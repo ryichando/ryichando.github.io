@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>潮風フレームワーク: include/shiokaze/array/array_extrapolator3.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">潮風フレームワーク
+   </div>
+   <div id="projectbrief">研究開発に特化したコンピューターグラフィックスのための流体ソルバ</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('array__extrapolator3_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">array_extrapolator3.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="array__extrapolator3_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">**  array_extrapolator3.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">**  This is part of Shiokaze, a research-oriented fluid solver for computer graphics.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">**  Created by Ryoichi Ando &lt;rand@nii.ac.jp&gt; on Feb 14, 2018.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">**  Permission is hereby granted, free of charge, to any person obtaining a copy of</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">**  this software and associated documentation files (the &quot;Software&quot;), to deal in</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">**  the Software without restriction, including without limitation the rights to use,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">**  copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">**  Software, and to permit persons to whom the Software is furnished to do so,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">**  subject to the following conditions:</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">**  The above copyright notice and this permission notice shall be included in all copies</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">**  or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">**  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">**  INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">**  PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">**  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">**  CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">**  OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef SHKZ_ARRAY_EXTRAPOLATOR3_H</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define SHKZ_ARRAY_EXTRAPOLATOR3_H</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="array3_8h.html">array3.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="shared__array3_8h.html">shared_array3.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<a class="code" href="common_8h.html#a391a3576f94983f8ff8e79bed315b29d">SHKZ_BEGIN_NAMESPACE</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"></span><span class="keyword">namespace </span><a class="code" href="namespacearray__extrapolator3.html">array_extrapolator3</a> {</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="namespacearray__extrapolator3.html#ab75e270220a51049007dd2aea5c6bcb2">   47</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">unsigned</span> <a class="code" href="namespacearray__extrapolator3.html#ab75e270220a51049007dd2aea5c6bcb2">extrapolate_if</a> ( <a class="code" href="classarray3.html">array3&lt;T&gt;</a> &amp;array, std::function&lt;<span class="keywordtype">bool</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, <span class="keywordtype">int</span> thread_index )&gt; func, <span class="keywordtype">int</span> count=1 ) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::vector&lt;unsigned&gt; counters(array.<a class="code" href="classarray3.html#a9a912a0bf763bd9e48d580884d64633d">get_thread_num</a>());</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">const</span> <a class="code" href="structshape3.html">shape3</a> shape(array.<a class="code" href="classarray3.html#ab5ba22c91f61323e07fcc8a4e66d7dba">shape</a>());</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        array.<a class="code" href="classarray3.html#ada9d307fd75e12367d887bc04dbd40c2">dilate</a>([&amp;](<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, <span class="keyword">auto</span> &amp;it, <span class="keywordtype">int</span> tn ) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span>( func(i,j,k,tn)) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                T sum (0.0);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordtype">int</span> weight = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <a class="code" href="structvec.html">vec3i</a> query[] = {<a class="code" href="structvec.html">vec3i</a>(i+1,j,k),<a class="code" href="structvec.html">vec3i</a>(i-1,j,k),<a class="code" href="structvec.html">vec3i</a>(i,j+1,k),</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                 <a class="code" href="structvec.html">vec3i</a>(i,j-1,k),<a class="code" href="structvec.html">vec3i</a>(i,j,k-1),<a class="code" href="structvec.html">vec3i</a>(i,j,k+1)};</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordflow">for</span>( <span class="keywordtype">int</span> nq=0; nq&lt;6; nq++ ) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    <a class="code" href="structvec.html">vec3i</a> qi (query[nq]);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <span class="keywordflow">if</span>( ! shape.<a class="code" href="structshape3.html#a847ef9f9e09cd4a5993e08edb2e16ebb">out_of_bounds</a>(qi) ) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                        <span class="keywordflow">if</span>( array.<a class="code" href="classarray3.html#a4ebd28192ac848aa2c3e629560e782ef">active</a>(qi)) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                            sum += array(qi);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                            weight ++;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">if</span>( weight ) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    counters[tn] ++;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    it.set(sum / weight);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        },count);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">unsigned</span> sum (0);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">for</span>( <span class="keyword">const</span> <span class="keyword">auto</span> &amp;e : counters ) sum += e;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> sum;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacearray__extrapolator3.html#a71144fea77badcd6c49d1ae6e5ceb163">   86</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">unsigned</span> <a class="code" href="namespacearray__extrapolator3.html#a71144fea77badcd6c49d1ae6e5ceb163">extrapolate</a> ( <a class="code" href="classarray3.html">array3&lt;T&gt;</a> &amp;array, <span class="keywordtype">int</span> count=1 ) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespacearray__extrapolator3.html#ab75e270220a51049007dd2aea5c6bcb2">extrapolate_if</a>(array,[&amp;](<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, <span class="keywordtype">int</span> tn){ <span class="keywordflow">return</span> <span class="keyword">true</span>; },count);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<a class="code" href="common_8h.html#a5b02c8b38b9521be5c763c68cde927bf">SHKZ_END_NAMESPACE</a></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">//</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astructshape3_html_a847ef9f9e09cd4a5993e08edb2e16ebb"><div class="ttname"><a href="structshape3.html#a847ef9f9e09cd4a5993e08edb2e16ebb">shape3::out_of_bounds</a></div><div class="ttdeci">bool out_of_bounds(int i, int j, int k) const</div><div class="ttdoc">入力の位置がこの形状のインデックス空間の範囲外にあるか取得する。</div><div class="ttdef"><b>Definition:</b> shape.h:811</div></div>
+<div class="ttc" id="aclassarray3_html_a4ebd28192ac848aa2c3e629560e782ef"><div class="ttname"><a href="classarray3.html#a4ebd28192ac848aa2c3e629560e782ef">array3::active</a></div><div class="ttdeci">bool active(int i, int j, int k) const</div><div class="ttdoc">グリッドのある位置がアクティブか得る。</div><div class="ttdef"><b>Definition:</b> array3.h:552</div></div>
+<div class="ttc" id="ashared__array3_8h_html"><div class="ttname"><a href="shared__array3_8h.html">shared_array3.h</a></div></div>
+<div class="ttc" id="anamespacearray__extrapolator3_html_a71144fea77badcd6c49d1ae6e5ceb163"><div class="ttname"><a href="namespacearray__extrapolator3.html#a71144fea77badcd6c49d1ae6e5ceb163">array_extrapolator3::extrapolate</a></div><div class="ttdeci">unsigned extrapolate(array3&lt; T &gt; &amp;array, int count=1)</div><div class="ttdoc">テスト関数をパスする場所でグリッドを外挿する。</div><div class="ttdef"><b>Definition:</b> array_extrapolator3.h:86</div></div>
+<div class="ttc" id="astructshape3_html"><div class="ttname"><a href="structshape3.html">shape3</a></div><div class="ttdoc">縦、横、奥行きといった3次元の形状を定義する構造体。</div><div class="ttdef"><b>Definition:</b> shape.h:478</div></div>
+<div class="ttc" id="aclassarray3_html_a9a912a0bf763bd9e48d580884d64633d"><div class="ttname"><a href="classarray3.html#a9a912a0bf763bd9e48d580884d64633d">array3::get_thread_num</a></div><div class="ttdeci">int get_thread_num() const</div><div class="ttdoc">現在設定されている並列処理をするためのスレッドの数を得る。</div><div class="ttdef"><b>Definition:</b> array3.h:954</div></div>
+<div class="ttc" id="acommon_8h_html_a391a3576f94983f8ff8e79bed315b29d"><div class="ttname"><a href="common_8h.html#a391a3576f94983f8ff8e79bed315b29d">SHKZ_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_BEGIN_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の開始の定義。</div><div class="ttdef"><b>Definition:</b> common.h:39</div></div>
+<div class="ttc" id="aclassarray3_html_ada9d307fd75e12367d887bc04dbd40c2"><div class="ttname"><a href="classarray3.html#ada9d307fd75e12367d887bc04dbd40c2">array3::dilate</a></div><div class="ttdeci">void dilate(std::function&lt; void(int i, int j, int k, iterator &amp;it, int thread_index)&gt; func, int count=1)</div><div class="ttdoc">拡張する。</div><div class="ttdef"><b>Definition:</b> array3.h:1661</div></div>
+<div class="ttc" id="aarray3_8h_html"><div class="ttname"><a href="array3_8h.html">array3.h</a></div></div>
+<div class="ttc" id="astructvec_html"><div class="ttname"><a href="structvec.html">vec</a></div><div class="ttdoc">固定サイズのベクトル構造体。</div><div class="ttdef"><b>Definition:</b> vec.h:38</div></div>
+<div class="ttc" id="anamespacearray__extrapolator3_html"><div class="ttname"><a href="namespacearray__extrapolator3.html">array_extrapolator3</a></div><div class="ttdoc">グリッドの外挿を実装する名前空間。</div><div class="ttdef"><b>Definition:</b> array_extrapolator3.h:36</div></div>
+<div class="ttc" id="acommon_8h_html_a5b02c8b38b9521be5c763c68cde927bf"><div class="ttname"><a href="common_8h.html#a5b02c8b38b9521be5c763c68cde927bf">SHKZ_END_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_END_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の終了の定義。</div><div class="ttdef"><b>Definition:</b> common.h:44</div></div>
+<div class="ttc" id="aclassarray3_html_ab5ba22c91f61323e07fcc8a4e66d7dba"><div class="ttname"><a href="classarray3.html#ab5ba22c91f61323e07fcc8a4e66d7dba">array3::shape</a></div><div class="ttdeci">shape3 shape() const</div><div class="ttdoc">グリッドの形を返す。</div><div class="ttdef"><b>Definition:</b> array3.h:218</div></div>
+<div class="ttc" id="anamespacearray__extrapolator3_html_ab75e270220a51049007dd2aea5c6bcb2"><div class="ttname"><a href="namespacearray__extrapolator3.html#ab75e270220a51049007dd2aea5c6bcb2">array_extrapolator3::extrapolate_if</a></div><div class="ttdeci">unsigned extrapolate_if(array3&lt; T &gt; &amp;array, std::function&lt; bool(int i, int j, int k, int thread_index)&gt; func, int count=1)</div><div class="ttdoc">テスト関数をパスする場所でグリッドを外挿する。</div><div class="ttdef"><b>Definition:</b> array_extrapolator3.h:47</div></div>
+<div class="ttc" id="aclassarray3_html"><div class="ttname"><a href="classarray3.html">array3</a></div><div class="ttdoc">recursive_configurable インスタンスのメンバーインスタンスとして定義可能な3次元配列クラス。</div><div class="ttdef"><b>Definition:</b> array3.h:42</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_eee5611a0202d01240738684f683b52c.html">shiokaze</a></li><li class="navelem"><a class="el" href="dir_fafa4d74566e6004ce41c819ea2174e0.html">array</a></li><li class="navelem"><a class="el" href="array__extrapolator3_8h.html">array_extrapolator3.h</a></li>
+    <li class="footer">2020年09月11日(金) 08時43分28秒作成 - 潮風フレームワーク / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

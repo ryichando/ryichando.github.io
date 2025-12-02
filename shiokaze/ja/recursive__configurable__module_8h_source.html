@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>潮風フレームワーク: include/shiokaze/core/recursive_configurable_module.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">潮風フレームワーク
+   </div>
+   <div id="projectbrief">研究開発に特化したコンピューターグラフィックスのための流体ソルバ</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('recursive__configurable__module_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">recursive_configurable_module.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="recursive__configurable__module_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">**  recursive_configurable_module.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">**  This is part of Shiokaze, a research-oriented fluid solver for computer graphics.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">**  Created by Ryoichi Ando &lt;rand@nii.ac.jp&gt; on Jan 12, 2018.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">**  Permission is hereby granted, free of charge, to any person obtaining a copy of</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">**  this software and associated documentation files (the &quot;Software&quot;), to deal in</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">**  the Software without restriction, including without limitation the rights to use,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">**  copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">**  Software, and to permit persons to whom the Software is furnished to do so,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">**  subject to the following conditions:</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">**  The above copyright notice and this permission notice shall be included in all copies</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">**  or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">**  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">**  INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">**  PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">**  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">**  CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">**  OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifndef SHKZ_RECURSIVE_CONFIGURABLE_MODULE_H</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define SHKZ_RECURSIVE_CONFIGURABLE_MODULE_H</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="module_8h.html">shiokaze/core/module.h</a>&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="configurable_8h.html">shiokaze/core/configurable.h</a>&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="common_8h.html#a391a3576f94983f8ff8e79bed315b29d">SHKZ_BEGIN_NAMESPACE</a></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="recursive__configurable__module_8h.html#a086071a8f57eb7ef4ebb57c17a741c30">   39</a></span>&#160;<span class="preprocessor">#define DEFINE_MODULE(CLASS_T,LNG_NAME,ARG_NAME,DESCRIPTION) \</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">    DEFINE_QUICK_ALLOC_MODULE(CLASS_T,ARG_NAME,DESCRIPTION) \</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">    LONG_NAME(LNG_NAME) \</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">    static std::unique_ptr&lt;CLASS_T&gt; quick_load_module( configuration &amp;config, std::string name ) { \</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">        auto result = unique_alloc_module&lt;CLASS_T&gt;(config,ARG_NAME,name,DESCRIPTION); \</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">        result-&gt;recursive_load(config); \</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">        return result; \</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">    }</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">class </span><a class="code" href="classrecursive__configurable__module.html">recursive_configurable_module</a> : <span class="keyword">public</span> <a class="code" href="classrecursive__configurable.html">recursive_configurable</a>, <span class="keyword">public</span> <a class="code" href="classmodule.html">module</a> {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classrecursive__configurable__module.html#a7289dda5aef6b0f6308c55532a71d743">   57</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classrecursive__configurable__module.html#a7289dda5aef6b0f6308c55532a71d743">recursive_load</a> ( <a class="code" href="classconfiguration.html">configuration</a> &amp;config )<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="structconfiguration_1_1auto__group.html">configuration::auto_group</a> group(config,*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="classrecursive__configurable.html#aef0767771608fbbf10ec514d01a5915d">recursive_configurable::recursive_load</a>(config);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classrecursive__configurable__module.html#af166a64ef3afcafcf3bb30aba8cb73a7">   67</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classrecursive__configurable__module.html#af166a64ef3afcafcf3bb30aba8cb73a7">recursive_configure</a> ( <a class="code" href="classconfiguration.html">configuration</a> &amp;config )<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="structconfiguration_1_1auto__group.html">configuration::auto_group</a> group(config,*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="classrecursive__configurable.html#a514e780fda79b6287755635243189c44">recursive_configurable::recursive_configure</a>(config);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classrecursive__configurable__driver.html">   76</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code" href="classrecursive__configurable__driver.html">recursive_configurable_driver</a> : <span class="keyword">public</span> <a class="code" href="classconfigurable.html">configurable</a>, <span class="keyword">public</span> <a class="code" href="classmessageable.html">messageable</a> {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classrecursive__configurable__driver.html#a138f16b19bd4b49dd44e75f202a849c2">   86</a></span>&#160;    <a class="code" href="classrecursive__configurable__driver.html#a138f16b19bd4b49dd44e75f202a849c2">recursive_configurable_driver</a> ( std::string name, std::string argname=<span class="stringliteral">&quot;&quot;</span> ) : m_name(name), m_argname(argname) {}</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classrecursive__configurable__driver.html#aff8bd0533968b919009f91cc693ff371">   95</a></span>&#160;    <a class="code" href="classrecursive__configurable__driver.html#aff8bd0533968b919009f91cc693ff371">recursive_configurable_driver</a> ( <a class="code" href="classrecursive__configurable.html">recursive_configurable</a> *parent, std::string name ) : m_name(name) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        assert(parent);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        parent-&gt;<a class="code" href="classrecursive__configurable.html#a893a1dea81a5aa229b826ad3878d4e74">add_child</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classrecursive__configurable__driver.html#afe571276626c46bfc042eb5fe9dc3cf0">  107</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classrecursive__configurable__driver.html#afe571276626c46bfc042eb5fe9dc3cf0">set_name</a>( std::string long_name, std::string argname=<span class="stringliteral">&quot;&quot;</span> ) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        m_long_name = long_name;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">if</span>( argname.size()) m_argname = argname;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classrecursive__configurable__driver.html#a9b2b5e20ec3cd13cbe012d384cc12067">  117</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classrecursive__configurable__driver.html#a9b2b5e20ec3cd13cbe012d384cc12067">set_argument_name</a>( std::string argname ) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        m_argname = argname;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classrecursive__configurable__driver.html#a540e72ca44c395772af1666eb400f11d">  128</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classrecursive__configurable__driver.html#a540e72ca44c395772af1666eb400f11d">set_environment</a>( std::string name, <span class="keyword">const</span> <span class="keywordtype">void</span> *value ) {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        m_environment[name] = value;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classrecursive__configurable__driver.html#a5ab40ecd464adb48a08b4421eb686350">  137</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classrecursive__configurable__driver.html#a5ab40ecd464adb48a08b4421eb686350">load</a> ( <a class="code" href="classconfiguration.html">configuration</a> &amp;config )<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        m_object = T::quick_alloc_module(config,m_name);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">if</span>( m_long_name.size()) m_object-&gt;set_name(m_long_name);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">if</span>( m_argname.size()) m_object-&gt;set_argument_name(m_argname);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        m_object-&gt;recursive_load(config);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classrecursive__configurable__driver.html#a6b9290328706450349bea853e4ea93f8">  149</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classrecursive__configurable__driver.html#a6b9290328706450349bea853e4ea93f8">configure</a> ( <a class="code" href="classconfiguration.html">configuration</a> &amp;config )<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        m_object-&gt;recursive_configure(config);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="classrecursive__configurable__driver.html#adc3f9a7010de223427f7abf9a5a614be">  158</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classrecursive__configurable__driver.html#adc3f9a7010de223427f7abf9a5a614be">initialize</a>( <span class="keyword">const</span> <a class="code" href="classconfigurable.html#a543be0036cefaf1cde8d268b8414754d">configurable::environment_map</a> &amp;environment )<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="classconfigurable.html#a543be0036cefaf1cde8d268b8414754d">configurable::environment_map</a> merged_environment(m_environment);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        merged_environment.insert(environment.begin(),environment.end());</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        m_object-&gt;recursive_initialize(merged_environment);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classrecursive__configurable__driver.html#af510349718f39ea6597c62fa9c81f4db">  169</a></span>&#160;    T* <a class="code" href="classrecursive__configurable__driver.html#af510349718f39ea6597c62fa9c81f4db">operator-&gt;</a>() { <span class="keywordflow">return</span> <a class="code" href="classrecursive__configurable__driver.html#a87f2c546e8893d7c8c0d9d85b19b52a5">get</a>(); }</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classrecursive__configurable__driver.html#a2f7e047b16490d0b2e80049dba9ea913">  176</a></span>&#160;    <span class="keyword">const</span> T* <a class="code" href="classrecursive__configurable__driver.html#a2f7e047b16490d0b2e80049dba9ea913">operator-&gt;</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classrecursive__configurable__driver.html#a87f2c546e8893d7c8c0d9d85b19b52a5">get</a>(); }</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classrecursive__configurable__driver.html#a87f2c546e8893d7c8c0d9d85b19b52a5">  183</a></span>&#160;    T* <a class="code" href="classrecursive__configurable__driver.html#a87f2c546e8893d7c8c0d9d85b19b52a5">get</a>() { <span class="keywordflow">return</span> m_object.get(); }</div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classrecursive__configurable__driver.html#af2c04d021d3a4a0a30e22c0bb8388891">  190</a></span>&#160;    <span class="keyword">const</span> T* <a class="code" href="classrecursive__configurable__driver.html#af2c04d021d3a4a0a30e22c0bb8388891">get</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_object.get(); }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    std::string m_name, m_long_name, m_argname;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    std::unique_ptr&lt;T&gt; m_object;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="classconfigurable.html#a543be0036cefaf1cde8d268b8414754d">configurable::environment_map</a> m_environment;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="classrecursive__configurable__driver.html#a138f16b19bd4b49dd44e75f202a849c2">recursive_configurable_driver</a>( <span class="keyword">const</span> <a class="code" href="classrecursive__configurable__driver.html">recursive_configurable_driver</a> &amp; ) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="classrecursive__configurable__driver.html">recursive_configurable_driver</a>&amp; operator=( <span class="keyword">const</span> <a class="code" href="classrecursive__configurable__driver.html">recursive_configurable_driver</a> &amp; ) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;};</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<a class="code" href="common_8h.html#a5b02c8b38b9521be5c763c68cde927bf">SHKZ_END_NAMESPACE</a></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassrecursive__configurable__driver_html_a5ab40ecd464adb48a08b4421eb686350"><div class="ttname"><a href="classrecursive__configurable__driver.html#a5ab40ecd464adb48a08b4421eb686350">recursive_configurable_driver::load</a></div><div class="ttdeci">virtual void load(configuration &amp;config) override</div><div class="ttdoc">読み込みを行う。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:137</div></div>
+<div class="ttc" id="aclassrecursive__configurable__driver_html_a540e72ca44c395772af1666eb400f11d"><div class="ttname"><a href="classrecursive__configurable__driver.html#a540e72ca44c395772af1666eb400f11d">recursive_configurable_driver::set_environment</a></div><div class="ttdeci">void set_environment(std::string name, const void *value)</div><div class="ttdoc">入力名に関連した環境変数の値へのポインターを設定する。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:128</div></div>
+<div class="ttc" id="aclassrecursive__configurable__driver_html_aff8bd0533968b919009f91cc693ff371"><div class="ttname"><a href="classrecursive__configurable__driver.html#aff8bd0533968b919009f91cc693ff371">recursive_configurable_driver::recursive_configurable_driver</a></div><div class="ttdeci">recursive_configurable_driver(recursive_configurable *parent, std::string name)</div><div class="ttdoc">recursive_configurable_driver のコンストラクタ。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:95</div></div>
+<div class="ttc" id="aclassrecursive__configurable__driver_html_a87f2c546e8893d7c8c0d9d85b19b52a5"><div class="ttname"><a href="classrecursive__configurable__driver.html#a87f2c546e8893d7c8c0d9d85b19b52a5">recursive_configurable_driver::get</a></div><div class="ttdeci">T * get()</div><div class="ttdoc">生ポインターを取得する</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:183</div></div>
+<div class="ttc" id="amodule_8h_html"><div class="ttname"><a href="module_8h.html">module.h</a></div></div>
+<div class="ttc" id="aclassrecursive__configurable__driver_html"><div class="ttname"><a href="classrecursive__configurable__driver.html">recursive_configurable_driver</a></div><div class="ttdoc">recursive_configurable のクラスを抱擁するクラス。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:76</div></div>
+<div class="ttc" id="aclassconfigurable_html"><div class="ttname"><a href="classconfigurable.html">configurable</a></div><div class="ttdoc">load - configure - initialize ワークフローを管理するための基本クラス。</div><div class="ttdef"><b>Definition:</b> configurable.h:40</div></div>
+<div class="ttc" id="aclassrecursive__configurable__driver_html_a6b9290328706450349bea853e4ea93f8"><div class="ttname"><a href="classrecursive__configurable__driver.html#a6b9290328706450349bea853e4ea93f8">recursive_configurable_driver::configure</a></div><div class="ttdeci">virtual void configure(configuration &amp;config) override</div><div class="ttdoc">configure 処理を行う。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:149</div></div>
+<div class="ttc" id="aclassrecursive__configurable__driver_html_af510349718f39ea6597c62fa9c81f4db"><div class="ttname"><a href="classrecursive__configurable__driver.html#af510349718f39ea6597c62fa9c81f4db">recursive_configurable_driver::operator-&gt;</a></div><div class="ttdeci">T * operator-&gt;()</div><div class="ttdoc">生ポインターを取得する</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:169</div></div>
+<div class="ttc" id="aclassrecursive__configurable_html_aef0767771608fbbf10ec514d01a5915d"><div class="ttname"><a href="classrecursive__configurable.html#aef0767771608fbbf10ec514d01a5915d">recursive_configurable::recursive_load</a></div><div class="ttdeci">virtual void recursive_load(configuration &amp;config)</div><div class="ttdoc">自身のプログラムを読み込み、子供インスタンスにも同様の処理を行う。ファイルやライブラリをメモリに読み込むことに使われる。</div><div class="ttdef"><b>Definition:</b> configurable.h:139</div></div>
+<div class="ttc" id="acommon_8h_html_a391a3576f94983f8ff8e79bed315b29d"><div class="ttname"><a href="common_8h.html#a391a3576f94983f8ff8e79bed315b29d">SHKZ_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_BEGIN_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の開始の定義。</div><div class="ttdef"><b>Definition:</b> common.h:39</div></div>
+<div class="ttc" id="aclassrecursive__configurable__driver_html_adc3f9a7010de223427f7abf9a5a614be"><div class="ttname"><a href="classrecursive__configurable__driver.html#adc3f9a7010de223427f7abf9a5a614be">recursive_configurable_driver::initialize</a></div><div class="ttdeci">virtual void initialize(const configurable::environment_map &amp;environment) override</div><div class="ttdoc">環境変数を元に初期化を行う。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:158</div></div>
+<div class="ttc" id="aclassrecursive__configurable__driver_html_af2c04d021d3a4a0a30e22c0bb8388891"><div class="ttname"><a href="classrecursive__configurable__driver.html#af2c04d021d3a4a0a30e22c0bb8388891">recursive_configurable_driver::get</a></div><div class="ttdeci">const T * get() const</div><div class="ttdoc">生ポインターを取得する</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:190</div></div>
+<div class="ttc" id="aclassrecursive__configurable__driver_html_afe571276626c46bfc042eb5fe9dc3cf0"><div class="ttname"><a href="classrecursive__configurable__driver.html#afe571276626c46bfc042eb5fe9dc3cf0">recursive_configurable_driver::set_name</a></div><div class="ttdeci">void set_name(std::string long_name, std::string argname=&quot;&quot;)</div><div class="ttdoc">名前を設定する。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:107</div></div>
+<div class="ttc" id="aclassrecursive__configurable__module_html_af166a64ef3afcafcf3bb30aba8cb73a7"><div class="ttname"><a href="classrecursive__configurable__module.html#af166a64ef3afcafcf3bb30aba8cb73a7">recursive_configurable_module::recursive_configure</a></div><div class="ttdeci">virtual void recursive_configure(configuration &amp;config) override</div><div class="ttdoc">再帰的に configure を呼ぶ。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:67</div></div>
+<div class="ttc" id="aclassmodule_html"><div class="ttname"><a href="classmodule.html">module</a></div><div class="ttdoc">モジュールクラス。</div><div class="ttdef"><b>Definition:</b> module.h:49</div></div>
+<div class="ttc" id="aclassrecursive__configurable_html"><div class="ttname"><a href="classrecursive__configurable.html">recursive_configurable</a></div><div class="ttdoc">複数の子供 configurable を保持する configurable クラスの拡張。</div><div class="ttdef"><b>Definition:</b> configurable.h:126</div></div>
+<div class="ttc" id="astructconfiguration_1_1auto__group_html"><div class="ttname"><a href="structconfiguration_1_1auto__group.html">configuration::auto_group</a></div><div class="ttdoc">グループの push と pop を自動化するクラス。</div><div class="ttdef"><b>Definition:</b> configuration.h:107</div></div>
+<div class="ttc" id="aclassrecursive__configurable_html_a514e780fda79b6287755635243189c44"><div class="ttname"><a href="classrecursive__configurable.html#a514e780fda79b6287755635243189c44">recursive_configurable::recursive_configure</a></div><div class="ttdeci">virtual void recursive_configure(configuration &amp;config)</div><div class="ttdoc">プログラムの設定を実際に行い、子供インスタンスにも同様の処理を行う。パラメータの読み込みと設定に使われる。</div><div class="ttdef"><b>Definition:</b> configurable.h:152</div></div>
+<div class="ttc" id="aclassconfigurable_html_a543be0036cefaf1cde8d268b8414754d"><div class="ttname"><a href="classconfigurable.html#a543be0036cefaf1cde8d268b8414754d">configurable::environment_map</a></div><div class="ttdeci">std::map&lt; std::string, const void * &gt; environment_map</div><div class="ttdoc">environment_map のタイプ。</div><div class="ttdef"><b>Definition:</b> configurable.h:46</div></div>
+<div class="ttc" id="aconfigurable_8h_html"><div class="ttname"><a href="configurable_8h.html">configurable.h</a></div></div>
+<div class="ttc" id="aclassrecursive__configurable__module_html_a7289dda5aef6b0f6308c55532a71d743"><div class="ttname"><a href="classrecursive__configurable__module.html#a7289dda5aef6b0f6308c55532a71d743">recursive_configurable_module::recursive_load</a></div><div class="ttdeci">virtual void recursive_load(configuration &amp;config) override</div><div class="ttdoc">再帰的に load を呼ぶ。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:57</div></div>
+<div class="ttc" id="aclassconfiguration_html"><div class="ttname"><a href="classconfiguration.html">configuration</a></div><div class="ttdoc">プログラムの設定などを管理するクラス。</div><div class="ttdef"><b>Definition:</b> configuration.h:39</div></div>
+<div class="ttc" id="aclassmessageable_html"><div class="ttname"><a href="classmessageable.html">messageable</a></div><div class="ttdoc">メッセージクラス。</div><div class="ttdef"><b>Definition:</b> messageable.h:36</div></div>
+<div class="ttc" id="acommon_8h_html_a5b02c8b38b9521be5c763c68cde927bf"><div class="ttname"><a href="common_8h.html#a5b02c8b38b9521be5c763c68cde927bf">SHKZ_END_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_END_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の終了の定義。</div><div class="ttdef"><b>Definition:</b> common.h:44</div></div>
+<div class="ttc" id="aclassrecursive__configurable__driver_html_a9b2b5e20ec3cd13cbe012d384cc12067"><div class="ttname"><a href="classrecursive__configurable__driver.html#a9b2b5e20ec3cd13cbe012d384cc12067">recursive_configurable_driver::set_argument_name</a></div><div class="ttdeci">void set_argument_name(std::string argname)</div><div class="ttdoc">変数名前を設定する。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:117</div></div>
+<div class="ttc" id="aclassrecursive__configurable__driver_html_a138f16b19bd4b49dd44e75f202a849c2"><div class="ttname"><a href="classrecursive__configurable__driver.html#a138f16b19bd4b49dd44e75f202a849c2">recursive_configurable_driver::recursive_configurable_driver</a></div><div class="ttdeci">recursive_configurable_driver(std::string name, std::string argname=&quot;&quot;)</div><div class="ttdoc">recursive_configurable_driver のコンストラクタ。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:86</div></div>
+<div class="ttc" id="aclassrecursive__configurable_html_a893a1dea81a5aa229b826ad3878d4e74"><div class="ttname"><a href="classrecursive__configurable.html#a893a1dea81a5aa229b826ad3878d4e74">recursive_configurable::add_child</a></div><div class="ttdeci">virtual void add_child(configurable *child)</div><div class="ttdoc">子供インスタンスを追加する。</div><div class="ttdef"><b>Definition:</b> configurable.h:191</div></div>
+<div class="ttc" id="aclassrecursive__configurable__module_html"><div class="ttname"><a href="classrecursive__configurable__module.html">recursive_configurable_module</a></div><div class="ttdoc">module を継承する recursive_configurable クラス。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:49</div></div>
+<div class="ttc" id="aclassrecursive__configurable__driver_html_a2f7e047b16490d0b2e80049dba9ea913"><div class="ttname"><a href="classrecursive__configurable__driver.html#a2f7e047b16490d0b2e80049dba9ea913">recursive_configurable_driver::operator-&gt;</a></div><div class="ttdeci">const T * operator-&gt;() const</div><div class="ttdoc">const な生ポインターを取得する</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:176</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_eee5611a0202d01240738684f683b52c.html">shiokaze</a></li><li class="navelem"><a class="el" href="dir_9bc6a64153ec85ef276670136fd5313b.html">core</a></li><li class="navelem"><a class="el" href="recursive__configurable__module_8h.html">recursive_configurable_module.h</a></li>
+    <li class="footer">2020年09月11日(金) 08時43分28秒作成 - 潮風フレームワーク / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

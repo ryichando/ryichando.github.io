@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>潮風フレームワーク: 圧力ソルバを拡張する</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">潮風フレームワーク
+   </div>
+   <div id="projectbrief">研究開発に特化したコンピューターグラフィックスのための流体ソルバ</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('extend_pressure.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">圧力ソルバを拡張する </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p> <style>div.image img[src="Liquid_simstep.png"]{width:700px;}</style> </p>
+<h1><a class="anchor" id="extend_pressure_code_implement"></a>
+実装コード</h1>
+<p>潮風を使えば、新しい圧力のポアソン方程式を解くためのアイデアを思いついた時、そのアイデアを簡単に組み込むことが出来ます。ここでは、ガウス＝ザイデル法を例にして解説します。まず、gauss_seidel.cpp を src/linsolver/gauss_seidel.cpp に作成します。コンテンツは以下の通りです。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_r_c_matrix__solver_8h.html">shiokaze/linsolver/RCMatrix_solver.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><a class="code" href="common_8h.html#a42681c4dcb51a2a9b20e3613df8a3eb2">SHKZ_USING_NAMESPACE</a></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> N, <span class="keyword">class</span> T&gt; <span class="keyword">class </span>gause_seidel_solver : <span class="keyword">public</span> <a class="code" href="class_r_c_matrix__solver__interface.html">RCMatrix_solver_interface</a>&lt;N,T&gt; {</div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <span class="comment">//</span></div>
+<div class="line">    <a class="code" href="credit_8h.html#a58ed65af9cd96e3c2c59d6c13240cf09">LONG_NAME</a>(<span class="stringliteral">&quot;Gauss Seidel Solver&quot;</span>)</div>
+<div class="line">    <a class="code" href="credit_8h.html#a3594c17dc4ebc9f9ba58393fa411dfc8">ARGUMENT_NAME</a>(&quot;GaussSeidel&quot;)</div>
+<div class="line">    <span class="comment">//</span></div>
+<div class="line">    virtual <span class="keywordtype">void</span> configure( <a class="code" href="classconfiguration.html">configuration</a> &amp;config )<span class="keyword"> override </span>{</div>
+<div class="line">        config.get_double(<span class="stringliteral">&quot;Residual&quot;</span>,m_param.residual,<span class="stringliteral">&quot;Tolerable residual&quot;</span>);</div>
+<div class="line">        config.get_unsigned(<span class="stringliteral">&quot;MaxIterations&quot;</span>,m_param.max_iterations,<span class="stringliteral">&quot;Maximal iteration count&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <a class="code" href="class_r_c_matrix__solver__interface.html#a6caeb102d63d2b738c51d96b361a61d5">solve</a>( <span class="keyword">const</span> <a class="code" href="class_r_c_matrix__interface.html">RCMatrix_interface&lt;N,T&gt;</a> *A, <span class="keyword">const</span> <a class="code" href="class_r_c_matrix__vector__interface.html">RCMatrix_vector_interface&lt;N,T&gt;</a> *b, <a class="code" href="class_r_c_matrix__vector__interface.html">RCMatrix_vector_interface&lt;N,T&gt;</a> *x )<span class="keyword"> const override </span>{</div>
+<div class="line">        <span class="comment">//</span></div>
+<div class="line">        T relative_error (1.0), initial_error (0.0);</div>
+<div class="line">        <span class="keywordtype">unsigned</span> iteration_count (0);</div>
+<div class="line">        <span class="keywordflow">do</span> {</div>
+<div class="line">            T error (0.0);</div>
+<div class="line">            ++ iteration_count;</div>
+<div class="line">            <span class="keywordflow">for</span>( N row=0; row&lt;A-&gt;<a class="code" href="class_r_c_matrix__interface.html#a6873f48127398aa05021e402af5e440e">rows</a>(); ++row ) {</div>
+<div class="line">                T diag (0.0), rhs (0.0), bi (b-&gt;<a class="code" href="class_r_c_matrix__vector__interface.html#a5d177ea0928abfd4e60d90c32b22a2c5">at</a>(row));</div>
+<div class="line">                A-&gt;<a class="code" href="class_r_c_matrix__interface.html#a151185e7f8f2b92c0b0aa58b405d2e3b">const_for_each</a>(row,[&amp;]( N column, T value ) {</div>
+<div class="line">                    <span class="keywordflow">if</span>( row == column ) {</div>
+<div class="line">                        diag = value;</div>
+<div class="line">                    } <span class="keywordflow">else</span> {</div>
+<div class="line">                        rhs += value * x-&gt;<a class="code" href="class_r_c_matrix__vector__interface.html#a5d177ea0928abfd4e60d90c32b22a2c5">at</a>(column);</div>
+<div class="line">                    }</div>
+<div class="line">                });</div>
+<div class="line">                error = std::max(error,std::abs(rhs+diag*x-&gt;<a class="code" href="class_r_c_matrix__vector__interface.html#a5d177ea0928abfd4e60d90c32b22a2c5">at</a>(row)-bi));</div>
+<div class="line">                x-&gt;<a class="code" href="class_r_c_matrix__vector__interface.html#a3ffc999a489398e7546a618972ceefa6">set</a>(row,(bi-rhs)/diag);</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">if</span>( ! error ) <span class="keywordflow">break</span>;</div>
+<div class="line">            <span class="keywordflow">else</span> {</div>
+<div class="line">                <span class="keywordflow">if</span>( ! initial_error ) initial_error = error;</div>
+<div class="line">                relative_error = error / initial_error;</div>
+<div class="line">            }</div>
+<div class="line">        } <span class="keywordflow">while</span>( relative_error &gt; m_param.residual &amp;&amp; iteration_count &lt; m_param.max_iterations );</div>
+<div class="line">        <span class="keywordflow">return</span> iteration_count;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">//</span></div>
+<div class="line">    <span class="keyword">struct </span>Parameters {</div>
+<div class="line">        <span class="keywordtype">double</span> residual {1e-4};</div>
+<div class="line">        <span class="keywordtype">unsigned</span> max_iterations {30000};</div>
+<div class="line">    };</div>
+<div class="line">    <span class="comment">//</span></div>
+<div class="line">    Parameters m_param;</div>
+<div class="line">};</div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <a class="code" href="classmodule.html">module</a> * create_instance() {</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">new</span> gause_seidel_solver&lt;INDEX_TYPE,FLOAT_TYPE&gt;();</div>
+<div class="line">}</div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *license() {</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="stringliteral">&quot;MIT&quot;</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> 最後に、これらの行を同じディレクトリに存在する wscript に書き込みます。</p>
+<div class="fragment"><div class="line">bld.shlib(source = <span class="stringliteral">&#39;gauss_seidel.cpp&#39;</span>,</div>
+<div class="line">            cxxflags = [<span class="stringliteral">&#39;-DINDEX_TYPE=size_t&#39;</span>,<span class="stringliteral">&#39;-DFLOAT_TYPE=double&#39;</span>],</div>
+<div class="line">            target = bld.get_target_name(bld,<span class="stringliteral">&#39;gauss_seidel&#39;</span>),</div>
+<div class="line">            use = bld.get_target_name(bld,<span class="stringliteral">&#39;core&#39;</span>))</div>
+</div><!-- fragment --><p> これで終わりです。./waf コマンドを走らせて、問題なくコンパイルできることを確認します。</p>
+<h1><a class="anchor" id="extend_pressure_examine_performance"></a>
+パフォーマンスを計測する</h1>
+<p>上記で実装したガウスザイデル法を使って、シミュレーションを行い、パフォーマンスを計測してみましょう。これは、次のコマンドを走らせて行います。</p>
+<div class="fragment"><div class="line">./run Target=macliquid3 LinSolver=gauss_seidel Container=Yes Log=log_waterdrop_gauss_seidel</div>
+</div><!-- fragment --><p>シミュレーションが実行されている間、その中間結果を次の URL でリアルタイムに確認出来ます。</p>
+<ul>
+<li>Gauss Seidel 法の反復回数: <a href="http://localhost:8080/shiokaze/log_waterdrop_gauss_seidel/record/graph_images/Projection_number_projection_iteration.png">http://localhost:8080/shiokaze/log_waterdrop_gauss_seidel/record/graph_images/Projection_number_projection_iteration.png</a> </li>
+<li>線形方程式を解くのにかかった時間: <a href="http://localhost:8080/shiokaze/log_waterdrop_gauss_seidel/record/graph_images/Projection_projection.png">http://localhost:8080/shiokaze/log_waterdrop_gauss_seidel/record/graph_images/Projection_projection.png</a> </li>
+<li>ステップ毎のシミュレーションの時間: <a href="http://localhost:8080/shiokaze/log_waterdrop_gauss_seidel/record/graph_images/Liquid_simstep.png">http://localhost:8080/shiokaze/log_waterdrop_gauss_seidel/record/graph_images/Liquid_simstep.png</a></li>
+</ul>
+<p>これらの元のログファイルは次の URL で確認出来ます。</p>
+<ul>
+<li><a href="http://localhost:8080/shiokaze/log_waterdrop_gauss_seidel/record/Projection_number_projection_iteration.out">http://localhost:8080/shiokaze/log_waterdrop_gauss_seidel/record/Projection_number_projection_iteration.out</a> </li>
+<li><a href="http://localhost:8080/shiokaze/log_waterdrop_gauss_seidel/record/Projection_projection.out">http://localhost:8080/shiokaze/log_waterdrop_gauss_seidel/record/Projection_projection.out</a> </li>
+<li><a href="http://localhost:8080/shiokaze/log_waterdrop_gauss_seidel/record/Liquid_simstep.out">http://localhost:8080/shiokaze/log_waterdrop_gauss_seidel/record/Liquid_simstep.out</a></li>
+</ul>
+<p>もちろん、レンダリング結果も次の URL で閲覧出来ます。</p>
+<ul>
+<li><a href="http://localhost:8080/shiokaze/log_waterdrop_gauss_seidel/mesh_img/">http://localhost:8080/shiokaze/log_waterdrop_gauss_seidel/mesh_img/</a></li>
+</ul>
+<p>全ての時間はミリ秒で記録されています。下の画像は、ステップ毎のシミュレーション時間のグラフの例です。</p>
+<div class="image">
+<img src="Liquid_simstep.png" alt=""/>
+</div>
+ </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_r_c_matrix__vector__interface_html"><div class="ttname"><a href="class_r_c_matrix__vector__interface.html">RCMatrix_vector_interface</a></div><div class="ttdoc">ベクトル計算を提供するインターフェース。</div><div class="ttdef"><b>Definition:</b> RCMatrix_interface.h:36</div></div>
+<div class="ttc" id="aclass_r_c_matrix__interface_html_a151185e7f8f2b92c0b0aa58b405d2e3b"><div class="ttname"><a href="class_r_c_matrix__interface.html#a151185e7f8f2b92c0b0aa58b405d2e3b">RCMatrix_interface::const_for_each</a></div><div class="ttdeci">void const_for_each(N row, std::function&lt; void(N column, T value)&gt; func) const</div><div class="ttdoc">要素の値を逐次的に読み込む。</div><div class="ttdef"><b>Definition:</b> RCMatrix_interface.h:492</div></div>
+<div class="ttc" id="aclass_r_c_matrix__interface_html_a6873f48127398aa05021e402af5e440e"><div class="ttname"><a href="class_r_c_matrix__interface.html#a6873f48127398aa05021e402af5e440e">RCMatrix_interface::rows</a></div><div class="ttdeci">virtual N rows() const =0</div><div class="ttdoc">行の数を取得する。</div></div>
+<div class="ttc" id="acredit_8h_html_a3594c17dc4ebc9f9ba58393fa411dfc8"><div class="ttname"><a href="credit_8h.html#a3594c17dc4ebc9f9ba58393fa411dfc8">ARGUMENT_NAME</a></div><div class="ttdeci">#define ARGUMENT_NAME(argument_name)</div><div class="ttdoc">引数の名前を定義するマクロ。</div><div class="ttdef"><b>Definition:</b> credit.h:40</div></div>
+<div class="ttc" id="aclass_r_c_matrix__vector__interface_html_a3ffc999a489398e7546a618972ceefa6"><div class="ttname"><a href="class_r_c_matrix__vector__interface.html#a3ffc999a489398e7546a618972ceefa6">RCMatrix_vector_interface::set</a></div><div class="ttdeci">virtual void set(N index, T value)=0</div><div class="ttdoc">入力のインデックスの位置での要素の値を設定する。</div></div>
+<div class="ttc" id="aclass_r_c_matrix__vector__interface_html_a5d177ea0928abfd4e60d90c32b22a2c5"><div class="ttname"><a href="class_r_c_matrix__vector__interface.html#a5d177ea0928abfd4e60d90c32b22a2c5">RCMatrix_vector_interface::at</a></div><div class="ttdeci">virtual T at(N index) const =0</div><div class="ttdoc">入力のインデックスの位置での要素の値を取得する。</div></div>
+<div class="ttc" id="acredit_8h_html_a58ed65af9cd96e3c2c59d6c13240cf09"><div class="ttname"><a href="credit_8h.html#a58ed65af9cd96e3c2c59d6c13240cf09">LONG_NAME</a></div><div class="ttdeci">#define LONG_NAME(long_name)</div><div class="ttdoc">完全な名前を定義するマクロ。</div><div class="ttdef"><b>Definition:</b> credit.h:37</div></div>
+<div class="ttc" id="aclassmodule_html"><div class="ttname"><a href="classmodule.html">module</a></div><div class="ttdoc">モジュールクラス。</div><div class="ttdef"><b>Definition:</b> module.h:49</div></div>
+<div class="ttc" id="aclass_r_c_matrix__solver__interface_html"><div class="ttname"><a href="class_r_c_matrix__solver__interface.html">RCMatrix_solver_interface</a></div><div class="ttdoc">疎行列で構成される線形一次方程式を解くためのインターフェース。&quot;cg&quot; と &quot;pcg&quot;、&quot;amg&quot; が T=double and N=size_t の実装として提供される。</div><div class="ttdef"><b>Definition:</b> RCMatrix_solver.h:36</div></div>
+<div class="ttc" id="a_r_c_matrix__solver_8h_html"><div class="ttname"><a href="_r_c_matrix__solver_8h.html">RCMatrix_solver.h</a></div></div>
+<div class="ttc" id="aclass_r_c_matrix__solver__interface_html_a6caeb102d63d2b738c51d96b361a61d5"><div class="ttname"><a href="class_r_c_matrix__solver__interface.html#a6caeb102d63d2b738c51d96b361a61d5">RCMatrix_solver_interface::solve</a></div><div class="ttdeci">virtual Result solve(const RCMatrix_interface&lt; N, T &gt; *A, const RCMatrix_vector_interface&lt; N, T &gt; *b, RCMatrix_vector_interface&lt; N, T &gt; *x) const =0</div><div class="ttdoc">Ax = b で表される線形一次方程式を解く。</div></div>
+<div class="ttc" id="aclass_r_c_matrix__interface_html"><div class="ttname"><a href="class_r_c_matrix__interface.html">RCMatrix_interface</a></div><div class="ttdoc">行圧縮の疎行列のインターフェース。</div><div class="ttdef"><b>Definition:</b> RCMatrix_interface.h:38</div></div>
+<div class="ttc" id="aclassconfiguration_html"><div class="ttname"><a href="classconfiguration.html">configuration</a></div><div class="ttdoc">プログラムの設定などを管理するクラス。</div><div class="ttdef"><b>Definition:</b> configuration.h:39</div></div>
+<div class="ttc" id="acommon_8h_html_a42681c4dcb51a2a9b20e3613df8a3eb2"><div class="ttname"><a href="common_8h.html#a42681c4dcb51a2a9b20e3613df8a3eb2">SHKZ_USING_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_USING_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の使用の定義。</div><div class="ttdef"><b>Definition:</b> common.h:49</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">2020年09月11日(金) 08時43分29秒作成 - 潮風フレームワーク / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>潮風フレームワーク: include/shiokaze/parallel/parallel_driver.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">潮風フレームワーク
+   </div>
+   <div id="projectbrief">研究開発に特化したコンピューターグラフィックスのための流体ソルバ</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('parallel__driver_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">parallel_driver.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="parallel__driver_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">**  parallel_driver.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">**  This is part of Shiokaze, a research-oriented fluid solver for computer graphics.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">**  Created by Ryoichi Ando &lt;rand@nii.ac.jp&gt; on Feb 1, 2018.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">**  Permission is hereby granted, free of charge, to any person obtaining a copy of</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">**  this software and associated documentation files (the &quot;Software&quot;), to deal in</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">**  the Software without restriction, including without limitation the rights to use,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">**  copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">**  Software, and to permit persons to whom the Software is furnished to do so,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">**  subject to the following conditions:</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">**  The above copyright notice and this permission notice shall be included in all copies</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">**  or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">**  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">**  INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">**  PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">**  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">**  CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">**  OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef SHKZ_PARALLEL_DRIVER_H</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define SHKZ_PARALLEL_DRIVER_H</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="credit_8h.html">shiokaze/core/credit.h</a>&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="configurable_8h.html">shiokaze/core/configurable.h</a>&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="shape_8h.html">shiokaze/math/shape.h</a>&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="parallel__core_8h.html">parallel_core.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="loop__splitter_8h.html">loop_splitter.h</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<a class="code" href="common_8h.html#a391a3576f94983f8ff8e79bed315b29d">SHKZ_BEGIN_NAMESPACE</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define shkz_default_parallel_name  &quot;stdthread&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define shkz_default_splitter_name  &quot;sequential_splitter&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="classparallel__driver.html">parallel_driver</a> : <span class="keyword">public</span> <a class="code" href="classconfigurable.html">configurable</a>, <span class="keyword">public</span> <a class="code" href="classcredit.html">credit</a> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="credit_8h.html#a58ed65af9cd96e3c2c59d6c13240cf09">LONG_NAME</a>(<span class="stringliteral">&quot;Parallel Driver&quot;</span>)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="credit_8h.html#a3594c17dc4ebc9f9ba58393fa411dfc8">ARGUMENT_NAME</a>(&quot;Parallel&quot;)</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classparallel__driver.html#ab886756a66d4d1eff2c6b4b1eed0de64">   59</a></span>&#160;    <a class="code" href="classparallel__driver.html">parallel_driver</a> ( <a class="code" href="classrecursive__configurable.html">recursive_configurable</a> *parent, std::<span class="keywordtype">string</span> parallel_name=shkz_default_parallel_name, std::<span class="keywordtype">string</span> splitter_name=shkz_default_splitter_name ) : m_parallel_name(parallel_name), m_splitter_name(splitter_name) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span>( parent ) parent-&gt;add_child(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">else</span> <a class="code" href="classconfigurable.html#a7a3e568d1311f4265405aa9f0afec112">setup_now</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classparallel__driver.html#ac5fe799745db904f107b1bd8bac0fd52">   71</a></span>&#160;    <a class="code" href="classparallel__driver.html#ac5fe799745db904f107b1bd8bac0fd52">parallel_driver</a> ( std::string parallel_name=shkz_default_parallel_name, std::string splitter_name=shkz_default_splitter_name ) : <a class="code" href="classparallel__driver.html">parallel_driver</a>(nullptr,parallel_name,splitter_name) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="classconfigurable.html#a7a3e568d1311f4265405aa9f0afec112">setup_now</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classparallel__driver.html#afa3b5379ef3f91b63f1153b3eb6a7f4e">   80</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classparallel__driver.html#afa3b5379ef3f91b63f1153b3eb6a7f4e">get_thread_num</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> m_maximal_threads;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classparallel__driver.html#a80ba86c9eb4d56b3bd4e0c451c4f4a43">   89</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classparallel__driver.html#a80ba86c9eb4d56b3bd4e0c451c4f4a43">set_thread_num</a>( <span class="keywordtype">int</span> maximal_threads ) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        m_maximal_threads = maximal_threads;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classparallel__driver.html#a6ba6d89336df783212b26d23941a5263">   98</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classparallel__core.html">parallel_core</a> *<a class="code" href="classparallel__driver.html#a6ba6d89336df783212b26d23941a5263">get</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">return</span> m_parallel_dispatcher.get();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classparallel__driver.html#ad7436571e5d38875667a43931dabaf5b">  107</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classparallel__driver.html#ad7436571e5d38875667a43931dabaf5b">run</a>( <span class="keyword">const</span> std::vector&lt;std::function&lt;<span class="keywordtype">void</span>()&gt; &gt; &amp;functions ) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span>( m_maximal_threads &gt; 1 ) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            m_parallel_dispatcher-&gt;run(functions);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">for</span>( <span class="keyword">auto</span> f : functions ) f();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classparallel__driver.html#a08536570ae291698a3fe8608e0b9317f">  122</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classparallel__driver.html#a08536570ae291698a3fe8608e0b9317f">for_each_byte_safe</a>( <span class="keywordtype">size_t</span> size, std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">size_t</span> n, <span class="keywordtype">int</span> thread_index)&gt; func )<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">size_t</span> size_div_8 = (size+7) / 8;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="classparallel__driver.html#ae111b2c838468f26b344270182ca6a5c">for_each</a>( size_div_8, [&amp;]( <span class="keywordtype">size_t</span> n_div_8, <span class="keywordtype">int</span> thread_index ) {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">for</span>( <span class="keywordtype">char</span> i=0; i&lt;8; ++i ) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="keywordtype">size_t</span> n = 8*n_div_8+i;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="keywordflow">if</span>( n &lt; size ) {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                    func(n,thread_index);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        });</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classparallel__driver.html#ae111b2c838468f26b344270182ca6a5c">  141</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classparallel__driver.html#ae111b2c838468f26b344270182ca6a5c">for_each</a>( <span class="keywordtype">size_t</span> size, std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">size_t</span> n, <span class="keywordtype">int</span> thread_index)&gt; func )<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">if</span>( size ) {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordtype">int</span> num_threads = m_maximal_threads;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">if</span>( num_threads &gt; size ) num_threads = size;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordflow">if</span>( num_threads &gt; 1 ) {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                <span class="comment">//</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                assert(m_loop_splitter.get());</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                <span class="comment">//</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">void</span> *context = m_loop_splitter-&gt;new_context(size,num_threads);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                <span class="keyword">auto</span> start_func = m_loop_splitter-&gt;get_start_func(context);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="keyword">auto</span> advance_func = m_loop_splitter-&gt;get_advance_func(context);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                <span class="comment">//</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                m_parallel_dispatcher-&gt;for_each(func,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                    [&amp;](<span class="keywordtype">int</span> q) { <span class="keywordflow">return</span> start_func(context,q); },</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                    [&amp;](<span class="keywordtype">size_t</span> &amp;n, <span class="keywordtype">int</span> q){ <span class="keywordflow">return</span> advance_func(context,n,q); },</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                num_threads);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <span class="comment">//</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                m_loop_splitter-&gt;delete_context(context);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <span class="keywordflow">for</span>( <span class="keywordtype">size_t</span> n=0; n&lt;size; ++n ) {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                    func(n,0);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="classparallel__driver.html#a0c5dbc69e1b593ba38e4ba60f9a3ce75">  175</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classparallel__driver.html#a0c5dbc69e1b593ba38e4ba60f9a3ce75">for_each</a>( <span class="keywordtype">size_t</span> size, std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">size_t</span> n)&gt; func )<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <a class="code" href="classparallel__driver.html#ae111b2c838468f26b344270182ca6a5c">for_each</a>(size,[&amp;]( <span class="keywordtype">size_t</span> n, <span class="keywordtype">int</span> thread_n ) {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            func(n);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        });</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classparallel__driver.html#a1b75e2b16334554feea23aa4040453ff">  190</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classparallel__driver.html#a1b75e2b16334554feea23aa4040453ff">for_each</a>( <span class="keyword">const</span> <a class="code" href="structshape2.html">shape2</a> &amp;shape, std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> thread_index)&gt; func )<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <a class="code" href="classparallel__driver.html#ae111b2c838468f26b344270182ca6a5c">for_each</a>(shape.<a class="code" href="structshape2.html#a270b92bcf717dbdfdd2f0f1c115f3670">count</a>(),[&amp;]( <span class="keywordtype">size_t</span> n, <span class="keywordtype">int</span> thread_index ) {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            vec2i pi = shape.decode(n);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            func(pi[0],pi[1],thread_index);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        });</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="classparallel__driver.html#a9b4bdd894bab6f75a20ef8dc16ef9511">  204</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classparallel__driver.html#a9b4bdd894bab6f75a20ef8dc16ef9511">for_each</a>( <span class="keyword">const</span> <a class="code" href="structshape2.html">shape2</a> &amp;shape, std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j)&gt; func )<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <a class="code" href="classparallel__driver.html#ae111b2c838468f26b344270182ca6a5c">for_each</a>(shape,[&amp;]( <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> thread_index ) {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            func(i,j);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        });</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="classparallel__driver.html#a63aeb2f00716b9fc234bdd722afdddfc">  217</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classparallel__driver.html#a63aeb2f00716b9fc234bdd722afdddfc">for_each</a>( <span class="keyword">const</span> <a class="code" href="structshape3.html">shape3</a> &amp;shape, std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, <span class="keywordtype">int</span> thread_index)&gt; func )<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <a class="code" href="classparallel__driver.html#ae111b2c838468f26b344270182ca6a5c">for_each</a>(shape.<a class="code" href="structshape3.html#a96b8ed64ca64c0e8bd99a038a3480864">count</a>(),[&amp;]( <span class="keywordtype">size_t</span> n, <span class="keywordtype">int</span> thread_index ) {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            vec3i pi = shape.decode(n);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            func(pi[0],pi[1],pi[2],thread_index);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        });</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="classparallel__driver.html#a70ceeb9f9e6285bd61c3c6bd26eb0a6c">  231</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classparallel__driver.html#a70ceeb9f9e6285bd61c3c6bd26eb0a6c">for_each</a>( <span class="keyword">const</span> <a class="code" href="structshape3.html">shape3</a> &amp;shape, std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k)&gt; func )<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <a class="code" href="classparallel__driver.html#ae111b2c838468f26b344270182ca6a5c">for_each</a>(shape,[&amp;]( <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, <span class="keywordtype">int</span> thread_index ) {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            func(i,j,k);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        });</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    std::string m_parallel_name, m_splitter_name;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    parallel_ptr m_parallel_dispatcher;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    loop_splitter_ptr m_loop_splitter;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">int</span> m_maximal_threads {NUM_THREAD};</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> load( <a class="code" href="classconfiguration.html">configuration</a> &amp;config )<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <a class="code" href="structconfiguration_1_1auto__group.html">configuration::auto_group</a> group(config,*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        m_parallel_dispatcher = parallel_core::quick_load_module(config,m_parallel_name);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        m_loop_splitter = loop_splitter::quick_load_module(config,m_splitter_name);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> configure( <a class="code" href="classconfiguration.html">configuration</a> &amp;config )<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <a class="code" href="structconfiguration_1_1auto__group.html">configuration::auto_group</a> group(config,*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        config.<a class="code" href="classconfiguration.html#ad43efc2f82086917c334bbaa9f27b42a">get_integer</a>(<span class="stringliteral">&quot;Threads&quot;</span>,m_maximal_threads,<span class="stringliteral">&quot;Number of maximal threads&quot;</span>);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        m_parallel_dispatcher-&gt;recursive_configure(config);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        m_loop_splitter-&gt;recursive_configure(config);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;};</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<a class="code" href="common_8h.html#a5b02c8b38b9521be5c763c68cde927bf">SHKZ_END_NAMESPACE</a></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="preprocessor">//</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="ashape_8h_html"><div class="ttname"><a href="shape_8h.html">shape.h</a></div></div>
+<div class="ttc" id="aloop__splitter_8h_html"><div class="ttname"><a href="loop__splitter_8h.html">loop_splitter.h</a></div></div>
+<div class="ttc" id="aclassparallel__driver_html"><div class="ttname"><a href="classparallel__driver.html">parallel_driver</a></div><div class="ttdoc">並列ループのための parallel_core を使いやすくするクラス。</div><div class="ttdef"><b>Definition:</b> parallel_driver.h:44</div></div>
+<div class="ttc" id="aclassparallel__driver_html_a9b4bdd894bab6f75a20ef8dc16ef9511"><div class="ttname"><a href="classparallel__driver.html#a9b4bdd894bab6f75a20ef8dc16ef9511">parallel_driver::for_each</a></div><div class="ttdeci">void for_each(const shape2 &amp;shape, std::function&lt; void(int i, int j)&gt; func) const</div><div class="ttdoc">2次元の並列処理を行う。</div><div class="ttdef"><b>Definition:</b> parallel_driver.h:204</div></div>
+<div class="ttc" id="aclassconfigurable_html_a7a3e568d1311f4265405aa9f0afec112"><div class="ttname"><a href="classconfigurable.html#a7a3e568d1311f4265405aa9f0afec112">configurable::setup_now</a></div><div class="ttdeci">virtual void setup_now(configuration &amp;config=get_global_configuration())</div><div class="ttdoc">load - configure - initialize のプロセスを呼ぶ。</div><div class="ttdef"><b>Definition:</b> configurable.h:95</div></div>
+<div class="ttc" id="aclassconfiguration_html_ad43efc2f82086917c334bbaa9f27b42a"><div class="ttname"><a href="classconfiguration.html#ad43efc2f82086917c334bbaa9f27b42a">configuration::get_integer</a></div><div class="ttdeci">bool get_integer(std::string name, int &amp;value, std::string description=std::string())</div><div class="ttdoc">整数のパラメータを得る。</div></div>
+<div class="ttc" id="astructshape3_html_a96b8ed64ca64c0e8bd99a038a3480864"><div class="ttname"><a href="structshape3.html#a96b8ed64ca64c0e8bd99a038a3480864">shape3::count</a></div><div class="ttdeci">size_t count() const</div><div class="ttdoc">この形で構成されるグリッドの全ての要素の数を数える。</div><div class="ttdef"><b>Definition:</b> shape.h:857</div></div>
+<div class="ttc" id="acredit_8h_html"><div class="ttname"><a href="credit_8h.html">credit.h</a></div></div>
+<div class="ttc" id="astructshape3_html"><div class="ttname"><a href="structshape3.html">shape3</a></div><div class="ttdoc">縦、横、奥行きといった3次元の形状を定義する構造体。</div><div class="ttdef"><b>Definition:</b> shape.h:478</div></div>
+<div class="ttc" id="acredit_8h_html_a3594c17dc4ebc9f9ba58393fa411dfc8"><div class="ttname"><a href="credit_8h.html#a3594c17dc4ebc9f9ba58393fa411dfc8">ARGUMENT_NAME</a></div><div class="ttdeci">#define ARGUMENT_NAME(argument_name)</div><div class="ttdoc">引数の名前を定義するマクロ。</div><div class="ttdef"><b>Definition:</b> credit.h:40</div></div>
+<div class="ttc" id="astructshape2_html_a270b92bcf717dbdfdd2f0f1c115f3670"><div class="ttname"><a href="structshape2.html#a270b92bcf717dbdfdd2f0f1c115f3670">shape2::count</a></div><div class="ttdeci">size_t count() const</div><div class="ttdoc">この形で構成されるグリッドの全ての要素の数を数える。</div><div class="ttdef"><b>Definition:</b> shape.h:385</div></div>
+<div class="ttc" id="aclassconfigurable_html"><div class="ttname"><a href="classconfigurable.html">configurable</a></div><div class="ttdoc">load - configure - initialize ワークフローを管理するための基本クラス。</div><div class="ttdef"><b>Definition:</b> configurable.h:40</div></div>
+<div class="ttc" id="aclassparallel__driver_html_a6ba6d89336df783212b26d23941a5263"><div class="ttname"><a href="classparallel__driver.html#a6ba6d89336df783212b26d23941a5263">parallel_driver::get</a></div><div class="ttdeci">const parallel_core * get() const</div><div class="ttdoc">内部の parallel_core のインスタンスへのポインターを獲る。</div><div class="ttdef"><b>Definition:</b> parallel_driver.h:98</div></div>
+<div class="ttc" id="aclassparallel__core_html"><div class="ttname"><a href="classparallel__core.html">parallel_core</a></div><div class="ttdoc">並列処理を行う抽象クラス。loop_splitter と共に使われる。&quot;stdthread&quot; と &quot;tbbthread&quot; が実装として提供される。</div><div class="ttdef"><b>Definition:</b> parallel_core.h:40</div></div>
+<div class="ttc" id="aparallel__core_8h_html"><div class="ttname"><a href="parallel__core_8h.html">parallel_core.h</a></div></div>
+<div class="ttc" id="aclassparallel__driver_html_a0c5dbc69e1b593ba38e4ba60f9a3ce75"><div class="ttname"><a href="classparallel__driver.html#a0c5dbc69e1b593ba38e4ba60f9a3ce75">parallel_driver::for_each</a></div><div class="ttdeci">void for_each(size_t size, std::function&lt; void(size_t n)&gt; func) const</div><div class="ttdoc">並列処理を行う。</div><div class="ttdef"><b>Definition:</b> parallel_driver.h:175</div></div>
+<div class="ttc" id="aclassparallel__driver_html_afa3b5379ef3f91b63f1153b3eb6a7f4e"><div class="ttname"><a href="classparallel__driver.html#afa3b5379ef3f91b63f1153b3eb6a7f4e">parallel_driver::get_thread_num</a></div><div class="ttdeci">int get_thread_num() const</div><div class="ttdoc">最大のスレッドの数を得る。</div><div class="ttdef"><b>Definition:</b> parallel_driver.h:80</div></div>
+<div class="ttc" id="acommon_8h_html_a391a3576f94983f8ff8e79bed315b29d"><div class="ttname"><a href="common_8h.html#a391a3576f94983f8ff8e79bed315b29d">SHKZ_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_BEGIN_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の開始の定義。</div><div class="ttdef"><b>Definition:</b> common.h:39</div></div>
+<div class="ttc" id="aclassparallel__driver_html_ad7436571e5d38875667a43931dabaf5b"><div class="ttname"><a href="classparallel__driver.html#ad7436571e5d38875667a43931dabaf5b">parallel_driver::run</a></div><div class="ttdeci">void run(const std::vector&lt; std::function&lt; void()&gt; &gt; &amp;functions)</div><div class="ttdoc">処理を並列に行う。</div><div class="ttdef"><b>Definition:</b> parallel_driver.h:107</div></div>
+<div class="ttc" id="aclassparallel__driver_html_a80ba86c9eb4d56b3bd4e0c451c4f4a43"><div class="ttname"><a href="classparallel__driver.html#a80ba86c9eb4d56b3bd4e0c451c4f4a43">parallel_driver::set_thread_num</a></div><div class="ttdeci">void set_thread_num(int maximal_threads)</div><div class="ttdoc">最大のスレッドの数をセットする。</div><div class="ttdef"><b>Definition:</b> parallel_driver.h:89</div></div>
+<div class="ttc" id="acredit_8h_html_a58ed65af9cd96e3c2c59d6c13240cf09"><div class="ttname"><a href="credit_8h.html#a58ed65af9cd96e3c2c59d6c13240cf09">LONG_NAME</a></div><div class="ttdeci">#define LONG_NAME(long_name)</div><div class="ttdoc">完全な名前を定義するマクロ。</div><div class="ttdef"><b>Definition:</b> credit.h:37</div></div>
+<div class="ttc" id="aclassparallel__driver_html_a63aeb2f00716b9fc234bdd722afdddfc"><div class="ttname"><a href="classparallel__driver.html#a63aeb2f00716b9fc234bdd722afdddfc">parallel_driver::for_each</a></div><div class="ttdeci">void for_each(const shape3 &amp;shape, std::function&lt; void(int i, int j, int k, int thread_index)&gt; func) const</div><div class="ttdoc">3次元の並列処理を行う。</div><div class="ttdef"><b>Definition:</b> parallel_driver.h:217</div></div>
+<div class="ttc" id="aclassrecursive__configurable_html"><div class="ttname"><a href="classrecursive__configurable.html">recursive_configurable</a></div><div class="ttdoc">複数の子供 configurable を保持する configurable クラスの拡張。</div><div class="ttdef"><b>Definition:</b> configurable.h:126</div></div>
+<div class="ttc" id="astructconfiguration_1_1auto__group_html"><div class="ttname"><a href="structconfiguration_1_1auto__group.html">configuration::auto_group</a></div><div class="ttdoc">グループの push と pop を自動化するクラス。</div><div class="ttdef"><b>Definition:</b> configuration.h:107</div></div>
+<div class="ttc" id="aclassparallel__driver_html_a08536570ae291698a3fe8608e0b9317f"><div class="ttname"><a href="classparallel__driver.html#a08536570ae291698a3fe8608e0b9317f">parallel_driver::for_each_byte_safe</a></div><div class="ttdeci">void for_each_byte_safe(size_t size, std::function&lt; void(size_t n, int thread_index)&gt; func) const</div><div class="ttdoc">並列処理を行う。もし (n mod 8) が同じなら、スレッドも同じことが保証される。</div><div class="ttdef"><b>Definition:</b> parallel_driver.h:122</div></div>
+<div class="ttc" id="aclasscredit_html"><div class="ttname"><a href="classcredit.html">credit</a></div><div class="ttdoc">名前、引数名、作者の名前、メールアドレス、日付、コードのバージョンなどを定義するクラス。</div><div class="ttdef"><b>Definition:</b> credit.h:47</div></div>
+<div class="ttc" id="aconfigurable_8h_html"><div class="ttname"><a href="configurable_8h.html">configurable.h</a></div></div>
+<div class="ttc" id="aclassconfiguration_html"><div class="ttname"><a href="classconfiguration.html">configuration</a></div><div class="ttdoc">プログラムの設定などを管理するクラス。</div><div class="ttdef"><b>Definition:</b> configuration.h:39</div></div>
+<div class="ttc" id="aclassparallel__driver_html_a1b75e2b16334554feea23aa4040453ff"><div class="ttname"><a href="classparallel__driver.html#a1b75e2b16334554feea23aa4040453ff">parallel_driver::for_each</a></div><div class="ttdeci">void for_each(const shape2 &amp;shape, std::function&lt; void(int i, int j, int thread_index)&gt; func) const</div><div class="ttdoc">2次元の並列処理を行う。</div><div class="ttdef"><b>Definition:</b> parallel_driver.h:190</div></div>
+<div class="ttc" id="astructshape2_html"><div class="ttname"><a href="structshape2.html">shape2</a></div><div class="ttdoc">縦、横といった形状を定義する構造体。</div><div class="ttdef"><b>Definition:</b> shape.h:42</div></div>
+<div class="ttc" id="acommon_8h_html_a5b02c8b38b9521be5c763c68cde927bf"><div class="ttname"><a href="common_8h.html#a5b02c8b38b9521be5c763c68cde927bf">SHKZ_END_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_END_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の終了の定義。</div><div class="ttdef"><b>Definition:</b> common.h:44</div></div>
+<div class="ttc" id="aclassparallel__driver_html_ae111b2c838468f26b344270182ca6a5c"><div class="ttname"><a href="classparallel__driver.html#ae111b2c838468f26b344270182ca6a5c">parallel_driver::for_each</a></div><div class="ttdeci">void for_each(size_t size, std::function&lt; void(size_t n, int thread_index)&gt; func) const</div><div class="ttdoc">並列処理を行う。</div><div class="ttdef"><b>Definition:</b> parallel_driver.h:141</div></div>
+<div class="ttc" id="aclassparallel__driver_html_ac5fe799745db904f107b1bd8bac0fd52"><div class="ttname"><a href="classparallel__driver.html#ac5fe799745db904f107b1bd8bac0fd52">parallel_driver::parallel_driver</a></div><div class="ttdeci">parallel_driver(std::string parallel_name=shkz_default_parallel_name, std::string splitter_name=shkz_default_splitter_name)</div><div class="ttdoc">parallel_driver のコンストラクタ。</div><div class="ttdef"><b>Definition:</b> parallel_driver.h:71</div></div>
+<div class="ttc" id="aclassparallel__driver_html_a70ceeb9f9e6285bd61c3c6bd26eb0a6c"><div class="ttname"><a href="classparallel__driver.html#a70ceeb9f9e6285bd61c3c6bd26eb0a6c">parallel_driver::for_each</a></div><div class="ttdeci">void for_each(const shape3 &amp;shape, std::function&lt; void(int i, int j, int k)&gt; func) const</div><div class="ttdoc">3次元の並列処理を行う。</div><div class="ttdef"><b>Definition:</b> parallel_driver.h:231</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_eee5611a0202d01240738684f683b52c.html">shiokaze</a></li><li class="navelem"><a class="el" href="dir_9809f72069497003d4e56d2b9cc1c282.html">parallel</a></li><li class="navelem"><a class="el" href="parallel__driver_8h.html">parallel_driver.h</a></li>
+    <li class="footer">2020年09月11日(金) 08時43分28秒作成 - 潮風フレームワーク / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>潮風フレームワーク: RCMatrix_interface&lt; N, T &gt; クラステンプレート</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">潮風フレームワーク
+   </div>
+   <div id="projectbrief">研究開発に特化したコンピューターグラフィックスのための流体ソルバ</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_r_c_matrix__interface.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_r_c_matrix__interface-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">RCMatrix_interface&lt; N, T &gt; クラステンプレート<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>行圧縮の疎行列のインターフェース。  
+ <a href="class_r_c_matrix__interface.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_r_c_matrix__interface_8h_source.html">RCMatrix_interface.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:af2b3727ac44a61e062afe41bae0c77ad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#af2b3727ac44a61e062afe41bae0c77ad">initialize</a> (N <a class="el" href="class_r_c_matrix__interface.html#a6873f48127398aa05021e402af5e440e">rows</a>, N <a class="el" href="class_r_c_matrix__interface.html#a8496def1fd922f3cabe07b94a38f0697">columns</a>)=0</td></tr>
+<tr class="memdesc:af2b3727ac44a61e062afe41bae0c77ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された行と列の大きさと行列を初期化する。  <a href="class_r_c_matrix__interface.html#af2b3727ac44a61e062afe41bae0c77ad">[詳解]</a><br /></td></tr>
+<tr class="separator:af2b3727ac44a61e062afe41bae0c77ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a410e54ae214a38116dd5912292e41608"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a410e54ae214a38116dd5912292e41608">copy</a> (const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *m)=0</td></tr>
+<tr class="memdesc:a410e54ae214a38116dd5912292e41608"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列をコピーする。  <a href="class_r_c_matrix__interface.html#a410e54ae214a38116dd5912292e41608">[詳解]</a><br /></td></tr>
+<tr class="separator:a410e54ae214a38116dd5912292e41608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0fad438a97771c70531a7a74b0034e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a6c0fad438a97771c70531a7a74b0034e">clear</a> (N row)=0</td></tr>
+<tr class="memdesc:a6c0fad438a97771c70531a7a74b0034e"><td class="mdescLeft">&#160;</td><td class="mdescRight">行をゼロで初期化する。  <a href="class_r_c_matrix__interface.html#a6c0fad438a97771c70531a7a74b0034e">[詳解]</a><br /></td></tr>
+<tr class="separator:a6c0fad438a97771c70531a7a74b0034e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee410c83b96b84328a1d3c4ccd5b2f0d"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#aee410c83b96b84328a1d3c4ccd5b2f0d">get</a> (N row, N column) const =0</td></tr>
+<tr class="memdesc:aee410c83b96b84328a1d3c4ccd5b2f0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された行と列の行列を取得する。  <a href="class_r_c_matrix__interface.html#aee410c83b96b84328a1d3c4ccd5b2f0d">[詳解]</a><br /></td></tr>
+<tr class="separator:aee410c83b96b84328a1d3c4ccd5b2f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62eb87e70b2b7fcbd3b73c539d55a6b4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a62eb87e70b2b7fcbd3b73c539d55a6b4">add_to_element</a> (N row, N column, T increment_value)=0</td></tr>
+<tr class="memdesc:a62eb87e70b2b7fcbd3b73c539d55a6b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素に値を加算する。  <a href="class_r_c_matrix__interface.html#a62eb87e70b2b7fcbd3b73c539d55a6b4">[詳解]</a><br /></td></tr>
+<tr class="separator:a62eb87e70b2b7fcbd3b73c539d55a6b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ed8a482b5eee602a37aa4f49ea62bc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a42ed8a482b5eee602a37aa4f49ea62bc">clear_element</a> (N row, N column)=0</td></tr>
+<tr class="memdesc:a42ed8a482b5eee602a37aa4f49ea62bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素の値をゼロにする。  <a href="class_r_c_matrix__interface.html#a42ed8a482b5eee602a37aa4f49ea62bc">[詳解]</a><br /></td></tr>
+<tr class="separator:a42ed8a482b5eee602a37aa4f49ea62bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a330c041575ab8ca62e32f1661ce49e79"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a330c041575ab8ca62e32f1661ce49e79">interruptible_for_each</a> (N row, std::function&lt; bool(N column, T &amp;value)&gt; func)=0</td></tr>
+<tr class="memdesc:a330c041575ab8ca62e32f1661ce49e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">逐次的に要素の値を操作する。  <a href="class_r_c_matrix__interface.html#a330c041575ab8ca62e32f1661ce49e79">[詳解]</a><br /></td></tr>
+<tr class="separator:a330c041575ab8ca62e32f1661ce49e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a17abe89f6b758ceff045606d28f716"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a3a17abe89f6b758ceff045606d28f716">const_interruptible_for_each</a> (N row, std::function&lt; bool(N column, T value)&gt; func) const =0</td></tr>
+<tr class="memdesc:a3a17abe89f6b758ceff045606d28f716"><td class="mdescLeft">&#160;</td><td class="mdescRight">逐次的に要素の値を読み込む。  <a href="class_r_c_matrix__interface.html#a3a17abe89f6b758ceff045606d28f716">[詳解]</a><br /></td></tr>
+<tr class="separator:a3a17abe89f6b758ceff045606d28f716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6873f48127398aa05021e402af5e440e"><td class="memItemLeft" align="right" valign="top">virtual N&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a6873f48127398aa05021e402af5e440e">rows</a> () const =0</td></tr>
+<tr class="memdesc:a6873f48127398aa05021e402af5e440e"><td class="mdescLeft">&#160;</td><td class="mdescRight">行の数を取得する。  <a href="class_r_c_matrix__interface.html#a6873f48127398aa05021e402af5e440e">[詳解]</a><br /></td></tr>
+<tr class="separator:a6873f48127398aa05021e402af5e440e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8496def1fd922f3cabe07b94a38f0697"><td class="memItemLeft" align="right" valign="top">virtual N&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a8496def1fd922f3cabe07b94a38f0697">columns</a> () const =0</td></tr>
+<tr class="memdesc:a8496def1fd922f3cabe07b94a38f0697"><td class="mdescLeft">&#160;</td><td class="mdescRight">列の数を取得する。  <a href="class_r_c_matrix__interface.html#a8496def1fd922f3cabe07b94a38f0697">[詳解]</a><br /></td></tr>
+<tr class="separator:a8496def1fd922f3cabe07b94a38f0697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae514d12ab82656bdf639812c2901161b"><td class="memItemLeft" align="right" valign="top">virtual N&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#ae514d12ab82656bdf639812c2901161b">non_zeros</a> (N row) const =0</td></tr>
+<tr class="memdesc:ae514d12ab82656bdf639812c2901161b"><td class="mdescLeft">&#160;</td><td class="mdescRight">行の非ゼロ成分の数を取得する。  <a href="class_r_c_matrix__interface.html#ae514d12ab82656bdf639812c2901161b">[詳解]</a><br /></td></tr>
+<tr class="separator:ae514d12ab82656bdf639812c2901161b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace9b3f7cf4425e9a4a1186af6e82b55f"><td class="memItemLeft" align="right" valign="top">RCMatrix_ptr&lt; N, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#ace9b3f7cf4425e9a4a1186af6e82b55f">duplicate</a> () const</td></tr>
+<tr class="memdesc:ace9b3f7cf4425e9a4a1186af6e82b55f"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列を複製する。  <a href="class_r_c_matrix__interface.html#ace9b3f7cf4425e9a4a1186af6e82b55f">[詳解]</a><br /></td></tr>
+<tr class="separator:ace9b3f7cf4425e9a4a1186af6e82b55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accb7195c5a68c3eecc17875599ace83a"><td class="memItemLeft" align="right" valign="top"><a id="accb7195c5a68c3eecc17875599ace83a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#accb7195c5a68c3eecc17875599ace83a">clear</a> ()</td></tr>
+<tr class="memdesc:accb7195c5a68c3eecc17875599ace83a"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素を全てゼロで初期化する。 <br /></td></tr>
+<tr class="separator:accb7195c5a68c3eecc17875599ace83a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbd61560ec6f36bc224141225d23d072"><td class="memItemLeft" align="right" valign="top">N&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#adbd61560ec6f36bc224141225d23d072">non_zeros</a> () const</td></tr>
+<tr class="memdesc:adbd61560ec6f36bc224141225d23d072"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ての非ゼロ要素の数を得る。  <a href="class_r_c_matrix__interface.html#adbd61560ec6f36bc224141225d23d072">[詳解]</a><br /></td></tr>
+<tr class="separator:adbd61560ec6f36bc224141225d23d072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4e5db44be6741ad19d6e7a1cf8ae46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a1d4e5db44be6741ad19d6e7a1cf8ae46">empty</a> () const</td></tr>
+<tr class="memdesc:a1d4e5db44be6741ad19d6e7a1cf8ae46"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列が空か取得する。  <a href="class_r_c_matrix__interface.html#a1d4e5db44be6741ad19d6e7a1cf8ae46">[詳解]</a><br /></td></tr>
+<tr class="separator:a1d4e5db44be6741ad19d6e7a1cf8ae46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9578a37f7d7b5a05c2db189e5d989601"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a9578a37f7d7b5a05c2db189e5d989601">empty</a> (N row) const</td></tr>
+<tr class="memdesc:a9578a37f7d7b5a05c2db189e5d989601"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列のある行が空か取得する。  <a href="class_r_c_matrix__interface.html#a9578a37f7d7b5a05c2db189e5d989601">[詳解]</a><br /></td></tr>
+<tr class="separator:a9578a37f7d7b5a05c2db189e5d989601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3bb916e9b2b31437157dcc2e9ba0021"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#aa3bb916e9b2b31437157dcc2e9ba0021">for_each</a> (N row, std::function&lt; void(N column, T &amp;value)&gt; func)</td></tr>
+<tr class="memdesc:aa3bb916e9b2b31437157dcc2e9ba0021"><td class="mdescLeft">&#160;</td><td class="mdescRight">逐次的に要素の値を操作する。  <a href="class_r_c_matrix__interface.html#aa3bb916e9b2b31437157dcc2e9ba0021">[詳解]</a><br /></td></tr>
+<tr class="separator:aa3bb916e9b2b31437157dcc2e9ba0021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a151185e7f8f2b92c0b0aa58b405d2e3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a151185e7f8f2b92c0b0aa58b405d2e3b">const_for_each</a> (N row, std::function&lt; void(N column, T value)&gt; func) const</td></tr>
+<tr class="memdesc:a151185e7f8f2b92c0b0aa58b405d2e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素の値を逐次的に読み込む。  <a href="class_r_c_matrix__interface.html#a151185e7f8f2b92c0b0aa58b405d2e3b">[詳解]</a><br /></td></tr>
+<tr class="separator:a151185e7f8f2b92c0b0aa58b405d2e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef52da69a34ab8a731a84cba8cbcd0c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#aef52da69a34ab8a731a84cba8cbcd0c3">multiply</a> (T value)=0</td></tr>
+<tr class="memdesc:aef52da69a34ab8a731a84cba8cbcd0c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ての要素に値を乗算する。  <a href="class_r_c_matrix__interface.html#aef52da69a34ab8a731a84cba8cbcd0c3">[詳解]</a><br /></td></tr>
+<tr class="separator:aef52da69a34ab8a731a84cba8cbcd0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add33ffeb56a95d0bc5a0615c03b212fd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#add33ffeb56a95d0bc5a0615c03b212fd">multiply</a> (const <a class="el" href="class_r_c_matrix__vector__interface.html">RCMatrix_vector_interface</a>&lt; N, T &gt; *rhs, <a class="el" href="class_r_c_matrix__vector__interface.html">RCMatrix_vector_interface</a>&lt; N, T &gt; *result) const =0</td></tr>
+<tr class="memdesc:add33ffeb56a95d0bc5a0615c03b212fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力のベクトルにかけ算を行い、結果を結果ベクトルに代入する。  <a href="class_r_c_matrix__interface.html#add33ffeb56a95d0bc5a0615c03b212fd">[詳解]</a><br /></td></tr>
+<tr class="separator:add33ffeb56a95d0bc5a0615c03b212fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02b97f11cdcd6d27cdc3f7a1ce9ca6fd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a02b97f11cdcd6d27cdc3f7a1ce9ca6fd">multiply</a> (const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *m, <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *result) const =0</td></tr>
+<tr class="memdesc:a02b97f11cdcd6d27cdc3f7a1ce9ca6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">[result] = [self][m] のように入力の行列にかけ算を行う。  <a href="class_r_c_matrix__interface.html#a02b97f11cdcd6d27cdc3f7a1ce9ca6fd">[詳解]</a><br /></td></tr>
+<tr class="separator:a02b97f11cdcd6d27cdc3f7a1ce9ca6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b6515bfd164faeac437b0580241eb7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a33b6515bfd164faeac437b0580241eb7">add</a> (const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *m, <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *result) const =0</td></tr>
+<tr class="memdesc:a33b6515bfd164faeac437b0580241eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列を加算する。  <a href="class_r_c_matrix__interface.html#a33b6515bfd164faeac437b0580241eb7">[詳解]</a><br /></td></tr>
+<tr class="separator:a33b6515bfd164faeac437b0580241eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a867518a069e7b9f28ac6a98172228a4a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a867518a069e7b9f28ac6a98172228a4a">transpose</a> (<a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *result) const =0</td></tr>
+<tr class="memdesc:a867518a069e7b9f28ac6a98172228a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">転置行列を計算する。  <a href="class_r_c_matrix__interface.html#a867518a069e7b9f28ac6a98172228a4a">[詳解]</a><br /></td></tr>
+<tr class="separator:a867518a069e7b9f28ac6a98172228a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe18f55b769aa35d6d9dbf40f5f60bbc"><td class="memItemLeft" align="right" valign="top">virtual RCFixedMatrix_ptr&lt; N, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#afe18f55b769aa35d6d9dbf40f5f60bbc">make_fixed</a> () const =0</td></tr>
+<tr class="memdesc:afe18f55b769aa35d6d9dbf40f5f60bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">固定行列を生成する。  <a href="class_r_c_matrix__interface.html#afe18f55b769aa35d6d9dbf40f5f60bbc">[詳解]</a><br /></td></tr>
+<tr class="separator:afe18f55b769aa35d6d9dbf40f5f60bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c374ad7b9b9badb2f2a145cbba7cc25"><td class="memItemLeft" align="right" valign="top">RCMatrix_vector_ptr&lt; N, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a6c374ad7b9b9badb2f2a145cbba7cc25">multiply</a> (const <a class="el" href="class_r_c_matrix__vector__interface.html">RCMatrix_vector_interface</a>&lt; N, T &gt; *rhs) const</td></tr>
+<tr class="memdesc:a6c374ad7b9b9badb2f2a145cbba7cc25"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力のベクトルにかけ算を行う。  <a href="class_r_c_matrix__interface.html#a6c374ad7b9b9badb2f2a145cbba7cc25">[詳解]</a><br /></td></tr>
+<tr class="separator:a6c374ad7b9b9badb2f2a145cbba7cc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9541ef079d33b00e674c591cf88f4a1"><td class="memItemLeft" align="right" valign="top">RCMatrix_ptr&lt; N, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#ab9541ef079d33b00e674c591cf88f4a1">multiply</a> (const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *m) const</td></tr>
+<tr class="memdesc:ab9541ef079d33b00e674c591cf88f4a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">[result] = [self][m] のように入力の行列にかけ算を行う。  <a href="class_r_c_matrix__interface.html#ab9541ef079d33b00e674c591cf88f4a1">[詳解]</a><br /></td></tr>
+<tr class="separator:ab9541ef079d33b00e674c591cf88f4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0551f523e79a2bb0e1b9ca927eb46013"><td class="memItemLeft" align="right" valign="top">RCMatrix_ptr&lt; N, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a0551f523e79a2bb0e1b9ca927eb46013">add</a> (const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *m) const</td></tr>
+<tr class="memdesc:a0551f523e79a2bb0e1b9ca927eb46013"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力の行列を加算する。  <a href="class_r_c_matrix__interface.html#a0551f523e79a2bb0e1b9ca927eb46013">[詳解]</a><br /></td></tr>
+<tr class="separator:a0551f523e79a2bb0e1b9ca927eb46013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f0ba81c2d194887fccf4c4d946c3c3"><td class="memItemLeft" align="right" valign="top">RCMatrix_ptr&lt; N, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#aa5f0ba81c2d194887fccf4c4d946c3c3">transpose</a> () const</td></tr>
+<tr class="memdesc:aa5f0ba81c2d194887fccf4c4d946c3c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">転置行列を計算する。  <a href="class_r_c_matrix__interface.html#aa5f0ba81c2d194887fccf4c4d946c3c3">[詳解]</a><br /></td></tr>
+<tr class="separator:aa5f0ba81c2d194887fccf4c4d946c3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3be818276d324b7d61c7bd0c84c530"><td class="memTemplParams" colspan="2">template&lt;class Y &gt; </td></tr>
+<tr class="memitem:a1b3be818276d324b7d61c7bd0c84c530"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a1b3be818276d324b7d61c7bd0c84c530">multiply</a> (const std::vector&lt; Y &gt; &amp;rhs, std::vector&lt; Y &gt; &amp;result) const</td></tr>
+<tr class="memdesc:a1b3be818276d324b7d61c7bd0c84c530"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力のベクトルにかけ算を行い、結果を結果ベクトルに代入する。std::vector との互換性を保つために提供される。  <a href="class_r_c_matrix__interface.html#a1b3be818276d324b7d61c7bd0c84c530">[詳解]</a><br /></td></tr>
+<tr class="separator:a1b3be818276d324b7d61c7bd0c84c530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87dbc54d4642fb99da6c71aecacd69b7"><td class="memTemplParams" colspan="2">template&lt;class Y &gt; </td></tr>
+<tr class="memitem:a87dbc54d4642fb99da6c71aecacd69b7"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Y &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__interface.html#a87dbc54d4642fb99da6c71aecacd69b7">multiply</a> (const std::vector&lt; Y &gt; &amp;rhs) const</td></tr>
+<tr class="memdesc:a87dbc54d4642fb99da6c71aecacd69b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力のベクトルにかけ算を行う。std::vector との互換性を保つために提供される。  <a href="class_r_c_matrix__interface.html#a87dbc54d4642fb99da6c71aecacd69b7">[詳解]</a><br /></td></tr>
+<tr class="separator:a87dbc54d4642fb99da6c71aecacd69b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><h3>template&lt;class N, class T&gt;<br />
+class RCMatrix_interface&lt; N, T &gt;</h3>
+
+<p>行圧縮の疎行列のインターフェース。 </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a0551f523e79a2bb0e1b9ca927eb46013"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0551f523e79a2bb0e1b9ca927eb46013">&#9670;&nbsp;</a></span>add() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RCMatrix_ptr&lt;N,T&gt; <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::add </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>入力の行列を加算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[in-out]</td><td>rhs 入力の行列。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>結果の行列。 </dd></dl>
+
+</div>
+</div>
+<a id="a33b6515bfd164faeac437b0580241eb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b6515bfd164faeac437b0580241eb7">&#9670;&nbsp;</a></span>add() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::add </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行列を加算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>加算する行列。 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>結果。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a62eb87e70b2b7fcbd3b73c539d55a6b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62eb87e70b2b7fcbd3b73c539d55a6b4">&#9670;&nbsp;</a></span>add_to_element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::add_to_element </td>
+          <td>(</td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>column</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>increment_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>要素に値を加算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>行のインデックス番号。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">column</td><td>列のインデックス番号。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">increment_value</td><td>加算する値。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6c0fad438a97771c70531a7a74b0034e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c0fad438a97771c70531a7a74b0034e">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::clear </td>
+          <td>(</td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>row</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行をゼロで初期化する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>行のインデックス番号。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a42ed8a482b5eee602a37aa4f49ea62bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42ed8a482b5eee602a37aa4f49ea62bc">&#9670;&nbsp;</a></span>clear_element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::clear_element </td>
+          <td>(</td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>要素の値をゼロにする。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>行のインデックス番号。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">column</td><td>列のインデックス番号。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8496def1fd922f3cabe07b94a38f0697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8496def1fd922f3cabe07b94a38f0697">&#9670;&nbsp;</a></span>columns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual N <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::columns </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>列の数を取得する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>列の数。 </dd></dl>
+
+</div>
+</div>
+<a id="a151185e7f8f2b92c0b0aa58b405d2e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a151185e7f8f2b92c0b0aa58b405d2e3b">&#9670;&nbsp;</a></span>const_for_each()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::const_for_each </td>
+          <td>(</td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(N column, T value)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>要素の値を逐次的に読み込む。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>列のインデックス番号。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>読み込みを行う関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3a17abe89f6b758ceff045606d28f716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a17abe89f6b758ceff045606d28f716">&#9670;&nbsp;</a></span>const_interruptible_for_each()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::const_interruptible_for_each </td>
+          <td>(</td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; bool(N column, T value)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>逐次的に要素の値を読み込む。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>行のインデックス番号。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>読み込みを行う関数。<code>true</code> を返すと、操作を中止する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a410e54ae214a38116dd5912292e41608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a410e54ae214a38116dd5912292e41608">&#9670;&nbsp;</a></span>copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行列をコピーする。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>コピーする行列。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ace9b3f7cf4425e9a4a1186af6e82b55f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace9b3f7cf4425e9a4a1186af6e82b55f">&#9670;&nbsp;</a></span>duplicate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RCMatrix_ptr&lt;N,T&gt; <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::duplicate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行列を複製する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>複製された行列。 </dd></dl>
+
+</div>
+</div>
+<a id="a1d4e5db44be6741ad19d6e7a1cf8ae46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d4e5db44be6741ad19d6e7a1cf8ae46">&#9670;&nbsp;</a></span>empty() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行列が空か取得する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>もし空なら <code>true</code> を、そうでなければ <code>false</code> を返す。 </dd></dl>
+
+</div>
+</div>
+<a id="a9578a37f7d7b5a05c2db189e5d989601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9578a37f7d7b5a05c2db189e5d989601">&#9670;&nbsp;</a></span>empty() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::empty </td>
+          <td>(</td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>row</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行列のある行が空か取得する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>列のインデックス番号。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>もし空なら <code>true</code> を、そうでなければ <code>false</code> を返す。 </dd></dl>
+
+</div>
+</div>
+<a id="aa3bb916e9b2b31437157dcc2e9ba0021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3bb916e9b2b31437157dcc2e9ba0021">&#9670;&nbsp;</a></span>for_each()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::for_each </td>
+          <td>(</td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(N column, T &amp;value)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>逐次的に要素の値を操作する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>列のインデックス番号。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>操作を行う関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aee410c83b96b84328a1d3c4ccd5b2f0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee410c83b96b84328a1d3c4ccd5b2f0d">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual T <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::get </td>
+          <td>(</td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定された行と列の行列を取得する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>行のインデックス番号。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">column</td><td>列のインデックス番号。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>要素の値。 </dd></dl>
+
+</div>
+</div>
+<a id="af2b3727ac44a61e062afe41bae0c77ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b3727ac44a61e062afe41bae0c77ad">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::initialize </td>
+          <td>(</td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>columns</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定された行と列の大きさと行列を初期化する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rows</td><td>行の大きさ。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">columns</td><td>列の大きさ。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a330c041575ab8ca62e32f1661ce49e79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a330c041575ab8ca62e32f1661ce49e79">&#9670;&nbsp;</a></span>interruptible_for_each()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::interruptible_for_each </td>
+          <td>(</td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; bool(N column, T &amp;value)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>逐次的に要素の値を操作する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>行のインデックス番号。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>操作を行う関数。<code>true</code> を返すと、操作を中止する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afe18f55b769aa35d6d9dbf40f5f60bbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe18f55b769aa35d6d9dbf40f5f60bbc">&#9670;&nbsp;</a></span>make_fixed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual RCFixedMatrix_ptr&lt;N,T&gt; <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::make_fixed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>固定行列を生成する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>生成された固定行列。 </dd></dl>
+
+</div>
+</div>
+<a id="ab9541ef079d33b00e674c591cf88f4a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9541ef079d33b00e674c591cf88f4a1">&#9670;&nbsp;</a></span>multiply() <span class="overload">[1/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RCMatrix_ptr&lt;N,T&gt; <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::multiply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>[result] = [self][m] のように入力の行列にかけ算を行う。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[in-out]</td><td>rhs 入力の行列。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>結果の行列。 </dd></dl>
+
+</div>
+</div>
+<a id="a02b97f11cdcd6d27cdc3f7a1ce9ca6fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02b97f11cdcd6d27cdc3f7a1ce9ca6fd">&#9670;&nbsp;</a></span>multiply() <span class="overload">[2/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::multiply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>[result] = [self][m] のように入力の行列にかけ算を行う。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>入力の行列。 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>結果の行列。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6c374ad7b9b9badb2f2a145cbba7cc25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c374ad7b9b9badb2f2a145cbba7cc25">&#9670;&nbsp;</a></span>multiply() <span class="overload">[3/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RCMatrix_vector_ptr&lt;N,T&gt; <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::multiply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_r_c_matrix__vector__interface.html">RCMatrix_vector_interface</a>&lt; N, T &gt; *&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>入力のベクトルにかけ算を行う。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[in-out]</td><td>rhs 入力のベクトル。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="add33ffeb56a95d0bc5a0615c03b212fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add33ffeb56a95d0bc5a0615c03b212fd">&#9670;&nbsp;</a></span>multiply() <span class="overload">[4/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::multiply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_r_c_matrix__vector__interface.html">RCMatrix_vector_interface</a>&lt; N, T &gt; *&#160;</td>
+          <td class="paramname"><em>rhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_r_c_matrix__vector__interface.html">RCMatrix_vector_interface</a>&lt; N, T &gt; *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>入力のベクトルにかけ算を行い、結果を結果ベクトルに代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>入力のベクトル。 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>結果のベクトル。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a87dbc54d4642fb99da6c71aecacd69b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87dbc54d4642fb99da6c71aecacd69b7">&#9670;&nbsp;</a></span>multiply() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<div class="memtemplate">
+template&lt;class Y &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Y&gt; <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::multiply </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; Y &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>入力のベクトルにかけ算を行う。std::vector との互換性を保つために提供される。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[in-out]</td><td>rhs 入力のベクトル。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1b3be818276d324b7d61c7bd0c84c530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b3be818276d324b7d61c7bd0c84c530">&#9670;&nbsp;</a></span>multiply() <span class="overload">[6/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<div class="memtemplate">
+template&lt;class Y &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::multiply </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; Y &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; Y &gt; &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>入力のベクトルにかけ算を行い、結果を結果ベクトルに代入する。std::vector との互換性を保つために提供される。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>入力のベクトル。 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>結果のベクトル。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aef52da69a34ab8a731a84cba8cbcd0c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef52da69a34ab8a731a84cba8cbcd0c3">&#9670;&nbsp;</a></span>multiply() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::multiply </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全ての要素に値を乗算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>乗算する値。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adbd61560ec6f36bc224141225d23d072"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd61560ec6f36bc224141225d23d072">&#9670;&nbsp;</a></span>non_zeros() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">N <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::non_zeros </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全ての非ゼロ要素の数を得る。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>全ての非ゼロ要素の数。 </dd></dl>
+
+</div>
+</div>
+<a id="ae514d12ab82656bdf639812c2901161b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae514d12ab82656bdf639812c2901161b">&#9670;&nbsp;</a></span>non_zeros() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual N <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::non_zeros </td>
+          <td>(</td>
+          <td class="paramtype">N&#160;</td>
+          <td class="paramname"><em>row</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行の非ゼロ成分の数を取得する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>行の非ゼロ成分の数。 </dd></dl>
+
+</div>
+</div>
+<a id="a6873f48127398aa05021e402af5e440e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6873f48127398aa05021e402af5e440e">&#9670;&nbsp;</a></span>rows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual N <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::rows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行の数を取得する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>行の数。 </dd></dl>
+
+</div>
+</div>
+<a id="aa5f0ba81c2d194887fccf4c4d946c3c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5f0ba81c2d194887fccf4c4d946c3c3">&#9670;&nbsp;</a></span>transpose() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RCMatrix_ptr&lt;N,T&gt; <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::transpose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>転置行列を計算する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>result 結果。 </dd></dl>
+
+</div>
+</div>
+<a id="a867518a069e7b9f28ac6a98172228a4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a867518a069e7b9f28ac6a98172228a4a">&#9670;&nbsp;</a></span>transpose() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt;::transpose </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>転置行列を計算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>結果。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>include/shiokaze/math/<a class="el" href="_r_c_matrix__interface_8h_source.html">RCMatrix_interface.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a></li>
+    <li class="footer">2020年09月11日(金) 08時43分29秒作成 - 潮風フレームワーク / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

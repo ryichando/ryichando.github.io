@@ -1,0 +1,13 @@
+@article{10.1109/TVCG.2012.87,
+author = {Ryoichi Ando and Nils Th\"urey and Reiji Tsuruno},
+title = {Preserving Fluid Sheets with Adaptively Sampled Anisotropic Particles},
+journal ={IEEE Transactions on Visualization and Computer Graphics},
+volume = {18},
+number = {8},
+issn = {1077-2626},
+year = {2012},
+pages = {1202-1214},
+doi = {http://doi.ieeecomputersociety.org/10.1109/TVCG.2012.87},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+}

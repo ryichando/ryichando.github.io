@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>潮風フレームワーク: include/shiokaze/particlerasterizer/particlerasterizer3_interface.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">潮風フレームワーク
+   </div>
+   <div id="projectbrief">研究開発に特化したコンピューターグラフィックスのための流体ソルバ</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('particlerasterizer3__interface_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">particlerasterizer3_interface.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="particlerasterizer3__interface_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">**  particlerasterizer3_interface.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">**  This is part of Shiokaze, a research-oriented fluid solver for computer graphics.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">**  Created by Ryoichi Ando &lt;rand@nii.ac.jp&gt; on June 27, 2017.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">**  Permission is hereby granted, free of charge, to any person obtaining a copy of</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">**  this software and associated documentation files (the &quot;Software&quot;), to deal in</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">**  the Software without restriction, including without limitation the rights to use,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">**  copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">**  Software, and to permit persons to whom the Software is furnished to do so,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">**  subject to the following conditions:</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">**  The above copyright notice and this permission notice shall be included in all copies</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">**  or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">**  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">**  INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">**  PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">**  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">**  CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">**  OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef SHKZ_PARTICLEMESHER3_H</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define SHKZ_PARTICLEMESHER3_H</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="recursive__configurable__module_8h.html">shiokaze/core/recursive_configurable_module.h</a>&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="vec_8h.html">shiokaze/math/vec.h</a>&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="bitarray3_8h.html">shiokaze/array/bitarray3.h</a>&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="array3_8h.html">shiokaze/array/array3.h</a>&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="common_8h.html#a391a3576f94983f8ff8e79bed315b29d">SHKZ_BEGIN_NAMESPACE</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="classparticlerasterizer3__interface.html">particlerasterizer3_interface</a> : <span class="keyword">public</span> <a class="code" href="classrecursive__configurable__module.html">recursive_configurable_module</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="recursive__configurable__module_8h.html#a086071a8f57eb7ef4ebb57c17a741c30">DEFINE_MODULE</a>(<a class="code" href="classparticlerasterizer3__interface.html">particlerasterizer3_interface</a>,<span class="stringliteral">&quot;Particle Rasterizer 3D&quot;</span>,<span class="stringliteral">&quot;Rasterizer&quot;</span>,<span class="stringliteral">&quot;Particle rasterizer module&quot;</span>)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structparticlerasterizer3__interface_1_1_particle3.html">   46</a></span>&#160;<span class="comment"></span>    struct <a class="code" href="structparticlerasterizer3__interface_1_1_particle3.html">Particle3</a> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structparticlerasterizer3__interface_1_1_particle3.html#a475f9eead437ee16fdd2ad0a12c94f59">   51</a></span>&#160;        <a class="code" href="structvec.html">vec3r</a> <a class="code" href="structparticlerasterizer3__interface_1_1_particle3.html#a475f9eead437ee16fdd2ad0a12c94f59">p</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structparticlerasterizer3__interface_1_1_particle3.html#ac692e8228dc38163bc8c921995ffb7d3">   56</a></span>&#160;        <a class="code" href="config_8h.html#a6baabe9790f3842ab73110ab342c5c5e">Real</a> <a class="code" href="structparticlerasterizer3__interface_1_1_particle3.html#ac692e8228dc38163bc8c921995ffb7d3">r</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    };</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classparticlerasterizer3__interface.html#a2d83531e12d646f9c7081659364f169d">build_levelset</a>( <a class="code" href="classarray3.html">array3&lt;Real&gt;</a> &amp;fluid, <span class="keyword">const</span> <a class="code" href="classbitarray3.html">bitarray3</a> &amp;mask, <span class="keyword">const</span> std::vector&lt;Particle3&gt; &amp;particles ) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> initialize( <span class="keyword">const</span> <a class="code" href="structshape3.html">shape3</a> &amp;shape, <span class="keywordtype">double</span> dx ) = 0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> initialize( <span class="keyword">const</span> <a class="code" href="classconfigurable.html#a543be0036cefaf1cde8d268b8414754d">configurable::environment_map</a> &amp;environment )<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        assert(<a class="code" href="classconfigurable.html#afa02dcb37a5080361011d790a784baa6">check_set</a>(environment,{<span class="stringliteral">&quot;shape&quot;</span>,<span class="stringliteral">&quot;dx&quot;</span>}));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        initialize(</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            get_env&lt;shape3&gt;(environment,<span class="stringliteral">&quot;shape&quot;</span>),</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            get_env&lt;double&gt;(environment,<span class="stringliteral">&quot;dx&quot;</span>)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">using</span> particlerasterizer3_ptr = std::unique_ptr&lt;particlerasterizer3_interface&gt;;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">using</span> <a class="code" href="classrecursive__configurable__driver.html">particlerasterizer3_driver</a> = <a class="code" href="classrecursive__configurable__driver.html">recursive_configurable_driver&lt;particlerasterizer3_interface&gt;</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<a class="code" href="common_8h.html#a5b02c8b38b9521be5c763c68cde927bf">SHKZ_END_NAMESPACE</a></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassparticlerasterizer3__interface_html"><div class="ttname"><a href="classparticlerasterizer3__interface.html">particlerasterizer3_interface</a></div><div class="ttdoc">粒子群からレベルセットを生成するインターフェース。&quot;convexhullrasterizer3&quot; と &quot;flatrasterizer3&quot; が実装として提供される。</div><div class="ttdef"><b>Definition:</b> particlerasterizer3_interface.h:39</div></div>
+<div class="ttc" id="aclassbitarray3_html"><div class="ttname"><a href="classbitarray3.html">bitarray3</a></div><div class="ttdoc">recursive_configurable インスタンスのメンバーインスタンスとして定義可能な3次元ビット配列クラス。</div><div class="ttdef"><b>Definition:</b> bitarray3.h:43</div></div>
+<div class="ttc" id="aclassrecursive__configurable__driver_html"><div class="ttname"><a href="classrecursive__configurable__driver.html">recursive_configurable_driver</a></div><div class="ttdoc">recursive_configurable のクラスを抱擁するクラス。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:76</div></div>
+<div class="ttc" id="astructshape3_html"><div class="ttname"><a href="structshape3.html">shape3</a></div><div class="ttdoc">縦、横、奥行きといった3次元の形状を定義する構造体。</div><div class="ttdef"><b>Definition:</b> shape.h:478</div></div>
+<div class="ttc" id="arecursive__configurable__module_8h_html_a086071a8f57eb7ef4ebb57c17a741c30"><div class="ttname"><a href="recursive__configurable__module_8h.html#a086071a8f57eb7ef4ebb57c17a741c30">DEFINE_MODULE</a></div><div class="ttdeci">#define DEFINE_MODULE(CLASS_T, LNG_NAME, ARG_NAME, DESCRIPTION)</div><div class="ttdoc">モジュールの読み込みを簡単にする定義。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:39</div></div>
+<div class="ttc" id="acommon_8h_html_a391a3576f94983f8ff8e79bed315b29d"><div class="ttname"><a href="common_8h.html#a391a3576f94983f8ff8e79bed315b29d">SHKZ_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_BEGIN_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の開始の定義。</div><div class="ttdef"><b>Definition:</b> common.h:39</div></div>
+<div class="ttc" id="aclassparticlerasterizer3__interface_html_a2d83531e12d646f9c7081659364f169d"><div class="ttname"><a href="classparticlerasterizer3__interface.html#a2d83531e12d646f9c7081659364f169d">particlerasterizer3_interface::build_levelset</a></div><div class="ttdeci">virtual void build_levelset(array3&lt; Real &gt; &amp;fluid, const bitarray3 &amp;mask, const std::vector&lt; Particle3 &gt; &amp;particles) const =0</div><div class="ttdoc">粒子群からレベルセットを生成する。</div></div>
+<div class="ttc" id="abitarray3_8h_html"><div class="ttname"><a href="bitarray3_8h.html">bitarray3.h</a></div></div>
+<div class="ttc" id="aarray3_8h_html"><div class="ttname"><a href="array3_8h.html">array3.h</a></div></div>
+<div class="ttc" id="aconfig_8h_html_a6baabe9790f3842ab73110ab342c5c5e"><div class="ttname"><a href="config_8h.html#a6baabe9790f3842ab73110ab342c5c5e">Real</a></div><div class="ttdeci">float Real</div><div class="ttdoc">一般的に使われる浮動小数点の精度。ここの定義を double に変えて、精度を高められる。</div><div class="ttdef"><b>Definition:</b> config.h:34</div></div>
+<div class="ttc" id="aclassconfigurable_html_afa02dcb37a5080361011d790a784baa6"><div class="ttname"><a href="classconfigurable.html#afa02dcb37a5080361011d790a784baa6">configurable::check_set</a></div><div class="ttdeci">bool check_set(const environment_map &amp;environment, std::vector&lt; std::string &gt; names)</div><div class="ttdoc">変数のキーの配列に対応する値が存在するか取得する。</div><div class="ttdef"><b>Definition:</b> configurable.h:115</div></div>
+<div class="ttc" id="astructvec_html"><div class="ttname"><a href="structvec.html">vec</a></div><div class="ttdoc">固定サイズのベクトル構造体。</div><div class="ttdef"><b>Definition:</b> vec.h:38</div></div>
+<div class="ttc" id="avec_8h_html"><div class="ttname"><a href="vec_8h.html">vec.h</a></div></div>
+<div class="ttc" id="astructparticlerasterizer3__interface_1_1_particle3_html_a475f9eead437ee16fdd2ad0a12c94f59"><div class="ttname"><a href="structparticlerasterizer3__interface_1_1_particle3.html#a475f9eead437ee16fdd2ad0a12c94f59">particlerasterizer3_interface::Particle3::p</a></div><div class="ttdeci">vec3r p</div><div class="ttdoc">粒子の位置。</div><div class="ttdef"><b>Definition:</b> particlerasterizer3_interface.h:51</div></div>
+<div class="ttc" id="aclassconfigurable_html_a543be0036cefaf1cde8d268b8414754d"><div class="ttname"><a href="classconfigurable.html#a543be0036cefaf1cde8d268b8414754d">configurable::environment_map</a></div><div class="ttdeci">std::map&lt; std::string, const void * &gt; environment_map</div><div class="ttdoc">environment_map のタイプ。</div><div class="ttdef"><b>Definition:</b> configurable.h:46</div></div>
+<div class="ttc" id="astructparticlerasterizer3__interface_1_1_particle3_html_ac692e8228dc38163bc8c921995ffb7d3"><div class="ttname"><a href="structparticlerasterizer3__interface_1_1_particle3.html#ac692e8228dc38163bc8c921995ffb7d3">particlerasterizer3_interface::Particle3::r</a></div><div class="ttdeci">Real r</div><div class="ttdoc">粒子の半径。</div><div class="ttdef"><b>Definition:</b> particlerasterizer3_interface.h:56</div></div>
+<div class="ttc" id="astructparticlerasterizer3__interface_1_1_particle3_html"><div class="ttname"><a href="structparticlerasterizer3__interface_1_1_particle3.html">particlerasterizer3_interface::Particle3</a></div><div class="ttdoc">粒子の構造体。</div><div class="ttdef"><b>Definition:</b> particlerasterizer3_interface.h:46</div></div>
+<div class="ttc" id="acommon_8h_html_a5b02c8b38b9521be5c763c68cde927bf"><div class="ttname"><a href="common_8h.html#a5b02c8b38b9521be5c763c68cde927bf">SHKZ_END_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_END_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の終了の定義。</div><div class="ttdef"><b>Definition:</b> common.h:44</div></div>
+<div class="ttc" id="arecursive__configurable__module_8h_html"><div class="ttname"><a href="recursive__configurable__module_8h.html">recursive_configurable_module.h</a></div></div>
+<div class="ttc" id="aclassrecursive__configurable__module_html"><div class="ttname"><a href="classrecursive__configurable__module.html">recursive_configurable_module</a></div><div class="ttdoc">module を継承する recursive_configurable クラス。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:49</div></div>
+<div class="ttc" id="aclassarray3_html"><div class="ttname"><a href="classarray3.html">array3</a></div><div class="ttdoc">recursive_configurable インスタンスのメンバーインスタンスとして定義可能な3次元配列クラス。</div><div class="ttdef"><b>Definition:</b> array3.h:42</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_eee5611a0202d01240738684f683b52c.html">shiokaze</a></li><li class="navelem"><a class="el" href="dir_8243c6e45e776ea2340491545b4afb75.html">particlerasterizer</a></li><li class="navelem"><a class="el" href="particlerasterizer3__interface_8h.html">particlerasterizer3_interface.h</a></li>
+    <li class="footer">2020年09月11日(金) 08時43分28秒作成 - 潮風フレームワーク / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

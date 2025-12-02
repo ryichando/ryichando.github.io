@@ -1,0 +1,18 @@
+@inproceedings{brush2010ando,
+crossref = {short-proc},
+author = {Ryoichi Ando and Reiji Tsuruno },
+title = {{Segmental Brush Synthesis with Stroke Images}},
+pages = {89-92},
+URL = {http://www.eg.org/EG/DL/conf/EG2010/short/089-092.pdf},
+abstract = {We present a new approach for synthesizing realistic brush strokes exploiting recent works of texture synthesis from stroke images. (See Figure 1). In our method, stroke images are automatically decomposed into a sequence of quad segments and stitched together along the path of user窶冱 input to produce final image. Numbers of methods using textures on digital painting have been explored; our usage of texture is novel in that the source image is typically a photo and the synthesis is fast enough to achieve realtime feedback. In contrast to previous methods, our approach allows a large variety of artistic brushes to be interactively simulated fairly so that unique media which haven窶冲 caught attention yet such as lipsticks or finger paint, are well reproduced. We shall show some artworks created using our method and demonstrate feasibility of our algorithm.We present a new approach for synthesizing realistic brush strokes exploiting recent works of texture synthesis from stroke images. (See Figure 1). In our method, stroke images are automatically decomposed into a sequence of quad segments and stitched together along the path of user窶冱 input to produce final image. Numbers of methods using textures on digital painting have been explored; our usage of texture is novel in that the source image is typically a photo and the synthesis is fast enough to achieve realtime feedback. In contrast to previous methods, our approach allows a large variety of artistic brushes to be interactively simulated fairly so that unique media which haven窶冲 caught attention yet such as lipsticks or finger paint, are well reproduced. We shall show some artworks created using our method and demonstrate feasibility of our algorithm.We present a new approach for synthesizing realistic brush strokes exploiting recent works of texture synthesis from stroke images. (See Figure 1). In our method, stroke images are automatically decomposed into a sequence of quad segments and stitched together along the path of user窶冱 input to produce final image. Numbers of methods using textures on digital painting have been explored; our usage of texture is novel in that the source image is typically a photo and the synthesis is fast enough to achieve realtime feedback. In contrast to previous methods, our approach allows a large variety of artistic brushes to be interactively simulated fairly so that unique media which haven窶冲 caught attention yet such as lipsticks or finger paint, are well reproduced. We shall show some artworks created using our method and demonstrate feasibility of our algorithm.}
+}
+
+@proceedings{short-proc,
+editor = {H. P. A. Lensch and S. Seipel},
+title = {EG 2010 - Short papers},
+year = {2010},
+isbn = {undefined},
+issn = {1017-4656},
+address = {Norrkﾃｶping, Sweden},
+publisher = {Eurographics Association}
+}

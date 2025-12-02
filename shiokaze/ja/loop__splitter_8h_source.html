@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>潮風フレームワーク: include/shiokaze/parallel/loop_splitter.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">潮風フレームワーク
+   </div>
+   <div id="projectbrief">研究開発に特化したコンピューターグラフィックスのための流体ソルバ</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('loop__splitter_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">loop_splitter.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="loop__splitter_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">**  loop_splitter.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">**  This is part of Shiokaze, a research-oriented fluid solver for computer graphics.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">**  Created by Ryoichi Ando &lt;rand@nii.ac.jp&gt; on March 8, 2018.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">**  Permission is hereby granted, free of charge, to any person obtaining a copy of</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">**  this software and associated documentation files (the &quot;Software&quot;), to deal in</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">**  the Software without restriction, including without limitation the rights to use,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">**  copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">**  Software, and to permit persons to whom the Software is furnished to do so,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">**  subject to the following conditions:</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">**  The above copyright notice and this permission notice shall be included in all copies</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">**  or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">**  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">**  INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">**  PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">**  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">**  CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">**  OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef SHKZ_LOOP_SPLITTER_H</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define SHKZ_LOOP_SPLITTER_H</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="recursive__configurable__module_8h.html">shiokaze/core/recursive_configurable_module.h</a>&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<a class="code" href="common_8h.html#a391a3576f94983f8ff8e79bed315b29d">SHKZ_BEGIN_NAMESPACE</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="classloop__splitter.html">loop_splitter</a> : <span class="keyword">public</span> <a class="code" href="classrecursive__configurable__module.html">recursive_configurable_module</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="recursive__configurable__module_8h.html#a086071a8f57eb7ef4ebb57c17a741c30">DEFINE_MODULE</a>(<a class="code" href="classloop__splitter.html">loop_splitter</a>,<span class="stringliteral">&quot;Parallel Loop Splitter&quot;</span>,<span class="stringliteral">&quot;Loop&quot;</span>,<span class="stringliteral">&quot;Parallel loop splitter module&quot;</span>)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    virtual const <span class="keywordtype">void</span>* <a class="code" href="classloop__splitter.html#abfdd38b4e98a1dfb878bbcb4f4d66144">new_context</a> ( <span class="keywordtype">size_t</span> size, <span class="keywordtype">int</span> num_threads ) const = 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    virtual std::function&lt;<span class="keywordtype">size_t</span>(const <span class="keywordtype">void</span> *context, <span class="keywordtype">int</span> thread_index)&gt; <a class="code" href="classloop__splitter.html#a890756aa5b2f78da3dd8d26fedb43470">get_start_func</a>( const <span class="keywordtype">void</span> *context ) const = 0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    virtual std::function&lt;<span class="keywordtype">bool</span>(const <span class="keywordtype">void</span> *context, <span class="keywordtype">size_t</span> &amp;n, <span class="keywordtype">int</span> thread_index)&gt; <a class="code" href="classloop__splitter.html#aa98ee77f0bcd6a7ba274e4f3b88b4e5e">get_advance_func</a>( const <span class="keywordtype">void</span> *context ) const = 0;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classloop__splitter.html#afbdd84f9a2058147c3ccd0d7e10142e4">delete_context</a>( const <span class="keywordtype">void</span> *context ) const = 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;using loop_splitter_ptr = std::unique_ptr&lt;<a class="code" href="classloop__splitter.html">loop_splitter</a>&gt;;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<a class="code" href="common_8h.html#a5b02c8b38b9521be5c763c68cde927bf">SHKZ_END_NAMESPACE</a></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">//</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassloop__splitter_html_afbdd84f9a2058147c3ccd0d7e10142e4"><div class="ttname"><a href="classloop__splitter.html#afbdd84f9a2058147c3ccd0d7e10142e4">loop_splitter::delete_context</a></div><div class="ttdeci">virtual void delete_context(const void *context) const =0</div><div class="ttdoc">new_context で作成されたコンテクストを解放する。</div></div>
+<div class="ttc" id="arecursive__configurable__module_8h_html_a086071a8f57eb7ef4ebb57c17a741c30"><div class="ttname"><a href="recursive__configurable__module_8h.html#a086071a8f57eb7ef4ebb57c17a741c30">DEFINE_MODULE</a></div><div class="ttdeci">#define DEFINE_MODULE(CLASS_T, LNG_NAME, ARG_NAME, DESCRIPTION)</div><div class="ttdoc">モジュールの読み込みを簡単にする定義。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:39</div></div>
+<div class="ttc" id="acommon_8h_html_a391a3576f94983f8ff8e79bed315b29d"><div class="ttname"><a href="common_8h.html#a391a3576f94983f8ff8e79bed315b29d">SHKZ_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_BEGIN_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の開始の定義。</div><div class="ttdef"><b>Definition:</b> common.h:39</div></div>
+<div class="ttc" id="aclassloop__splitter_html"><div class="ttname"><a href="classloop__splitter.html">loop_splitter</a></div><div class="ttdoc">並列処理のためのループの分散を扱う抽象クラス。&quot;sequential_splitter&quot; と &quot;dispersed_splitter&quot; が実装として提供される。</div><div class="ttdef"><b>Definition:</b> loop_splitter.h:36</div></div>
+<div class="ttc" id="acommon_8h_html_a5b02c8b38b9521be5c763c68cde927bf"><div class="ttname"><a href="common_8h.html#a5b02c8b38b9521be5c763c68cde927bf">SHKZ_END_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_END_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の終了の定義。</div><div class="ttdef"><b>Definition:</b> common.h:44</div></div>
+<div class="ttc" id="aclassloop__splitter_html_a890756aa5b2f78da3dd8d26fedb43470"><div class="ttname"><a href="classloop__splitter.html#a890756aa5b2f78da3dd8d26fedb43470">loop_splitter::get_start_func</a></div><div class="ttdeci">virtual std::function&lt; size_t(const void *context, int thread_index)&gt; get_start_func(const void *context) const =0</div><div class="ttdoc">指定されたスレッドに関してループの最初のインデックスを提供する関数を取得する。</div></div>
+<div class="ttc" id="aclassloop__splitter_html_aa98ee77f0bcd6a7ba274e4f3b88b4e5e"><div class="ttname"><a href="classloop__splitter.html#aa98ee77f0bcd6a7ba274e4f3b88b4e5e">loop_splitter::get_advance_func</a></div><div class="ttdeci">virtual std::function&lt; bool(const void *context, size_t &amp;n, int thread_index)&gt; get_advance_func(const void *context) const =0</div><div class="ttdoc">ループのインデックスを進める関数を取得する。</div></div>
+<div class="ttc" id="arecursive__configurable__module_8h_html"><div class="ttname"><a href="recursive__configurable__module_8h.html">recursive_configurable_module.h</a></div></div>
+<div class="ttc" id="aclassloop__splitter_html_abfdd38b4e98a1dfb878bbcb4f4d66144"><div class="ttname"><a href="classloop__splitter.html#abfdd38b4e98a1dfb878bbcb4f4d66144">loop_splitter::new_context</a></div><div class="ttdeci">virtual const void * new_context(size_t size, int num_threads) const =0</div><div class="ttdoc">ループの新しいコンテクストを作成する。</div></div>
+<div class="ttc" id="aclassrecursive__configurable__module_html"><div class="ttname"><a href="classrecursive__configurable__module.html">recursive_configurable_module</a></div><div class="ttdoc">module を継承する recursive_configurable クラス。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:49</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_eee5611a0202d01240738684f683b52c.html">shiokaze</a></li><li class="navelem"><a class="el" href="dir_9809f72069497003d4e56d2b9cc1c282.html">parallel</a></li><li class="navelem"><a class="el" href="loop__splitter_8h.html">loop_splitter.h</a></li>
+    <li class="footer">2020年09月11日(金) 08時43分28秒作成 - 潮風フレームワーク / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

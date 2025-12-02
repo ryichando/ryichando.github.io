@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+	<head>
+		<meta http-equiv="Content-Language" content="ja" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex" />
+
+		<title>薄い液体層を保持可能な粒子ベースの流体表現</title>
+		
+		<style type="text/css">	
+			body {
+				background-color: #f2f2f2;
+				background-image:url('img/grad.jpg');
+				background-repeat:repeat-x;
+				color: black;
+				font-family: sans-serif;
+				margin-top: 15px;
+				margin-left: 7%; margin-right: 7%;
+			}
+			
+			img {
+				border-style: none;
+				}
+			:link { color: #38468c }
+			:visited { color: #8c383c }
+			.boardered {
+				border-style: none;
+				border-width: 0px;
+			}
+			
+			.caption {
+				// font-style: italic;
+			}
+			
+			.picture {
+				display: block;
+				border-color: #343434;
+				border-style: solid;
+				border-width: 1px;
+				display: block;
+			}
+				
+		.publication {
+		font-family: times, serif;
+		}
+		</style>
+		<script type="text/javascript" src="../jwplayer/jwplayer.js"></script>
+	</head>
+	
+	<body>
+	
+	<p align="right"><a href="index.html">[English]</a></p>
+	<center>
+	<h2>薄い液体層を保持可能な粒子ベースの流体表現</h2>
+	<big><p><a href="../index.html">安東遼一</a> &nbsp; &nbsp; 鶴野玲治</big>
+		<div>
+			<img src="img/teaser.jpg" width="844" height="249" alt="Teaser" />
+		</div>
+	</center>
+	<p class="caption"><b>水の飛沫表現：</b>左から右に： 粒子による可視化．非等方性重み付け陰関数を用いたなめらかな表面サーフェス生成結果．同時間で，本手法の頂点挿入を行わなかった場合． 
+<a target="_blank" href="img/teaser_big.png">大きな画像を表示する．</a></p>
+		<p>
+		<center><b><h3>この論文は発展して<a href="tvcg.html">TVCG論文</a>になりました．</h3></b></center>
+		</p>
+		<h2>あらまし</h2>
+		
+		<p>本論文では，流体の薄い液体層を陽的に保持可能な粒子法流体表現モデルを提案する．本論文の第一貢献は，薄い液体層内で分裂し，
+		高密度領域で結合する完全にメッシュレスな粒子法モデルである．既存の界面追跡手法と比較して，提案手法は数値拡散を伴わず，界面の「からまり」が発生せず，また
+		メッシュレスな表現より頑健に幾何学的変化を扱うことが可能である．本手法では，基盤の流体モデルとして，Fluid-Implicit-Particle (FLIP) と微弱なバネモデルを使用する．
+		この組み合わせにより，粒子の空間分布を一様に保ったまま，水のなめらかな流動表現が可能であることを示す．薄い液体層は，粒子の周辺分布の主成分分析を用いて検出する．
+		薄い液体層の表面サーフェス生成は，主成分分析情報を用いた非等方性重み付け陰関数により実現される．本提案手法は直感的に実装でき，並列化が容易であり，同時に複雑な薄い液体層を持った
+		流体表現が可能である．</p>
+		
+			<h2>論文</h2>
+	
+	<p><a href="download/sheetflip.pdf"><b>論文 (英語) (PDF)</b></a><br>Ryoichi Ando and Reiji Tsuruno. <b>A Particle-based Method for Preserving Fluid Sheets.</b><br>
+	In Proceedings of ACM SIGGRAPH / EUROGRAPHICS Symposium on Computer Animation (SCA), 2011.</p>
+	
+	<p><a href="download/bibtex.txt"><b>Bibtex (Text)</b></a><br> LaTeX ワードプロセッサ形式の bibtex フォーマット．</p>
+	
+	<p><a href="download/SCA2011.pdf"><b>プレゼンテーションスライド</b></a><br>PDF（英語）． 
+
+	<p><a href="download/sheetflip.mp4"><b>動画 (MP4)</b></a><br>本手法で生成された流体アニメーションの動画． (100 MB)</p>
+		
+		<h2>図表</h2>
+		
+	<div>
+		<img src="img/2dflow.png" width="684" height="264" alt="2D Liquid Flow" />
+	</div>
+	
+	<p class="caption"><b>２次元ダム崩壊実験：</b> 左：本手法の微弱なバネを適用した FLIP ベースの流体シミュレーション．右： PIC/FLIP 法．
+	本手法の流体シミュレーションでは粒子の分布を一様に保てるが，PIC/FLIP では分布が不均一になってしまう．</p>
+
+	<div>
+		<img class="picture" src="img/3dflow.jpg" width="739" height="553" alt="3D Liquid Flow" />
+	</div>
+	
+	<p class="caption"><b>微弱なバネの効果：</b>上から下に： 均一な配置された PIC/FLIP 法， ジッター配置された PIC/FLIP 法，
+微弱なバネを適用した PIC/FLIP 法．左の２列：粒子の分裂を行わなかった場合．右の２列：分裂を行った場合．
+<a target="_blank" href="img/3dflow_big.png">大きな画像を表示する．</a></p>
+	
+	<div>
+		<img class="picture" src="img/stuck.jpg" width="675" height="950" alt="Stuck Particle and Reposition" />
+	</div>
+	
+	<p class="caption"><b>障害物に張り付いた水の液体層：</b>上から下に： 水の液体層が障害物に張り付いてしまった様子．張り付いた液体層を再度液体内に再配置した様子．
+粒子による可視化．</p>
+		
+	<div>
+		<img class="picture" src="img/towerdrop.jpg" width="713" height="726" alt="Tower Drop" />
+	</div>
+	
+	<p class="caption"><b>立方体上への水球の落下実験：</b> 上段：本手法の流体シミュレーションのみを行った場合．中断：液体層保持アルゴリズムを適用させた場合．
+	下段：粒子を用いた可視化．赤い点は分裂した粒子を示す． <a target="_blank" href="img/towerdrop_big.png">大きな画像を表示する．</a></p>
+	
+	<div>
+		<img class="picture" src="img/cliff.jpg" width="681" height="614" alt="Cliff Pour" />
+	</div>
+	
+	<p class="caption"><b>直方体上への液体注入実験：</b>本実験では，注がれた液体が直方体の端から流出し，連続した液体層を保ったまま下段の液体層に着地している様子が観察できる．
+	<a target="_blank" href="img/cliff_big.png">大きな画像を表示する．</a></p></p>
+	
+	<div>
+		<img class="picture" src="img/enright.jpg" width="766" height="443" alt="Enright Deformation Test" />
+	</div>
+	
+	<p class="caption"><b>Enright の変形実験：</b>薄膜層で分裂し，高密度領域で結合する本手法の粒子ベースの薄膜保持モデルは，Enright 変形実験の著しい変形にも対応できる
+	（分裂粒子は赤で示されている）．</p>
+		
+	<div>
+		<img class="picture" src="img/dambreak.jpg" width="800" height="924" alt="Dam Break" />
+	</div>
+	
+	<p class="caption">本手法を用いた３次元ダム崩壊実験</p>
+	
+	</p>
+
+<p><br><a href="../">[戻る] (英語)</a></p>
+
+	</body>	
+</html>

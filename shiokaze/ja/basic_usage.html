@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>潮風フレームワーク: 基本的な使い方</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">潮風フレームワーク
+   </div>
+   <div id="projectbrief">研究開発に特化したコンピューターグラフィックスのための流体ソルバ</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('basic_usage.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">基本的な使い方 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>潮風は "shiokaze" ディレクトリ直下から次のようなコマンドで実行されるよう設計されています。</p>
+<div class="fragment"><div class="line">./run Target=macliquid2 Threads=1</div>
+</div><!-- fragment --><p>macliquid2 は目的となる動的ライブラリの名前で、Threads パラメータはスレッドの数です (もし省略された場合、利用できる最大コアの数が割り当てられます。2次元のアニメーションでは、スレッドの数を1にした場合が高速な傾向があります。)プログラムは実行され、2次元の水球落下のアニメーションと共に、次のセクションがターミナルにプリントされます。</p>
+<div class="fragment"><div class="line">-------------------  MAC Liquid 2D (Liquid)  -------------------</div>
+<div class="line">   Advection = &quot;macadvection2&quot;</div>
+<div class="line">   Array = &quot;lineararray_core2&quot;</div>
+<div class="line">   Gravity = 0,-9.8</div>
+<div class="line">   GridUtility = &quot;gridutility2&quot;</div>
+<div class="line">   GridVisualizer = &quot;gridvisualizer2&quot;</div>
+<div class="line">   MacStats = &quot;macstats2&quot;</div>
+<div class="line">   MacUtility = &quot;macutility2&quot;</div>
+<div class="line">   MacVisualizer = &quot;macvisualizer2&quot;</div>
+<div class="line">   Name = &quot;waterdrop2&quot;</div>
+<div class="line">   Projection = &quot;macpressuresolver2&quot;</div>
+<div class="line">   ResolutionScale = 1.0</div>
+<div class="line">   ResolutionX = 64</div>
+<div class="line">   ResolutionY = 32</div>
+<div class="line">   SurfaceTracker = &quot;maclevelsetsurfacetracker2&quot;</div>
+<div class="line">   TimeStepper = &quot;timestepper&quot;</div>
+<div class="line">   VolumeChangeTolRatio = 0.03</div>
+<div class="line">   VolumeCorrection = Yes</div>
+<div class="line">-------------  MAC Visualizer 2D (MacVisualizer)  --------------</div>
+</div><!-- fragment --><p> これは液体ソルバに該当するパラメータのリストで、コマンドラインインターフェースを用いて変更できます。例えば、空間解像度を2倍にしたい場合、次のコマンドを走らせます。</p>
+<div class="fragment"><div class="line">./run Target=macliquid2 Threads=1 ResolutionScale=2.0</div>
+</div><!-- fragment --><p>同じことが、次のコマンドでも可能です。</p>
+<div class="fragment"><div class="line">./run Target=macliquid2 Threads=1 Liquid.ResolutionScale=2.0</div>
+</div><!-- fragment --><p>ここで、私達は "Liquid" は変数名と呼び、"ResolutionScale" は変数項目と呼びます。それぞれのパラメータについて詳細を知りたい場合、コマンドに "help" を追加して確認できます。</p>
+<div class="fragment"><div class="line">./run Target=macliquid2 help</div>
+</div><!-- fragment --><p>キーボード処理として、'/' が押されたらシミュレーションを一時停止したり実行したりします。'R' が押されたら、シミュレーションを最初から開始します。'.' キーが押されたら、シミュレーションが一時停止の時、一度だけ idle 関数を呼びます。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">2020年09月11日(金) 08時43分29秒作成 - 潮風フレームワーク / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

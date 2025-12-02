@@ -1,0 +1,3237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>潮風フレームワーク: bitmacarray3 クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">潮風フレームワーク
+   </div>
+   <div id="projectbrief">研究開発に特化したコンピューターグラフィックスのための流体ソルバ</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classbitmacarray3.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="classbitmacarray3-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">bitmacarray3 クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classrecursive__configurable.html" title="複数の子供 configurable を保持する configurable クラスの拡張。">recursive_configurable</a> インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。  
+ <a href="classbitmacarray3.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="bitmacarray3_8h_source.html">bitmacarray3.h</a>&gt;</code></p>
+<div class="dynheader">
+bitmacarray3 の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classbitmacarray3.png" usemap="#bitmacarray3_map" alt=""/>
+  <map id="bitmacarray3_map" name="bitmacarray3_map">
+<area href="classrecursive__configurable.html" title="複数の子供 configurable を保持する configurable クラスの拡張。" alt="recursive_configurable" shape="rect" coords="0,56,144,80"/>
+<area href="classmessageable.html" title="メッセージクラス。" alt="messageable" shape="rect" coords="154,56,298,80"/>
+<area href="classconfigurable.html" title="load - configure - initialize ワークフローを管理するための基本クラス。" alt="configurable" shape="rect" coords="0,0,144,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbitmacarray3_1_1type3.html">type3</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">このグリッドのプロパティー集。  <a href="structbitmacarray3_1_1type3.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a292245627d24ab19ca08e08aa267a7e1"><td class="memItemLeft" align="right" valign="top"><a id="a292245627d24ab19ca08e08aa267a7e1"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>ACTIVES</b> = true, 
+<b>ALL</b> = false
+ }</td></tr>
+<tr class="separator:a292245627d24ab19ca08e08aa267a7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classconfigurable"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classconfigurable')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classconfigurable.html">configurable</a> に属する継承公開型</td></tr>
+<tr class="memitem:a543be0036cefaf1cde8d268b8414754d inherit pub_types_classconfigurable"><td class="memItemLeft" align="right" valign="top"><a id="a543be0036cefaf1cde8d268b8414754d"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfigurable.html#a543be0036cefaf1cde8d268b8414754d">environment_map</a> = std::map&lt; std::string, const void * &gt;</td></tr>
+<tr class="memdesc:a543be0036cefaf1cde8d268b8414754d inherit pub_types_classconfigurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">environment_map のタイプ。 <br /></td></tr>
+<tr class="separator:a543be0036cefaf1cde8d268b8414754d inherit pub_types_classconfigurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae2c4b9d3587a2ce00f0b8e373d7ad941"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#ae2c4b9d3587a2ce00f0b8e373d7ad941">bitmacarray3</a> (<a class="el" href="classrecursive__configurable.html">recursive_configurable</a> *parent, const <a class="el" href="structshape3.html">shape3</a> &amp;<a class="el" href="classbitmacarray3.html#a0faaecfb9d9d94324cbad92b4815db46">shape</a>, std::string core_name=&quot;&quot;)</td></tr>
+<tr class="memdesc:ae2c4b9d3587a2ce00f0b8e373d7ad941"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のコンストラクタ。  <a href="classbitmacarray3.html#ae2c4b9d3587a2ce00f0b8e373d7ad941">[詳解]</a><br /></td></tr>
+<tr class="separator:ae2c4b9d3587a2ce00f0b8e373d7ad941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a1be84bc20b531f4bc639b5f5c9b506"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a6a1be84bc20b531f4bc639b5f5c9b506">bitmacarray3</a> (<a class="el" href="classrecursive__configurable.html">recursive_configurable</a> *parent, std::string core_name=&quot;&quot;)</td></tr>
+<tr class="memdesc:a6a1be84bc20b531f4bc639b5f5c9b506"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のコンストラクタ。  <a href="classbitmacarray3.html#a6a1be84bc20b531f4bc639b5f5c9b506">[詳解]</a><br /></td></tr>
+<tr class="separator:a6a1be84bc20b531f4bc639b5f5c9b506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aa0a1f55605866dd35eee60f25af253"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a3aa0a1f55605866dd35eee60f25af253">bitmacarray3</a> (std::string core_name=&quot;&quot;)</td></tr>
+<tr class="memdesc:a3aa0a1f55605866dd35eee60f25af253"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のコンストラクタ。  <a href="classbitmacarray3.html#a3aa0a1f55605866dd35eee60f25af253">[詳解]</a><br /></td></tr>
+<tr class="separator:a3aa0a1f55605866dd35eee60f25af253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b33c4a4522773c9405cdd15aa2b2589"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a5b33c4a4522773c9405cdd15aa2b2589">bitmacarray3</a> (const <a class="el" href="structshape3.html">shape3</a> &amp;<a class="el" href="classbitmacarray3.html#a0faaecfb9d9d94324cbad92b4815db46">shape</a>, std::string core_name=&quot;&quot;)</td></tr>
+<tr class="memdesc:a5b33c4a4522773c9405cdd15aa2b2589"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のコンストラクタ。  <a href="classbitmacarray3.html#a5b33c4a4522773c9405cdd15aa2b2589">[詳解]</a><br /></td></tr>
+<tr class="separator:a5b33c4a4522773c9405cdd15aa2b2589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744e89d31cbc965d73f94eafd2c864da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a744e89d31cbc965d73f94eafd2c864da">bitmacarray3</a> (const <a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;v)</td></tr>
+<tr class="memdesc:a744e89d31cbc965d73f94eafd2c864da"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のコピーコンストラクタ。  <a href="classbitmacarray3.html#a744e89d31cbc965d73f94eafd2c864da">[詳解]</a><br /></td></tr>
+<tr class="separator:a744e89d31cbc965d73f94eafd2c864da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb15e7b176fb80218edb388fc9d0026c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#acb15e7b176fb80218edb388fc9d0026c">send_message</a> (std::string message, void *ptr) override</td></tr>
+<tr class="memdesc:acb15e7b176fb80218edb388fc9d0026c"><td class="mdescLeft">&#160;</td><td class="mdescRight">コアモジュールにメッセージを送る  <a href="classbitmacarray3.html#acb15e7b176fb80218edb388fc9d0026c">[詳解]</a><br /></td></tr>
+<tr class="separator:acb15e7b176fb80218edb388fc9d0026c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21bf70e94384b145167b5256fa035d74"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a21bf70e94384b145167b5256fa035d74">const_send_message</a> (std::string message, void *ptr) const override</td></tr>
+<tr class="memdesc:a21bf70e94384b145167b5256fa035d74"><td class="mdescLeft">&#160;</td><td class="mdescRight">コアモジュールにメッセージを送る  <a href="classbitmacarray3.html#a21bf70e94384b145167b5256fa035d74">[詳解]</a><br /></td></tr>
+<tr class="separator:a21bf70e94384b145167b5256fa035d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b8c925b4ee0004d1ff3b141b8bca545"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a2b8c925b4ee0004d1ff3b141b8bca545">operator=</a> (const <a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;array)</td></tr>
+<tr class="memdesc:a2b8c925b4ee0004d1ff3b141b8bca545"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のディープコピー演算子。  <a href="classbitmacarray3.html#a2b8c925b4ee0004d1ff3b141b8bca545">[詳解]</a><br /></td></tr>
+<tr class="separator:a2b8c925b4ee0004d1ff3b141b8bca545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f98330752a056784bc62339374954d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a59f98330752a056784bc62339374954d">copy</a> (const <a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;array)</td></tr>
+<tr class="memdesc:a59f98330752a056784bc62339374954d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のディープコピー関数。  <a href="classbitmacarray3.html#a59f98330752a056784bc62339374954d">[詳解]</a><br /></td></tr>
+<tr class="separator:a59f98330752a056784bc62339374954d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0cd279eb3d1c19a9eeb380c472f14a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#af0cd279eb3d1c19a9eeb380c472f14a7">initialize</a> (const <a class="el" href="structshape3.html">shape3</a> &amp;<a class="el" href="classbitmacarray3.html#a0faaecfb9d9d94324cbad92b4815db46">shape</a>)</td></tr>
+<tr class="memdesc:af0cd279eb3d1c19a9eeb380c472f14a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">グリッドを値でメモリに展開する。  <a href="classbitmacarray3.html#af0cd279eb3d1c19a9eeb380c472f14a7">[詳解]</a><br /></td></tr>
+<tr class="separator:af0cd279eb3d1c19a9eeb380c472f14a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb7fb2c3dec5432d8664817e75c6fcbd"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#abb7fb2c3dec5432d8664817e75c6fcbd">count</a> () const</td></tr>
+<tr class="memdesc:abb7fb2c3dec5432d8664817e75c6fcbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブセルの数を数える関数。  <a href="classbitmacarray3.html#abb7fb2c3dec5432d8664817e75c6fcbd">[詳解]</a><br /></td></tr>
+<tr class="separator:abb7fb2c3dec5432d8664817e75c6fcbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d968e83749a75c5e8af57e668ab617"><td class="memItemLeft" align="right" valign="top">std::array&lt; std::vector&lt; <a class="el" href="structvec.html">vec3i</a> &gt;, DIM3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a37d968e83749a75c5e8af57e668ab617">actives</a> () const</td></tr>
+<tr class="memdesc:a37d968e83749a75c5e8af57e668ab617"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブセルの位置のリストを返す関数。  <a href="classbitmacarray3.html#a37d968e83749a75c5e8af57e668ab617">[詳解]</a><br /></td></tr>
+<tr class="separator:a37d968e83749a75c5e8af57e668ab617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae82b6f81412470aeab18380583169d1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#ae82b6f81412470aeab18380583169d1e">activate</a> (const std::array&lt; std::vector&lt; <a class="el" href="structvec.html">vec3i</a> &gt;, DIM3 &gt; &amp;active_entries, const std::array&lt; <a class="el" href="structvec.html">vec3i</a>, DIM3 &gt; &amp;offsets={<a class="el" href="structvec.html">vec3i</a>(), <a class="el" href="structvec.html">vec3i</a>(), <a class="el" href="structvec.html">vec3i</a>()})</td></tr>
+<tr class="memdesc:ae82b6f81412470aeab18380583169d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">active_entries と同じ場所のセルを offset だけずらして、アクティブにする。  <a href="classbitmacarray3.html#ae82b6f81412470aeab18380583169d1e">[詳解]</a><br /></td></tr>
+<tr class="separator:ae82b6f81412470aeab18380583169d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad49a4a791b8358cac2ad74db87aaa224"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#ad49a4a791b8358cac2ad74db87aaa224">activate_as_bit</a> (const <a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;array, const std::array&lt; <a class="el" href="structvec.html">vec3i</a>, DIM3 &gt; &amp;offsets={<a class="el" href="structvec.html">vec3i</a>(), <a class="el" href="structvec.html">vec3i</a>(), <a class="el" href="structvec.html">vec3i</a>()})</td></tr>
+<tr class="memdesc:ad49a4a791b8358cac2ad74db87aaa224"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力のグリッドのアクティブセルと同じ場所のセルを offset だけずらして、アクティブにする。  <a href="classbitmacarray3.html#ad49a4a791b8358cac2ad74db87aaa224">[詳解]</a><br /></td></tr>
+<tr class="separator:ad49a4a791b8358cac2ad74db87aaa224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4b153d94db16296b4e450ec930a495"><td class="memTemplParams" colspan="2">template&lt;class Y &gt; </td></tr>
+<tr class="memitem:aae4b153d94db16296b4e450ec930a495"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#aae4b153d94db16296b4e450ec930a495">activate_as</a> (const Y &amp;array, const std::array&lt; <a class="el" href="structvec.html">vec3i</a>, DIM3 &gt; &amp;offsets={<a class="el" href="structvec.html">vec3i</a>(), <a class="el" href="structvec.html">vec3i</a>(), <a class="el" href="structvec.html">vec3i</a>()})</td></tr>
+<tr class="memdesc:aae4b153d94db16296b4e450ec930a495"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力のグリッドのアクティブセルと同じ場所のセルを offset だけずらして、アクティブにする。  <a href="classbitmacarray3.html#aae4b153d94db16296b4e450ec930a495">[詳解]</a><br /></td></tr>
+<tr class="separator:aae4b153d94db16296b4e450ec930a495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b8ccaa8fc2215a7de2487368949911d"><td class="memItemLeft" align="right" valign="top"><a id="a2b8ccaa8fc2215a7de2487368949911d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a2b8ccaa8fc2215a7de2487368949911d">activate_all</a> ()</td></tr>
+<tr class="memdesc:a2b8ccaa8fc2215a7de2487368949911d"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルをアクティブにする。 <br /></td></tr>
+<tr class="separator:a2b8ccaa8fc2215a7de2487368949911d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a491519d3e872bd4833a34d41542678cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a491519d3e872bd4833a34d41542678cf">copy_active_as</a> (const <a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;array, const <a class="el" href="structvec.html">vec3i</a> &amp;offset=<a class="el" href="structvec.html">vec3i</a>())</td></tr>
+<tr class="memdesc:a491519d3e872bd4833a34d41542678cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルのアクティブと非アクティブステートの状態を入力のグリッドと同じようにセットする。  <a href="classbitmacarray3.html#a491519d3e872bd4833a34d41542678cf">[詳解]</a><br /></td></tr>
+<tr class="separator:a491519d3e872bd4833a34d41542678cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0faaecfb9d9d94324cbad92b4815db46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structshape3.html">shape3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a0faaecfb9d9d94324cbad92b4815db46">shape</a> () const</td></tr>
+<tr class="memdesc:a0faaecfb9d9d94324cbad92b4815db46"><td class="mdescLeft">&#160;</td><td class="mdescRight">グリッドの形を返す。  <a href="classbitmacarray3.html#a0faaecfb9d9d94324cbad92b4815db46">[詳解]</a><br /></td></tr>
+<tr class="separator:a0faaecfb9d9d94324cbad92b4815db46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f437c86784f92f310aed362a6a1db8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structshape3.html">shape3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#ad4f437c86784f92f310aed362a6a1db8">shape</a> (int dim) const</td></tr>
+<tr class="memdesc:ad4f437c86784f92f310aed362a6a1db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された次元のスタッガードグリッドの形を返す。  <a href="classbitmacarray3.html#ad4f437c86784f92f310aed362a6a1db8">[詳解]</a><br /></td></tr>
+<tr class="separator:ad4f437c86784f92f310aed362a6a1db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fecaf6e80a4cfff25589be8d6ae76da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a0fecaf6e80a4cfff25589be8d6ae76da">clear</a> ()</td></tr>
+<tr class="memdesc:a0fecaf6e80a4cfff25589be8d6ae76da"><td class="mdescLeft">&#160;</td><td class="mdescRight">グリッドを初期化する。  <a href="classbitmacarray3.html#a0fecaf6e80a4cfff25589be8d6ae76da">[詳解]</a><br /></td></tr>
+<tr class="separator:a0fecaf6e80a4cfff25589be8d6ae76da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a26af7e9ae6134ac55a6d151389ac6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a12a26af7e9ae6134ac55a6d151389ac6">operator!=</a> (const <a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;v) const</td></tr>
+<tr class="memdesc:a12a26af7e9ae6134ac55a6d151389ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">グリッドが入力されたグリッドと違うかどうか返す。  <a href="classbitmacarray3.html#a12a26af7e9ae6134ac55a6d151389ac6">[詳解]</a><br /></td></tr>
+<tr class="separator:a12a26af7e9ae6134ac55a6d151389ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f30383b774fd6e4ccbb83581003f89e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a8f30383b774fd6e4ccbb83581003f89e">operator==</a> (const <a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;v) const</td></tr>
+<tr class="memdesc:a8f30383b774fd6e4ccbb83581003f89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">グリッドが入力されたグリッドと同じかどうか返す。  <a href="classbitmacarray3.html#a8f30383b774fd6e4ccbb83581003f89e">[詳解]</a><br /></td></tr>
+<tr class="separator:a8f30383b774fd6e4ccbb83581003f89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd308284755d0db1d2a596c4e3530c0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classbitarray3.html">bitarray3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a1cd308284755d0db1d2a596c4e3530c0">operator[]</a> (int dim) const</td></tr>
+<tr class="memdesc:a1cd308284755d0db1d2a596c4e3530c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した次元の読み込み処理だけ可能なスタッガード格子の参照を得る。  <a href="classbitmacarray3.html#a1cd308284755d0db1d2a596c4e3530c0">[詳解]</a><br /></td></tr>
+<tr class="separator:a1cd308284755d0db1d2a596c4e3530c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9b805be601fc44c44aefe4b55c3b17a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbitarray3.html">bitarray3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#ac9b805be601fc44c44aefe4b55c3b17a">operator[]</a> (int dim)</td></tr>
+<tr class="memdesc:ac9b805be601fc44c44aefe4b55c3b17a"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した次元のスタッガード格子の参照を得る。  <a href="classbitmacarray3.html#ac9b805be601fc44c44aefe4b55c3b17a">[詳解]</a><br /></td></tr>
+<tr class="separator:ac9b805be601fc44c44aefe4b55c3b17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dfbddaedb5351ff5a6b852af1b8ef6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a9dfbddaedb5351ff5a6b852af1b8ef6c">set_thread_num</a> (int number)</td></tr>
+<tr class="memdesc:a9dfbddaedb5351ff5a6b852af1b8ef6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">並列処理をするためのスレッドの数を設定する。  <a href="classbitmacarray3.html#a9dfbddaedb5351ff5a6b852af1b8ef6c">[詳解]</a><br /></td></tr>
+<tr class="separator:a9dfbddaedb5351ff5a6b852af1b8ef6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a788a74d0d292a69579665181dbae82f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a788a74d0d292a69579665181dbae82f8">get_thread_num</a> () const</td></tr>
+<tr class="memdesc:a788a74d0d292a69579665181dbae82f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在設定されている並列処理をするためのスレッドの数を得る。  <a href="classbitmacarray3.html#a788a74d0d292a69579665181dbae82f8">[詳解]</a><br /></td></tr>
+<tr class="separator:a788a74d0d292a69579665181dbae82f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c01ca07c67909bd154fbbfcb3fb4245"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a5c01ca07c67909bd154fbbfcb3fb4245">parallel_actives</a> (std::function&lt; void(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func)</td></tr>
+<tr class="memdesc:a5c01ca07c67909bd154fbbfcb3fb4245"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブセルを並列に処理する。  <a href="classbitmacarray3.html#a5c01ca07c67909bd154fbbfcb3fb4245">[詳解]</a><br /></td></tr>
+<tr class="separator:a5c01ca07c67909bd154fbbfcb3fb4245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b93590ca12a22a002e6ca00a31f41f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#ac0b93590ca12a22a002e6ca00a31f41f">parallel_all</a> (std::function&lt; void(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func)</td></tr>
+<tr class="memdesc:ac0b93590ca12a22a002e6ca00a31f41f"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルを並列に処理する。  <a href="classbitmacarray3.html#ac0b93590ca12a22a002e6ca00a31f41f">[詳解]</a><br /></td></tr>
+<tr class="separator:ac0b93590ca12a22a002e6ca00a31f41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21e9a28ee47f9dc8e1b0a1cf1d9c9d0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a21e9a28ee47f9dc8e1b0a1cf1d9c9d0a">parallel_op</a> (std::function&lt; void(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func, bool <a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>=ALL)</td></tr>
+<tr class="memdesc:a21e9a28ee47f9dc8e1b0a1cf1d9c9d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルを並列に処理する。  <a href="classbitmacarray3.html#a21e9a28ee47f9dc8e1b0a1cf1d9c9d0a">[詳解]</a><br /></td></tr>
+<tr class="separator:a21e9a28ee47f9dc8e1b0a1cf1d9c9d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a9a74200205b618a78e33b79530096a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a3a9a74200205b618a78e33b79530096a">parallel_actives</a> (std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func)</td></tr>
+<tr class="memdesc:a3a9a74200205b618a78e33b79530096a"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブセルを並列に処理する。  <a href="classbitmacarray3.html#a3a9a74200205b618a78e33b79530096a">[詳解]</a><br /></td></tr>
+<tr class="separator:a3a9a74200205b618a78e33b79530096a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2244b737236df1a1ca6efe181b95606"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#af2244b737236df1a1ca6efe181b95606">parallel_all</a> (std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func)</td></tr>
+<tr class="memdesc:af2244b737236df1a1ca6efe181b95606"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルを並列に処理する。  <a href="classbitmacarray3.html#af2244b737236df1a1ca6efe181b95606">[詳解]</a><br /></td></tr>
+<tr class="separator:af2244b737236df1a1ca6efe181b95606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9fd8828c1a8297fd24ad6ca76b70a85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#ac9fd8828c1a8297fd24ad6ca76b70a85">parallel_op</a> (std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func, bool <a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>=ALL)</td></tr>
+<tr class="memdesc:ac9fd8828c1a8297fd24ad6ca76b70a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルを並列に処理する。  <a href="classbitmacarray3.html#ac9fd8828c1a8297fd24ad6ca76b70a85">[詳解]</a><br /></td></tr>
+<tr class="separator:ac9fd8828c1a8297fd24ad6ca76b70a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b899350f0c37e5657c120d3238115ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a1b899350f0c37e5657c120d3238115ce">parallel_actives</a> (std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it, int thread_index)&gt; func)</td></tr>
+<tr class="memdesc:a1b899350f0c37e5657c120d3238115ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブセルを並列に処理する。  <a href="classbitmacarray3.html#a1b899350f0c37e5657c120d3238115ce">[詳解]</a><br /></td></tr>
+<tr class="separator:a1b899350f0c37e5657c120d3238115ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2a8203765b3327a3e471889df79f118"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#ad2a8203765b3327a3e471889df79f118">parallel_all</a> (std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it, int thread_index)&gt; func)</td></tr>
+<tr class="memdesc:ad2a8203765b3327a3e471889df79f118"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルを並列に処理する。  <a href="classbitmacarray3.html#ad2a8203765b3327a3e471889df79f118">[詳解]</a><br /></td></tr>
+<tr class="separator:ad2a8203765b3327a3e471889df79f118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978572dcfdbdd2f7edb14d7f54d5ba51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a978572dcfdbdd2f7edb14d7f54d5ba51">parallel_op</a> (std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it, int thread_index)&gt; func, bool <a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>=ALL)</td></tr>
+<tr class="memdesc:a978572dcfdbdd2f7edb14d7f54d5ba51"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルを並列に処理する。  <a href="classbitmacarray3.html#a978572dcfdbdd2f7edb14d7f54d5ba51">[詳解]</a><br /></td></tr>
+<tr class="separator:a978572dcfdbdd2f7edb14d7f54d5ba51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a40ba2607f8e7109067d2b24f3d4d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#aa3a40ba2607f8e7109067d2b24f3d4d7">const_parallel_all</a> (std::function&lt; void(const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt; func) const</td></tr>
+<tr class="memdesc:aa3a40ba2607f8e7109067d2b24f3d4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルを並列に読み込みのみで処理する。  <a href="classbitmacarray3.html#aa3a40ba2607f8e7109067d2b24f3d4d7">[詳解]</a><br /></td></tr>
+<tr class="separator:aa3a40ba2607f8e7109067d2b24f3d4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d053a85f1d0fedc1619ea3bab1ed17e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a7d053a85f1d0fedc1619ea3bab1ed17e">const_parallel_op</a> (std::function&lt; void(const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt; func, bool <a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>=ALL) const</td></tr>
+<tr class="memdesc:a7d053a85f1d0fedc1619ea3bab1ed17e"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルを並列に読み込みのみで処理する。  <a href="classbitmacarray3.html#a7d053a85f1d0fedc1619ea3bab1ed17e">[詳解]</a><br /></td></tr>
+<tr class="separator:a7d053a85f1d0fedc1619ea3bab1ed17e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc5b6b0c8ecfcb1063eed90ed2461d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a3dc5b6b0c8ecfcb1063eed90ed2461d6">const_parallel_actives</a> (std::function&lt; void(int dim, int i, int j, int k)&gt; func) const</td></tr>
+<tr class="memdesc:a3dc5b6b0c8ecfcb1063eed90ed2461d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブセルを並列に読み込みのみで処理する。  <a href="classbitmacarray3.html#a3dc5b6b0c8ecfcb1063eed90ed2461d6">[詳解]</a><br /></td></tr>
+<tr class="separator:a3dc5b6b0c8ecfcb1063eed90ed2461d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59080b93f0839f3adb1d3356764cfa7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a59080b93f0839f3adb1d3356764cfa7b">const_parallel_all</a> (std::function&lt; void(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt; func) const</td></tr>
+<tr class="memdesc:a59080b93f0839f3adb1d3356764cfa7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルを並列に読み込みのみで処理する。  <a href="classbitmacarray3.html#a59080b93f0839f3adb1d3356764cfa7b">[詳解]</a><br /></td></tr>
+<tr class="separator:a59080b93f0839f3adb1d3356764cfa7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a517a664a8c9c0e1864c2f935fb2b7419"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a517a664a8c9c0e1864c2f935fb2b7419">const_parallel_op</a> (std::function&lt; void(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt; func, bool <a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>=ALL) const</td></tr>
+<tr class="memdesc:a517a664a8c9c0e1864c2f935fb2b7419"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルを並列に読み込みのみで処理する。  <a href="classbitmacarray3.html#a517a664a8c9c0e1864c2f935fb2b7419">[詳解]</a><br /></td></tr>
+<tr class="separator:a517a664a8c9c0e1864c2f935fb2b7419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff5e272a18d8312f07f37413c9c24bd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#aff5e272a18d8312f07f37413c9c24bd9">const_parallel_actives</a> (std::function&lt; void(int dim, int i, int j, int k, int thread_index)&gt; func) const</td></tr>
+<tr class="memdesc:aff5e272a18d8312f07f37413c9c24bd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブセルを並列に読み込みのみで処理する。  <a href="classbitmacarray3.html#aff5e272a18d8312f07f37413c9c24bd9">[詳解]</a><br /></td></tr>
+<tr class="separator:aff5e272a18d8312f07f37413c9c24bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17068ed993e199db90a40fd795513423"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a17068ed993e199db90a40fd795513423">const_parallel_all</a> (std::function&lt; void(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it, int thread_index)&gt; func) const</td></tr>
+<tr class="memdesc:a17068ed993e199db90a40fd795513423"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルを並列に読み込みのみで処理する。  <a href="classbitmacarray3.html#a17068ed993e199db90a40fd795513423">[詳解]</a><br /></td></tr>
+<tr class="separator:a17068ed993e199db90a40fd795513423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27b1b5ae35ec37515d98ddd67793085c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a27b1b5ae35ec37515d98ddd67793085c">const_parallel_op</a> (std::function&lt; void(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it, int thread_index)&gt; func, bool <a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>=ALL) const</td></tr>
+<tr class="memdesc:a27b1b5ae35ec37515d98ddd67793085c"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルを並列に読み込みのみで処理する。  <a href="classbitmacarray3.html#a27b1b5ae35ec37515d98ddd67793085c">[詳解]</a><br /></td></tr>
+<tr class="separator:a27b1b5ae35ec37515d98ddd67793085c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff9ef198548c632d97e1013da560766"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a5ff9ef198548c632d97e1013da560766">serial_actives</a> (std::function&lt; void(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func)</td></tr>
+<tr class="memdesc:a5ff9ef198548c632d97e1013da560766"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブなセルをシリアルに処理する。  <a href="classbitmacarray3.html#a5ff9ef198548c632d97e1013da560766">[詳解]</a><br /></td></tr>
+<tr class="separator:a5ff9ef198548c632d97e1013da560766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6488ff8b3360ace75c6d086cac384d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#ad6488ff8b3360ace75c6d086cac384d3">serial_all</a> (std::function&lt; void(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func)</td></tr>
+<tr class="memdesc:ad6488ff8b3360ace75c6d086cac384d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルをシリアルに処理する。  <a href="classbitmacarray3.html#ad6488ff8b3360ace75c6d086cac384d3">[詳解]</a><br /></td></tr>
+<tr class="separator:ad6488ff8b3360ace75c6d086cac384d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55bfc03843c5e04b54db42b46edbcfe7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a55bfc03843c5e04b54db42b46edbcfe7">serial_op</a> (std::function&lt; void(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func, bool <a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>=ALL)</td></tr>
+<tr class="memdesc:a55bfc03843c5e04b54db42b46edbcfe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルをシリアルに処理する。  <a href="classbitmacarray3.html#a55bfc03843c5e04b54db42b46edbcfe7">[詳解]</a><br /></td></tr>
+<tr class="separator:a55bfc03843c5e04b54db42b46edbcfe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fc0021085c4ef1628e1ac7752f668d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a1fc0021085c4ef1628e1ac7752f668d1">serial_actives</a> (std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func)</td></tr>
+<tr class="memdesc:a1fc0021085c4ef1628e1ac7752f668d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブなセルをシリアルに処理する。  <a href="classbitmacarray3.html#a1fc0021085c4ef1628e1ac7752f668d1">[詳解]</a><br /></td></tr>
+<tr class="separator:a1fc0021085c4ef1628e1ac7752f668d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae24a488bc548c1dd46fd9fbc4bf39900"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#ae24a488bc548c1dd46fd9fbc4bf39900">serial_all</a> (std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func)</td></tr>
+<tr class="memdesc:ae24a488bc548c1dd46fd9fbc4bf39900"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルをシリアルに処理する。  <a href="classbitmacarray3.html#ae24a488bc548c1dd46fd9fbc4bf39900">[詳解]</a><br /></td></tr>
+<tr class="separator:ae24a488bc548c1dd46fd9fbc4bf39900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34149d20cfd61d66c61eb28479302a19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a34149d20cfd61d66c61eb28479302a19">serial_op</a> (std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func, bool <a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>=ALL)</td></tr>
+<tr class="memdesc:a34149d20cfd61d66c61eb28479302a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルをシリアルに処理する。  <a href="classbitmacarray3.html#a34149d20cfd61d66c61eb28479302a19">[詳解]</a><br /></td></tr>
+<tr class="separator:a34149d20cfd61d66c61eb28479302a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a629814ac244a20e73616d4d5a37590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a6a629814ac244a20e73616d4d5a37590">const_serial_all</a> (std::function&lt; void(const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt; func) const</td></tr>
+<tr class="memdesc:a6a629814ac244a20e73616d4d5a37590"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルをシリアルに読み込みのみで処理する。  <a href="classbitmacarray3.html#a6a629814ac244a20e73616d4d5a37590">[詳解]</a><br /></td></tr>
+<tr class="separator:a6a629814ac244a20e73616d4d5a37590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b8fb4bc63b7d5c06596f3adc00afa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a03b8fb4bc63b7d5c06596f3adc00afa9">const_serial_op</a> (std::function&lt; void(const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt; func, bool <a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>=ALL) const</td></tr>
+<tr class="memdesc:a03b8fb4bc63b7d5c06596f3adc00afa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルをシリアルに読み込みのみで処理する。  <a href="classbitmacarray3.html#a03b8fb4bc63b7d5c06596f3adc00afa9">[詳解]</a><br /></td></tr>
+<tr class="separator:a03b8fb4bc63b7d5c06596f3adc00afa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7fc7dc12de494c9da2d3bbc4ae93e2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#ad7fc7dc12de494c9da2d3bbc4ae93e2f">const_serial_actives</a> (std::function&lt; void(int dim, int i, int j, int k)&gt; func) const</td></tr>
+<tr class="memdesc:ad7fc7dc12de494c9da2d3bbc4ae93e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブなセルをシリアルに読み込みのみで処理する。  <a href="classbitmacarray3.html#ad7fc7dc12de494c9da2d3bbc4ae93e2f">[詳解]</a><br /></td></tr>
+<tr class="separator:ad7fc7dc12de494c9da2d3bbc4ae93e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb696c271b0fd09e77556807006c7f9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#adb696c271b0fd09e77556807006c7f9e">const_serial_all</a> (std::function&lt; void(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt; func) const</td></tr>
+<tr class="memdesc:adb696c271b0fd09e77556807006c7f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルをシリアルに読み込みのみで処理する。  <a href="classbitmacarray3.html#adb696c271b0fd09e77556807006c7f9e">[詳解]</a><br /></td></tr>
+<tr class="separator:adb696c271b0fd09e77556807006c7f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef6e7cd3e44e1022a9176153a76d34f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#aef6e7cd3e44e1022a9176153a76d34f4">const_serial_op</a> (std::function&lt; void(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt; func, bool <a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>=ALL) const</td></tr>
+<tr class="memdesc:aef6e7cd3e44e1022a9176153a76d34f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルをシリアルに読み込みのみで処理する。  <a href="classbitmacarray3.html#aef6e7cd3e44e1022a9176153a76d34f4">[詳解]</a><br /></td></tr>
+<tr class="separator:aef6e7cd3e44e1022a9176153a76d34f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cc514e708662f151d3c2914a9776121"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a2cc514e708662f151d3c2914a9776121">interruptible_serial_actives</a> (std::function&lt; bool(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func)</td></tr>
+<tr class="memdesc:a2cc514e708662f151d3c2914a9776121"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブなセルをシリアルに処理する。  <a href="classbitmacarray3.html#a2cc514e708662f151d3c2914a9776121">[詳解]</a><br /></td></tr>
+<tr class="separator:a2cc514e708662f151d3c2914a9776121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9826333ea403be56af73fa6c02cfea7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a9826333ea403be56af73fa6c02cfea7d">interruptible_serial_all</a> (std::function&lt; bool(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func)</td></tr>
+<tr class="memdesc:a9826333ea403be56af73fa6c02cfea7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルをシリアルに処理する。  <a href="classbitmacarray3.html#a9826333ea403be56af73fa6c02cfea7d">[詳解]</a><br /></td></tr>
+<tr class="separator:a9826333ea403be56af73fa6c02cfea7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e01987a2f99eab89ce8fa74efda5e6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a8e01987a2f99eab89ce8fa74efda5e6f">interruptible_serial_op</a> (std::function&lt; bool(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func, bool <a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>=ALL)</td></tr>
+<tr class="memdesc:a8e01987a2f99eab89ce8fa74efda5e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルをシリアルに処理する。  <a href="classbitmacarray3.html#a8e01987a2f99eab89ce8fa74efda5e6f">[詳解]</a><br /></td></tr>
+<tr class="separator:a8e01987a2f99eab89ce8fa74efda5e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a706a10e896325357bce52d591c5dc038"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a706a10e896325357bce52d591c5dc038">interruptible_serial_actives</a> (std::function&lt; bool(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func)</td></tr>
+<tr class="memdesc:a706a10e896325357bce52d591c5dc038"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブなセルをシリアルに処理する。<code>true</code> を返すと、ループを中断する。  <a href="classbitmacarray3.html#a706a10e896325357bce52d591c5dc038">[詳解]</a><br /></td></tr>
+<tr class="separator:a706a10e896325357bce52d591c5dc038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a707c94602239ee154d0acfe0c7998392"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a707c94602239ee154d0acfe0c7998392">interruptible_serial_all</a> (std::function&lt; bool(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func)</td></tr>
+<tr class="memdesc:a707c94602239ee154d0acfe0c7998392"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルをシリアルに処理する。<code>true</code> を返すと、ループを中断する。  <a href="classbitmacarray3.html#a707c94602239ee154d0acfe0c7998392">[詳解]</a><br /></td></tr>
+<tr class="separator:a707c94602239ee154d0acfe0c7998392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a849b47b5f8c63d7a2a8ecd79500f46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a4a849b47b5f8c63d7a2a8ecd79500f46">interruptible_serial_op</a> (std::function&lt; bool(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func, bool <a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>=ALL)</td></tr>
+<tr class="memdesc:a4a849b47b5f8c63d7a2a8ecd79500f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルをシリアルに処理する。  <a href="classbitmacarray3.html#a4a849b47b5f8c63d7a2a8ecd79500f46">[詳解]</a><br /></td></tr>
+<tr class="separator:a4a849b47b5f8c63d7a2a8ecd79500f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55ee0720d539ee56fb0b15f6c7e41803"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a55ee0720d539ee56fb0b15f6c7e41803">interruptible_const_serial_all</a> (std::function&lt; bool(const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt; func) const</td></tr>
+<tr class="memdesc:a55ee0720d539ee56fb0b15f6c7e41803"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルを読み込み可能に限定してシリアルに処理する。  <a href="classbitmacarray3.html#a55ee0720d539ee56fb0b15f6c7e41803">[詳解]</a><br /></td></tr>
+<tr class="separator:a55ee0720d539ee56fb0b15f6c7e41803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d0ed848cd593582cb9f56e91d55c15c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a1d0ed848cd593582cb9f56e91d55c15c">interruptible_const_serial_op</a> (std::function&lt; bool(const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt; func, bool <a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>=ALL) const</td></tr>
+<tr class="memdesc:a1d0ed848cd593582cb9f56e91d55c15c"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルを読み込み可能に限定してシリアルに処理する。  <a href="classbitmacarray3.html#a1d0ed848cd593582cb9f56e91d55c15c">[詳解]</a><br /></td></tr>
+<tr class="separator:a1d0ed848cd593582cb9f56e91d55c15c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ad92ee864a1d8aa9005751f1741cc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a68ad92ee864a1d8aa9005751f1741cc7">interruptible_const_serial_actives</a> (std::function&lt; bool(int dim, int i, int j, int k)&gt; func) const</td></tr>
+<tr class="memdesc:a68ad92ee864a1d8aa9005751f1741cc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブなセルを読み込み可能に限定してシリアルに処理する。  <a href="classbitmacarray3.html#a68ad92ee864a1d8aa9005751f1741cc7">[詳解]</a><br /></td></tr>
+<tr class="separator:a68ad92ee864a1d8aa9005751f1741cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb4e5a509a19c5f232be5cfb0913acae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#afb4e5a509a19c5f232be5cfb0913acae">interruptible_const_serial_all</a> (std::function&lt; bool(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt; func) const</td></tr>
+<tr class="memdesc:afb4e5a509a19c5f232be5cfb0913acae"><td class="mdescLeft">&#160;</td><td class="mdescRight">全てのセルを読み込み可能に限定してシリアルに処理する。  <a href="classbitmacarray3.html#afb4e5a509a19c5f232be5cfb0913acae">[詳解]</a><br /></td></tr>
+<tr class="separator:afb4e5a509a19c5f232be5cfb0913acae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7f173cedac2968ae4f4949f53bf825b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#ab7f173cedac2968ae4f4949f53bf825b">interruptible_const_serial_op</a> (std::function&lt; bool(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt; func, bool <a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>=ALL) const</td></tr>
+<tr class="memdesc:ab7f173cedac2968ae4f4949f53bf825b"><td class="mdescLeft">&#160;</td><td class="mdescRight">セルを読み込み可能に限定してシリアルに処理する。  <a href="classbitmacarray3.html#ab7f173cedac2968ae4f4949f53bf825b">[詳解]</a><br /></td></tr>
+<tr class="separator:ab7f173cedac2968ae4f4949f53bf825b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a499863457ebf42c75499f60184d4c246"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a499863457ebf42c75499f60184d4c246">dilate</a> (std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it, int thread_index)&gt; func, int <a class="el" href="classbitmacarray3.html#abb7fb2c3dec5432d8664817e75c6fcbd">count</a>=1)</td></tr>
+<tr class="memdesc:a499863457ebf42c75499f60184d4c246"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡張する。  <a href="classbitmacarray3.html#a499863457ebf42c75499f60184d4c246">[詳解]</a><br /></td></tr>
+<tr class="separator:a499863457ebf42c75499f60184d4c246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa91dfd3a6c44aa7ac22f8587b82d9be5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#aa91dfd3a6c44aa7ac22f8587b82d9be5">dilate</a> (std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt; func, int <a class="el" href="classbitmacarray3.html#abb7fb2c3dec5432d8664817e75c6fcbd">count</a>=1)</td></tr>
+<tr class="memdesc:aa91dfd3a6c44aa7ac22f8587b82d9be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡張する。  <a href="classbitmacarray3.html#aa91dfd3a6c44aa7ac22f8587b82d9be5">[詳解]</a><br /></td></tr>
+<tr class="separator:aa91dfd3a6c44aa7ac22f8587b82d9be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88679e968ec7e41064da704174edc8e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a88679e968ec7e41064da704174edc8e7">dilate</a> (int <a class="el" href="classbitmacarray3.html#abb7fb2c3dec5432d8664817e75c6fcbd">count</a>=1)</td></tr>
+<tr class="memdesc:a88679e968ec7e41064da704174edc8e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡張する。  <a href="classbitmacarray3.html#a88679e968ec7e41064da704174edc8e7">[詳解]</a><br /></td></tr>
+<tr class="separator:a88679e968ec7e41064da704174edc8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5824bbf906e2f917bf631349acf65577"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a5824bbf906e2f917bf631349acf65577">erode</a> (std::function&lt; bool(int dim, int i, int j, int k, int thread_index)&gt; func, int <a class="el" href="classbitmacarray3.html#abb7fb2c3dec5432d8664817e75c6fcbd">count</a>=1)</td></tr>
+<tr class="memdesc:a5824bbf906e2f917bf631349acf65577"><td class="mdescLeft">&#160;</td><td class="mdescRight">縮小する。  <a href="classbitmacarray3.html#a5824bbf906e2f917bf631349acf65577">[詳解]</a><br /></td></tr>
+<tr class="separator:a5824bbf906e2f917bf631349acf65577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a4e7a1b9d32c5c52ff7b035cc8d0e1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a5a4e7a1b9d32c5c52ff7b035cc8d0e1d">erode</a> (std::function&lt; bool(int dim, int i, int j, int k)&gt; func, int <a class="el" href="classbitmacarray3.html#abb7fb2c3dec5432d8664817e75c6fcbd">count</a>=1)</td></tr>
+<tr class="memdesc:a5a4e7a1b9d32c5c52ff7b035cc8d0e1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">縮小する。  <a href="classbitmacarray3.html#a5a4e7a1b9d32c5c52ff7b035cc8d0e1d">[詳解]</a><br /></td></tr>
+<tr class="separator:a5a4e7a1b9d32c5c52ff7b035cc8d0e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15e9b95ade0f304a5088e2ba183cf333"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a15e9b95ade0f304a5088e2ba183cf333">erode</a> (int <a class="el" href="classbitmacarray3.html#abb7fb2c3dec5432d8664817e75c6fcbd">count</a>=1)</td></tr>
+<tr class="memdesc:a15e9b95ade0f304a5088e2ba183cf333"><td class="mdescLeft">&#160;</td><td class="mdescRight">縮小する。  <a href="classbitmacarray3.html#a15e9b95ade0f304a5088e2ba183cf333">[詳解]</a><br /></td></tr>
+<tr class="separator:a15e9b95ade0f304a5088e2ba183cf333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a723f6bf1e1407a79df123aa8646c9d96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a723f6bf1e1407a79df123aa8646c9d96">set_core_name</a> (std::string core_name)</td></tr>
+<tr class="memdesc:a723f6bf1e1407a79df123aa8646c9d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">グリッドのモジュールのコアネームを取得する。  <a href="classbitmacarray3.html#a723f6bf1e1407a79df123aa8646c9d96">[詳解]</a><br /></td></tr>
+<tr class="separator:a723f6bf1e1407a79df123aa8646c9d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31287ffbb62b01f8a854203b6212eed8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a31287ffbb62b01f8a854203b6212eed8">get_core_name</a> () const</td></tr>
+<tr class="memdesc:a31287ffbb62b01f8a854203b6212eed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">グリッドのモジュールのコアネームを取得する。  <a href="classbitmacarray3.html#a31287ffbb62b01f8a854203b6212eed8">[詳解]</a><br /></td></tr>
+<tr class="separator:a31287ffbb62b01f8a854203b6212eed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af649ad74285f0ad1ba0dfcb9129c146d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbitmacarray3_1_1type3.html">type3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a> () const</td></tr>
+<tr class="memdesc:af649ad74285f0ad1ba0dfcb9129c146d"><td class="mdescLeft">&#160;</td><td class="mdescRight">このグリッドの type を取得する。  <a href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">[詳解]</a><br /></td></tr>
+<tr class="separator:af649ad74285f0ad1ba0dfcb9129c146d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a0add935628ac3b5ef3922241241fac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbitmacarray3.html#a5a0add935628ac3b5ef3922241241fac">set_type</a> (const <a class="el" href="structbitmacarray3_1_1type3.html">type3</a> &amp;<a class="el" href="classbitmacarray3.html#af649ad74285f0ad1ba0dfcb9129c146d">type</a>)</td></tr>
+<tr class="memdesc:a5a0add935628ac3b5ef3922241241fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">グリッドの type を設定する。  <a href="classbitmacarray3.html#a5a0add935628ac3b5ef3922241241fac">[詳解]</a><br /></td></tr>
+<tr class="separator:a5a0add935628ac3b5ef3922241241fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classrecursive__configurable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classrecursive__configurable')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classrecursive__configurable.html">recursive_configurable</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a57a3e06b0545736f36888a4e460657c9 inherit pub_methods_classrecursive__configurable"><td class="memItemLeft" align="right" valign="top"><a id="a57a3e06b0545736f36888a4e460657c9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrecursive__configurable.html#a57a3e06b0545736f36888a4e460657c9">recursive_configurable</a> ()=default</td></tr>
+<tr class="memdesc:a57a3e06b0545736f36888a4e460657c9 inherit pub_methods_classrecursive__configurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ。 <br /></td></tr>
+<tr class="separator:a57a3e06b0545736f36888a4e460657c9 inherit pub_methods_classrecursive__configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0767771608fbbf10ec514d01a5915d inherit pub_methods_classrecursive__configurable"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrecursive__configurable.html#aef0767771608fbbf10ec514d01a5915d">recursive_load</a> (<a class="el" href="classconfiguration.html">configuration</a> &amp;config)</td></tr>
+<tr class="memdesc:aef0767771608fbbf10ec514d01a5915d inherit pub_methods_classrecursive__configurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">自身のプログラムを読み込み、子供インスタンスにも同様の処理を行う。ファイルやライブラリをメモリに読み込むことに使われる。  <a href="classrecursive__configurable.html#aef0767771608fbbf10ec514d01a5915d">[詳解]</a><br /></td></tr>
+<tr class="separator:aef0767771608fbbf10ec514d01a5915d inherit pub_methods_classrecursive__configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a514e780fda79b6287755635243189c44 inherit pub_methods_classrecursive__configurable"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrecursive__configurable.html#a514e780fda79b6287755635243189c44">recursive_configure</a> (<a class="el" href="classconfiguration.html">configuration</a> &amp;config)</td></tr>
+<tr class="memdesc:a514e780fda79b6287755635243189c44 inherit pub_methods_classrecursive__configurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">プログラムの設定を実際に行い、子供インスタンスにも同様の処理を行う。パラメータの読み込みと設定に使われる。  <a href="classrecursive__configurable.html#a514e780fda79b6287755635243189c44">[詳解]</a><br /></td></tr>
+<tr class="separator:a514e780fda79b6287755635243189c44 inherit pub_methods_classrecursive__configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ba57f08df3ed9d312101031399c485 inherit pub_methods_classrecursive__configurable"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrecursive__configurable.html#a38ba57f08df3ed9d312101031399c485">recursive_initialize</a> (const <a class="el" href="classconfigurable.html#a543be0036cefaf1cde8d268b8414754d">configurable::environment_map</a> &amp;environment=<a class="el" href="classconfigurable.html#a543be0036cefaf1cde8d268b8414754d">configurable::environment_map</a>())</td></tr>
+<tr class="memdesc:a38ba57f08df3ed9d312101031399c485 inherit pub_methods_classrecursive__configurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">プログラムの初期化を行い、子供インスタンスにも同様の処理を行う。実際にプログラムを実行可能な状態を作るために使われる。  <a href="classrecursive__configurable.html#a38ba57f08df3ed9d312101031399c485">[詳解]</a><br /></td></tr>
+<tr class="separator:a38ba57f08df3ed9d312101031399c485 inherit pub_methods_classrecursive__configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d742b84b211860b211b28e27192f3b9 inherit pub_methods_classrecursive__configurable"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrecursive__configurable.html#a1d742b84b211860b211b28e27192f3b9">is_ready</a> () const</td></tr>
+<tr class="memdesc:a1d742b84b211860b211b28e27192f3b9 inherit pub_methods_classrecursive__configurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスが初期化されているか取得する。  <a href="classrecursive__configurable.html#a1d742b84b211860b211b28e27192f3b9">[詳解]</a><br /></td></tr>
+<tr class="separator:a1d742b84b211860b211b28e27192f3b9 inherit pub_methods_classrecursive__configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893a1dea81a5aa229b826ad3878d4e74 inherit pub_methods_classrecursive__configurable"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrecursive__configurable.html#a893a1dea81a5aa229b826ad3878d4e74">add_child</a> (<a class="el" href="classconfigurable.html">configurable</a> *child)</td></tr>
+<tr class="memdesc:a893a1dea81a5aa229b826ad3878d4e74 inherit pub_methods_classrecursive__configurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">子供インスタンスを追加する。  <a href="classrecursive__configurable.html#a893a1dea81a5aa229b826ad3878d4e74">[詳解]</a><br /></td></tr>
+<tr class="separator:a893a1dea81a5aa229b826ad3878d4e74 inherit pub_methods_classrecursive__configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4d913b0defd57d30baaa775638d1c6 inherit pub_methods_classrecursive__configurable"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrecursive__configurable.html#aaa4d913b0defd57d30baaa775638d1c6">add_child</a> (<a class="el" href="classrecursive__configurable.html">recursive_configurable</a> *child)</td></tr>
+<tr class="memdesc:aaa4d913b0defd57d30baaa775638d1c6 inherit pub_methods_classrecursive__configurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">子供インスタンスを追加する。  <a href="classrecursive__configurable.html#aaa4d913b0defd57d30baaa775638d1c6">[詳解]</a><br /></td></tr>
+<tr class="separator:aaa4d913b0defd57d30baaa775638d1c6 inherit pub_methods_classrecursive__configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d470d123e715ade34e0c0d24a864233 inherit pub_methods_classrecursive__configurable"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrecursive__configurable.html#a8d470d123e715ade34e0c0d24a864233">remove_child</a> (<a class="el" href="classconfigurable.html">configurable</a> *child)</td></tr>
+<tr class="memdesc:a8d470d123e715ade34e0c0d24a864233 inherit pub_methods_classrecursive__configurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">子供インスタンスを削除する。  <a href="classrecursive__configurable.html#a8d470d123e715ade34e0c0d24a864233">[詳解]</a><br /></td></tr>
+<tr class="separator:a8d470d123e715ade34e0c0d24a864233 inherit pub_methods_classrecursive__configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02903b5221e5a50049027de4d9536c58 inherit pub_methods_classrecursive__configurable"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrecursive__configurable.html#a02903b5221e5a50049027de4d9536c58">remove_child</a> (<a class="el" href="classrecursive__configurable.html">recursive_configurable</a> *child)</td></tr>
+<tr class="memdesc:a02903b5221e5a50049027de4d9536c58 inherit pub_methods_classrecursive__configurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">子供インスタンスを削除する。  <a href="classrecursive__configurable.html#a02903b5221e5a50049027de4d9536c58">[詳解]</a><br /></td></tr>
+<tr class="separator:a02903b5221e5a50049027de4d9536c58 inherit pub_methods_classrecursive__configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ef97143450735cb52746610da8679e inherit pub_methods_classrecursive__configurable"><td class="memItemLeft" align="right" valign="top"><a id="a89ef97143450735cb52746610da8679e"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrecursive__configurable.html#a89ef97143450735cb52746610da8679e">setup_now</a> (<a class="el" href="classconfiguration.html">configuration</a> &amp;config=<a class="el" href="classconfigurable.html#a939644db3f97d017fecdf140dd226e08">get_global_configuration</a>()) override</td></tr>
+<tr class="memdesc:a89ef97143450735cb52746610da8679e inherit pub_methods_classrecursive__configurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">recursive_load - recursive_configure - recursive_initialize のプロセスを呼ぶ。 <br /></td></tr>
+<tr class="separator:a89ef97143450735cb52746610da8679e inherit pub_methods_classrecursive__configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7de6c9a66d8343c55fda9bd2e493e992 inherit pub_methods_classrecursive__configurable"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrecursive__configurable.html#a7de6c9a66d8343c55fda9bd2e493e992">not_recursive</a> () override</td></tr>
+<tr class="memdesc:a7de6c9a66d8343c55fda9bd2e493e992 inherit pub_methods_classrecursive__configurable"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classrecursive__configurable.html" title="複数の子供 configurable を保持する configurable クラスの拡張。">recursive_configurable</a> から継承されたインスタンスでないか確認する。  <a href="classrecursive__configurable.html#a7de6c9a66d8343c55fda9bd2e493e992">[詳解]</a><br /></td></tr>
+<tr class="separator:a7de6c9a66d8343c55fda9bd2e493e992 inherit pub_methods_classrecursive__configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a3a62fbe7ceb4c05817b7395d41c18 inherit pub_methods_classrecursive__configurable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrecursive__configurable.html#a35a3a62fbe7ceb4c05817b7395d41c18">set_environment</a> (std::string name, const void *value)</td></tr>
+<tr class="memdesc:a35a3a62fbe7ceb4c05817b7395d41c18 inherit pub_methods_classrecursive__configurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力名に関連した環境変数の値へのポインターを設定する。  <a href="classrecursive__configurable.html#a35a3a62fbe7ceb4c05817b7395d41c18">[詳解]</a><br /></td></tr>
+<tr class="separator:a35a3a62fbe7ceb4c05817b7395d41c18 inherit pub_methods_classrecursive__configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classconfigurable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classconfigurable')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classconfigurable.html">configurable</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a73dffa9b8386604fb22bf1728323d72b inherit pub_methods_classconfigurable"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfigurable.html#a73dffa9b8386604fb22bf1728323d72b">load</a> (<a class="el" href="classconfiguration.html">configuration</a> &amp;config)</td></tr>
+<tr class="memdesc:a73dffa9b8386604fb22bf1728323d72b inherit pub_methods_classconfigurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">プログラムを読み込む。ファイルやライブラリをメモリに読み込むことに使われる。  <a href="classconfigurable.html#a73dffa9b8386604fb22bf1728323d72b">[詳解]</a><br /></td></tr>
+<tr class="separator:a73dffa9b8386604fb22bf1728323d72b inherit pub_methods_classconfigurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53809a1aac81fa627d8a0b5a1f4dd7f9 inherit pub_methods_classconfigurable"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfigurable.html#a53809a1aac81fa627d8a0b5a1f4dd7f9">configure</a> (<a class="el" href="classconfiguration.html">configuration</a> &amp;config)</td></tr>
+<tr class="memdesc:a53809a1aac81fa627d8a0b5a1f4dd7f9 inherit pub_methods_classconfigurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">プログラムの設定を実際に行う。パラメータの読み込みと設定に使われる。  <a href="classconfigurable.html#a53809a1aac81fa627d8a0b5a1f4dd7f9">[詳解]</a><br /></td></tr>
+<tr class="separator:a53809a1aac81fa627d8a0b5a1f4dd7f9 inherit pub_methods_classconfigurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classconfigurable"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classconfigurable')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classconfigurable.html">configurable</a> に属する継承静的公開メンバ関数</td></tr>
+<tr class="memitem:ad800379cc96e6d9e1b9af9b0522870c8 inherit pub_static_methods_classconfigurable"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classconfiguration.html">configuration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfigurable.html#ad800379cc96e6d9e1b9af9b0522870c8">set_global_configuration</a> (const <a class="el" href="classconfiguration.html">configuration</a> &amp;config)</td></tr>
+<tr class="memdesc:ad800379cc96e6d9e1b9af9b0522870c8 inherit pub_static_methods_classconfigurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバルの設定を与える。  <a href="classconfigurable.html#ad800379cc96e6d9e1b9af9b0522870c8">[詳解]</a><br /></td></tr>
+<tr class="separator:ad800379cc96e6d9e1b9af9b0522870c8 inherit pub_static_methods_classconfigurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a939644db3f97d017fecdf140dd226e08 inherit pub_static_methods_classconfigurable"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classconfiguration.html">configuration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfigurable.html#a939644db3f97d017fecdf140dd226e08">get_global_configuration</a> ()</td></tr>
+<tr class="memdesc:a939644db3f97d017fecdf140dd226e08 inherit pub_static_methods_classconfigurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">グローバルの設定を取得する。  <a href="classconfigurable.html#a939644db3f97d017fecdf140dd226e08">[詳解]</a><br /></td></tr>
+<tr class="separator:a939644db3f97d017fecdf140dd226e08 inherit pub_static_methods_classconfigurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad49ca37ebfd48f10e506e3a93466dd23 inherit pub_static_methods_classconfigurable"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad49ca37ebfd48f10e506e3a93466dd23 inherit pub_static_methods_classconfigurable"><td class="memTemplItemLeft" align="right" valign="top">static const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classconfigurable.html#ad49ca37ebfd48f10e506e3a93466dd23">get_env</a> (const <a class="el" href="classconfigurable.html#a543be0036cefaf1cde8d268b8414754d">environment_map</a> &amp;environment, std::string key)</td></tr>
+<tr class="memdesc:ad49ca37ebfd48f10e506e3a93466dd23 inherit pub_static_methods_classconfigurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力の環境のインスタンスから、指定された種類のポインターを取得する。  <a href="classconfigurable.html#ad49ca37ebfd48f10e506e3a93466dd23">[詳解]</a><br /></td></tr>
+<tr class="separator:ad49ca37ebfd48f10e506e3a93466dd23 inherit pub_static_methods_classconfigurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classconfigurable"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classconfigurable')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classconfigurable.html">configurable</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:afa02dcb37a5080361011d790a784baa6 inherit pro_methods_classconfigurable"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfigurable.html#afa02dcb37a5080361011d790a784baa6">check_set</a> (const <a class="el" href="classconfigurable.html#a543be0036cefaf1cde8d268b8414754d">environment_map</a> &amp;environment, std::vector&lt; std::string &gt; names)</td></tr>
+<tr class="memdesc:afa02dcb37a5080361011d790a784baa6 inherit pro_methods_classconfigurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">変数のキーの配列に対応する値が存在するか取得する。  <a href="classconfigurable.html#afa02dcb37a5080361011d790a784baa6">[詳解]</a><br /></td></tr>
+<tr class="separator:afa02dcb37a5080361011d790a784baa6 inherit pro_methods_classconfigurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p><a class="el" href="classrecursive__configurable.html" title="複数の子供 configurable を保持する configurable クラスの拡張。">recursive_configurable</a> インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。 </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ae2c4b9d3587a2ce00f0b8e373d7ad941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c4b9d3587a2ce00f0b8e373d7ad941">&#9670;&nbsp;</a></span>bitmacarray3() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bitmacarray3::bitmacarray3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrecursive__configurable.html">recursive_configurable</a> *&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structshape3.html">shape3</a> &amp;&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>core_name</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のコンストラクタ。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent</td><td>親 <a class="el" href="classrecursive__configurable.html" title="複数の子供 configurable を保持する configurable クラスの拡張。">recursive_configurable</a> のインスタンスへのポインタ。nullptr も可。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shape</td><td>グリッドの形 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">core_name</td><td>コア子ジュールの名前。デフォルトは "lineararray_core3"。"tiledarray_core3" も可能。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6a1be84bc20b531f4bc639b5f5c9b506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a1be84bc20b531f4bc639b5f5c9b506">&#9670;&nbsp;</a></span>bitmacarray3() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bitmacarray3::bitmacarray3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrecursive__configurable.html">recursive_configurable</a> *&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>core_name</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のコンストラクタ。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent</td><td>親 <a class="el" href="classrecursive__configurable.html" title="複数の子供 configurable を保持する configurable クラスの拡張。">recursive_configurable</a> のインスタンスへのポインタ。nullptr も可。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">core_name</td><td>コア子ジュールの名前。デフォルトは "lineararray_core3"。"tiledarray_core3" も可能。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3aa0a1f55605866dd35eee60f25af253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aa0a1f55605866dd35eee60f25af253">&#9670;&nbsp;</a></span>bitmacarray3() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bitmacarray3::bitmacarray3 </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>core_name</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のコンストラクタ。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">core_name</td><td>コア子ジュールの名前。デフォルトは "lineararray_core3"。"tiledarray_core3" も可能。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5b33c4a4522773c9405cdd15aa2b2589"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b33c4a4522773c9405cdd15aa2b2589">&#9670;&nbsp;</a></span>bitmacarray3() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bitmacarray3::bitmacarray3 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structshape3.html">shape3</a> &amp;&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>core_name</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のコンストラクタ。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">shape</td><td>グリッドの形 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">core_name</td><td>コア子ジュールの名前。デフォルトは "lineararray_core3"。"tiledarray_core3" も可能。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a744e89d31cbc965d73f94eafd2c864da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744e89d31cbc965d73f94eafd2c864da">&#9670;&nbsp;</a></span>bitmacarray3() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bitmacarray3::bitmacarray3 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のコピーコンストラクタ。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">コピーする</td><td><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のインスタンスへの参照。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ae82b6f81412470aeab18380583169d1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae82b6f81412470aeab18380583169d1e">&#9670;&nbsp;</a></span>activate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::activate </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; std::vector&lt; <a class="el" href="structvec.html">vec3i</a> &gt;, DIM3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>active_entries</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="structvec.html">vec3i</a>, DIM3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>offsets</em> = <code>{<a class="el" href="structvec.html">vec3i</a>(),<a class="el" href="structvec.html">vec3i</a>(),<a class="el" href="structvec.html">vec3i</a>()}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>active_entries と同じ場所のセルを offset だけずらして、アクティブにする。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">active_entries</td><td>アクティブにするセルの場所のリスト。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>active_entries に適用されるオフセット。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aae4b153d94db16296b4e450ec930a495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae4b153d94db16296b4e450ec930a495">&#9670;&nbsp;</a></span>activate_as()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Y &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::activate_as </td>
+          <td>(</td>
+          <td class="paramtype">const Y &amp;&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="structvec.html">vec3i</a>, DIM3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>offsets</em> = <code>{<a class="el" href="structvec.html">vec3i</a>(),<a class="el" href="structvec.html">vec3i</a>(),<a class="el" href="structvec.html">vec3i</a>()}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>入力のグリッドのアクティブセルと同じ場所のセルを offset だけずらして、アクティブにする。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array</td><td>目標となるグリッド。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>目標となるグリッドに適用されるオフセット。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad49a4a791b8358cac2ad74db87aaa224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad49a4a791b8358cac2ad74db87aaa224">&#9670;&nbsp;</a></span>activate_as_bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::activate_as_bit </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="structvec.html">vec3i</a>, DIM3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>offsets</em> = <code>{<a class="el" href="structvec.html">vec3i</a>(),<a class="el" href="structvec.html">vec3i</a>(),<a class="el" href="structvec.html">vec3i</a>()}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>入力のグリッドのアクティブセルと同じ場所のセルを offset だけずらして、アクティブにする。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array</td><td>目標となるグリッド。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>目標となるグリッドに適用されるオフセット。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a37d968e83749a75c5e8af57e668ab617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37d968e83749a75c5e8af57e668ab617">&#9670;&nbsp;</a></span>actives()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;std::vector&lt;<a class="el" href="structvec.html">vec3i</a>&gt;,DIM3&gt; bitmacarray3::actives </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アクティブセルの位置のリストを返す関数。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>アクティブセルの位置のリスト。 </dd></dl>
+
+</div>
+</div>
+<a id="a0fecaf6e80a4cfff25589be8d6ae76da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fecaf6e80a4cfff25589be8d6ae76da">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グリッドを初期化する。 </p>
+<p>グリッドの大きさやメモリ確保、レベルセット情報、バックグラウンド値は変更されない。 </p>
+
+</div>
+</div>
+<a id="a3dc5b6b0c8ecfcb1063eed90ed2461d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dc5b6b0c8ecfcb1063eed90ed2461d6">&#9670;&nbsp;</a></span>const_parallel_actives() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::const_parallel_actives </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アクティブセルを並列に読み込みのみで処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aff5e272a18d8312f07f37413c9c24bd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff5e272a18d8312f07f37413c9c24bd9">&#9670;&nbsp;</a></span>const_parallel_actives() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::const_parallel_actives </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, int thread_index)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アクティブセルを並列に読み込みのみで処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa3a40ba2607f8e7109067d2b24f3d4d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a40ba2607f8e7109067d2b24f3d4d7">&#9670;&nbsp;</a></span>const_parallel_all() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::const_parallel_all </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全てのセルを並列に読み込みのみで処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a59080b93f0839f3adb1d3356764cfa7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59080b93f0839f3adb1d3356764cfa7b">&#9670;&nbsp;</a></span>const_parallel_all() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::const_parallel_all </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全てのセルを並列に読み込みのみで処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a17068ed993e199db90a40fd795513423"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17068ed993e199db90a40fd795513423">&#9670;&nbsp;</a></span>const_parallel_all() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::const_parallel_all </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it, int thread_index)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全てのセルを並列に読み込みのみで処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7d053a85f1d0fedc1619ea3bab1ed17e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d053a85f1d0fedc1619ea3bab1ed17e">&#9670;&nbsp;</a></span>const_parallel_op() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::const_parallel_op </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>type</em> = <code>ALL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルを並列に読み込みのみで処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>ターゲットセルのタイプ. ACTIVE か ALL。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a517a664a8c9c0e1864c2f935fb2b7419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a517a664a8c9c0e1864c2f935fb2b7419">&#9670;&nbsp;</a></span>const_parallel_op() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::const_parallel_op </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>type</em> = <code>ALL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルを並列に読み込みのみで処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>ターゲットセルのタイプ. ACTIVE か ALL。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a27b1b5ae35ec37515d98ddd67793085c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27b1b5ae35ec37515d98ddd67793085c">&#9670;&nbsp;</a></span>const_parallel_op() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::const_parallel_op </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it, int thread_index)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>type</em> = <code>ALL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルを並列に読み込みのみで処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>ターゲットセルのタイプ. ACTIVE か ALL。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a21bf70e94384b145167b5256fa035d74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21bf70e94384b145167b5256fa035d74">&#9670;&nbsp;</a></span>const_send_message()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool bitmacarray3::const_send_message </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コアモジュールにメッセージを送る </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>メッセージ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>あるポインターの値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>もし処理されたら <code>true</code> を、処理されなかったら <code>false</code> </dd></dl>
+
+<p><a class="el" href="classmessageable.html#a427ff14c245d4f4133ca04c050451d8c">messageable</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="ad7fc7dc12de494c9da2d3bbc4ae93e2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7fc7dc12de494c9da2d3bbc4ae93e2f">&#9670;&nbsp;</a></span>const_serial_actives()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::const_serial_actives </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アクティブなセルをシリアルに読み込みのみで処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6a629814ac244a20e73616d4d5a37590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a629814ac244a20e73616d4d5a37590">&#9670;&nbsp;</a></span>const_serial_all() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::const_serial_all </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全てのセルをシリアルに読み込みのみで処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adb696c271b0fd09e77556807006c7f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb696c271b0fd09e77556807006c7f9e">&#9670;&nbsp;</a></span>const_serial_all() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::const_serial_all </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全てのセルをシリアルに読み込みのみで処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a03b8fb4bc63b7d5c06596f3adc00afa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b8fb4bc63b7d5c06596f3adc00afa9">&#9670;&nbsp;</a></span>const_serial_op() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::const_serial_op </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>type</em> = <code>ALL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルをシリアルに読み込みのみで処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>ターゲットセルのタイプ. ACTIVE か ALL。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aef6e7cd3e44e1022a9176153a76d34f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef6e7cd3e44e1022a9176153a76d34f4">&#9670;&nbsp;</a></span>const_serial_op() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::const_serial_op </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>type</em> = <code>ALL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルをシリアルに読み込みのみで処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>ターゲットセルのタイプ. ACTIVE か ALL。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a59f98330752a056784bc62339374954d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59f98330752a056784bc62339374954d">&#9670;&nbsp;</a></span>copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のディープコピー関数。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">コピーする</td><td><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のインスタンスへの参照。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a491519d3e872bd4833a34d41542678cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a491519d3e872bd4833a34d41542678cf">&#9670;&nbsp;</a></span>copy_active_as()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::copy_active_as </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structvec.html">vec3i</a> &amp;&#160;</td>
+          <td class="paramname"><em>offset</em> = <code><a class="el" href="structvec.html">vec3i</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルのアクティブと非アクティブステートの状態を入力のグリッドと同じようにセットする。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array</td><td>目標となる状態をコピーする元となるグリッド。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>オフセット </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abb7fb2c3dec5432d8664817e75c6fcbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb7fb2c3dec5432d8664817e75c6fcbd">&#9670;&nbsp;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t bitmacarray3::count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アクティブセルの数を数える関数。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>アクティブセルの数。 </dd></dl>
+
+</div>
+</div>
+<a id="a88679e968ec7e41064da704174edc8e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88679e968ec7e41064da704174edc8e7">&#9670;&nbsp;</a></span>dilate() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::dilate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>拡張する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>拡張の回数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa91dfd3a6c44aa7ac22f8587b82d9be5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa91dfd3a6c44aa7ac22f8587b82d9be5">&#9670;&nbsp;</a></span>dilate() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::dilate </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>拡張する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>拡張されたセルにどのような値を与えるか指定する関数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>拡張の回数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a499863457ebf42c75499f60184d4c246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a499863457ebf42c75499f60184d4c246">&#9670;&nbsp;</a></span>dilate() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::dilate </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it, int thread_index)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>拡張する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>拡張されたセルにどのような値を与えるか指定する関数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>拡張の回数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a15e9b95ade0f304a5088e2ba183cf333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15e9b95ade0f304a5088e2ba183cf333">&#9670;&nbsp;</a></span>erode() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::erode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>縮小する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>縮小の回数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5a4e7a1b9d32c5c52ff7b035cc8d0e1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a4e7a1b9d32c5c52ff7b035cc8d0e1d">&#9670;&nbsp;</a></span>erode() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::erode </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(int dim, int i, int j, int k)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>縮小する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>拡張されたセルを非アクティブにするか指定する関数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>縮小の回数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5824bbf906e2f917bf631349acf65577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5824bbf906e2f917bf631349acf65577">&#9670;&nbsp;</a></span>erode() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::erode </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(int dim, int i, int j, int k, int thread_index)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>縮小する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>拡張されたセルを非アクティブにするか指定する関数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>縮小の回数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a31287ffbb62b01f8a854203b6212eed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31287ffbb62b01f8a854203b6212eed8">&#9670;&nbsp;</a></span>get_core_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string bitmacarray3::get_core_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グリッドのモジュールのコアネームを取得する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>コアネームの名前。 </dd></dl>
+
+</div>
+</div>
+<a id="a788a74d0d292a69579665181dbae82f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a788a74d0d292a69579665181dbae82f8">&#9670;&nbsp;</a></span>get_thread_num()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int bitmacarray3::get_thread_num </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>現在設定されている並列処理をするためのスレッドの数を得る。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>number スレッドの数。 </dd></dl>
+
+</div>
+</div>
+<a id="af0cd279eb3d1c19a9eeb380c472f14a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0cd279eb3d1c19a9eeb380c472f14a7">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::initialize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structshape3.html">shape3</a> &amp;&#160;</td>
+          <td class="paramname"><em>shape</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グリッドを値でメモリに展開する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">shape</td><td>グリッドの形。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>初期値。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a68ad92ee864a1d8aa9005751f1741cc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ad92ee864a1d8aa9005751f1741cc7">&#9670;&nbsp;</a></span>interruptible_const_serial_actives()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::interruptible_const_serial_actives </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(int dim, int i, int j, int k)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アクティブなセルを読み込み可能に限定してシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。<code>true</code> を返すと、ループを中断する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a55ee0720d539ee56fb0b15f6c7e41803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55ee0720d539ee56fb0b15f6c7e41803">&#9670;&nbsp;</a></span>interruptible_const_serial_all() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::interruptible_const_serial_all </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全てのセルを読み込み可能に限定してシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。<code>true</code> を返すと、ループを中断する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afb4e5a509a19c5f232be5cfb0913acae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb4e5a509a19c5f232be5cfb0913acae">&#9670;&nbsp;</a></span>interruptible_const_serial_all() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::interruptible_const_serial_all </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全てのセルを読み込み可能に限定してシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。<code>true</code> を返すと、ループを中断する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1d0ed848cd593582cb9f56e91d55c15c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d0ed848cd593582cb9f56e91d55c15c">&#9670;&nbsp;</a></span>interruptible_const_serial_op() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::interruptible_const_serial_op </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>type</em> = <code>ALL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルを読み込み可能に限定してシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。<code>true</code> を返すと、ループを中断する。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>ターゲットセルのタイプ. ACTIVE か ALL。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab7f173cedac2968ae4f4949f53bf825b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7f173cedac2968ae4f4949f53bf825b">&#9670;&nbsp;</a></span>interruptible_const_serial_op() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::interruptible_const_serial_op </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(int dim, int i, int j, int k, const typename <a class="el" href="classbitarray3_1_1const__iterator.html">bitarray3::const_iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>type</em> = <code>ALL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルを読み込み可能に限定してシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。<code>true</code> を返すと、ループを中断する。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>ターゲットセルのタイプ. ACTIVE か ALL。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a706a10e896325357bce52d591c5dc038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a706a10e896325357bce52d591c5dc038">&#9670;&nbsp;</a></span>interruptible_serial_actives() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::interruptible_serial_actives </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アクティブなセルをシリアルに処理する。<code>true</code> を返すと、ループを中断する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2cc514e708662f151d3c2914a9776121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc514e708662f151d3c2914a9776121">&#9670;&nbsp;</a></span>interruptible_serial_actives() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::interruptible_serial_actives </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アクティブなセルをシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。<code>true</code> を返すと、ループを中断する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a707c94602239ee154d0acfe0c7998392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a707c94602239ee154d0acfe0c7998392">&#9670;&nbsp;</a></span>interruptible_serial_all() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::interruptible_serial_all </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全てのセルをシリアルに処理する。<code>true</code> を返すと、ループを中断する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9826333ea403be56af73fa6c02cfea7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9826333ea403be56af73fa6c02cfea7d">&#9670;&nbsp;</a></span>interruptible_serial_all() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::interruptible_serial_all </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全てのセルをシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。<code>true</code> を返すと、ループを中断する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4a849b47b5f8c63d7a2a8ecd79500f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a849b47b5f8c63d7a2a8ecd79500f46">&#9670;&nbsp;</a></span>interruptible_serial_op() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::interruptible_serial_op </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>type</em> = <code>ALL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルをシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。<code>true</code> を返すと、ループを中断する。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>ターゲットセルのタイプ. ACTIVE か ALL。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e01987a2f99eab89ce8fa74efda5e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e01987a2f99eab89ce8fa74efda5e6f">&#9670;&nbsp;</a></span>interruptible_serial_op() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::interruptible_serial_op </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>type</em> = <code>ALL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルをシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。<code>true</code> を返すと、ループを中断する。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>ターゲットセルのタイプ. ACTIVE か ALL。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a12a26af7e9ae6134ac55a6d151389ac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12a26af7e9ae6134ac55a6d151389ac6">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bitmacarray3::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グリッドが入力されたグリッドと違うかどうか返す。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array</td><td>目標とする比べるグリッド。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>もしグリッドが入力と違うグリッドなら <code>true</code> そうでなければ <code>false</code> を返す。 </dd></dl>
+
+</div>
+</div>
+<a id="a2b8c925b4ee0004d1ff3b141b8bca545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b8c925b4ee0004d1ff3b141b8bca545">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbitmacarray3.html">bitmacarray3</a>&amp; bitmacarray3::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のディープコピー演算子。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">コピーする</td><td><a class="el" href="classbitmacarray3.html" title="recursive_configurable インスタンスのメンバーインスタンスとして定義可能なスタッガード3次元ビット配列クラス。">bitmacarray3</a> のインスタンスへの参照。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8f30383b774fd6e4ccbb83581003f89e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f30383b774fd6e4ccbb83581003f89e">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bitmacarray3::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classbitmacarray3.html">bitmacarray3</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グリッドが入力されたグリッドと同じかどうか返す。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array</td><td>目標とする比べるグリッド。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>もしグリッドが入力と同じグリッドなら <code>true</code> そうでなければ <code>false</code> を返す。 </dd></dl>
+
+</div>
+</div>
+<a id="ac9b805be601fc44c44aefe4b55c3b17a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9b805be601fc44c44aefe4b55c3b17a">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbitarray3.html">bitarray3</a>&amp; bitmacarray3::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定した次元のスタッガード格子の参照を得る。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dim</td><td>グリッドの次元。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1cd308284755d0db1d2a596c4e3530c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cd308284755d0db1d2a596c4e3530c0">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classbitarray3.html">bitarray3</a>&amp; bitmacarray3::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dim</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定した次元の読み込み処理だけ可能なスタッガード格子の参照を得る。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dim</td><td>グリッドの次元。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3a9a74200205b618a78e33b79530096a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a9a74200205b618a78e33b79530096a">&#9670;&nbsp;</a></span>parallel_actives() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::parallel_actives </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アクティブセルを並列に処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1b899350f0c37e5657c120d3238115ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b899350f0c37e5657c120d3238115ce">&#9670;&nbsp;</a></span>parallel_actives() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::parallel_actives </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it, int thread_index)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アクティブセルを並列に処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5c01ca07c67909bd154fbbfcb3fb4245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c01ca07c67909bd154fbbfcb3fb4245">&#9670;&nbsp;</a></span>parallel_actives() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::parallel_actives </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アクティブセルを並列に処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af2244b737236df1a1ca6efe181b95606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2244b737236df1a1ca6efe181b95606">&#9670;&nbsp;</a></span>parallel_all() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::parallel_all </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全てのセルを並列に処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad2a8203765b3327a3e471889df79f118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2a8203765b3327a3e471889df79f118">&#9670;&nbsp;</a></span>parallel_all() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::parallel_all </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it, int thread_index)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全てのセルを並列に処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac0b93590ca12a22a002e6ca00a31f41f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b93590ca12a22a002e6ca00a31f41f">&#9670;&nbsp;</a></span>parallel_all() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::parallel_all </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全てのセルを並列に処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac9fd8828c1a8297fd24ad6ca76b70a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9fd8828c1a8297fd24ad6ca76b70a85">&#9670;&nbsp;</a></span>parallel_op() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::parallel_op </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>type</em> = <code>ALL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルを並列に処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>ターゲットセルのタイプ. ACTIVE か ALL。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a978572dcfdbdd2f7edb14d7f54d5ba51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a978572dcfdbdd2f7edb14d7f54d5ba51">&#9670;&nbsp;</a></span>parallel_op() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::parallel_op </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it, int thread_index)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>type</em> = <code>ALL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルを並列に処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>ターゲットセルのタイプ. ACTIVE か ALL。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a21e9a28ee47f9dc8e1b0a1cf1d9c9d0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e9a28ee47f9dc8e1b0a1cf1d9c9d0a">&#9670;&nbsp;</a></span>parallel_op() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::parallel_op </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>type</em> = <code>ALL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルを並列に処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>ターゲットセルのタイプ. ACTIVE か ALL。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acb15e7b176fb80218edb388fc9d0026c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb15e7b176fb80218edb388fc9d0026c">&#9670;&nbsp;</a></span>send_message()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool bitmacarray3::send_message </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コアモジュールにメッセージを送る </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>メッセージ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>あるポインターの値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>もし処理されたら <code>true</code> を、処理されなかったら <code>false</code> </dd></dl>
+
+<p><a class="el" href="classmessageable.html#aafa6bb0c9762bc86a1778709fbff7044">messageable</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a1fc0021085c4ef1628e1ac7752f668d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fc0021085c4ef1628e1ac7752f668d1">&#9670;&nbsp;</a></span>serial_actives() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::serial_actives </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アクティブなセルをシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5ff9ef198548c632d97e1013da560766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff9ef198548c632d97e1013da560766">&#9670;&nbsp;</a></span>serial_actives() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::serial_actives </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アクティブなセルをシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae24a488bc548c1dd46fd9fbc4bf39900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae24a488bc548c1dd46fd9fbc4bf39900">&#9670;&nbsp;</a></span>serial_all() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::serial_all </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全てのセルをシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad6488ff8b3360ace75c6d086cac384d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6488ff8b3360ace75c6d086cac384d3">&#9670;&nbsp;</a></span>serial_all() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::serial_all </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全てのセルをシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a34149d20cfd61d66c61eb28479302a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34149d20cfd61d66c61eb28479302a19">&#9670;&nbsp;</a></span>serial_op() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::serial_op </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(int dim, int i, int j, int k, typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>type</em> = <code>ALL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルをシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>ターゲットセルのタイプ. ACTIVE か ALL。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a55bfc03843c5e04b54db42b46edbcfe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55bfc03843c5e04b54db42b46edbcfe7">&#9670;&nbsp;</a></span>serial_op() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::serial_op </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(typename <a class="el" href="classbitarray3_1_1iterator.html">bitarray3::iterator</a> &amp;it)&gt;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>type</em> = <code>ALL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>セルをシリアルに処理する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>それぞれのセルを処理する関数。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>ターゲットセルのタイプ. ACTIVE か ALL。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a723f6bf1e1407a79df123aa8646c9d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a723f6bf1e1407a79df123aa8646c9d96">&#9670;&nbsp;</a></span>set_core_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::set_core_name </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>core_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グリッドのモジュールのコアネームを取得する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">コアネームの名前。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9dfbddaedb5351ff5a6b852af1b8ef6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dfbddaedb5351ff5a6b852af1b8ef6c">&#9670;&nbsp;</a></span>set_thread_num()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::set_thread_num </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>並列処理をするためのスレッドの数を設定する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>スレッドの数。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5a0add935628ac3b5ef3922241241fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a0add935628ac3b5ef3922241241fac">&#9670;&nbsp;</a></span>set_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bitmacarray3::set_type </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structbitmacarray3_1_1type3.html">type3</a> &amp;&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グリッドの type を設定する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>セットする type のインスタンス。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0faaecfb9d9d94324cbad92b4815db46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0faaecfb9d9d94324cbad92b4815db46">&#9670;&nbsp;</a></span>shape() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structshape3.html">shape3</a> bitmacarray3::shape </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グリッドの形を返す。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>グリッドの形。 </dd></dl>
+
+</div>
+</div>
+<a id="ad4f437c86784f92f310aed362a6a1db8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f437c86784f92f310aed362a6a1db8">&#9670;&nbsp;</a></span>shape() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structshape3.html">shape3</a> bitmacarray3::shape </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dim</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定された次元のスタッガードグリッドの形を返す。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>指定された次元でのグリッドの形。 </dd></dl>
+
+</div>
+</div>
+<a id="af649ad74285f0ad1ba0dfcb9129c146d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af649ad74285f0ad1ba0dfcb9129c146d">&#9670;&nbsp;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structbitmacarray3_1_1type3.html">type3</a> bitmacarray3::type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>このグリッドの type を取得する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>このグリッドの type。 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>include/shiokaze/array/<a class="el" href="bitmacarray3_8h_source.html">bitmacarray3.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classbitmacarray3.html">bitmacarray3</a></li>
+    <li class="footer">2020年09月11日(金) 08時43分29秒作成 - 潮風フレームワーク / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

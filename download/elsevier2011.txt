@@ -1,0 +1,16 @@
+@article{Ando2011148,
+title = "Vector graphics depicting marbling flow",
+journal = "Computers & Graphics",
+volume = "35",
+number = "1",
+pages = "148 - 159",
+year = "2011",
+note = "",
+issn = "0097-8493",
+doi = "DOI: 10.1016/j.cag.2010.11.002",
+url = "http://www.sciencedirect.com/science/article/B6TYG-51J36C6-1/2/56884399ccb92cfa731a22813653b9f1",
+author = "Ryoichi Ando and Reiji Tsuruno",
+keywords = "Marbling",
+keywords = "Surface flow",
+keywords = "Front tracking"
+}

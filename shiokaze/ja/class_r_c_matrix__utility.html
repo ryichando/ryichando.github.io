@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>潮風フレームワーク: RCMatrix_utility&lt; N, T &gt; クラステンプレート</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">潮風フレームワーク
+   </div>
+   <div id="projectbrief">研究開発に特化したコンピューターグラフィックスのための流体ソルバ</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_r_c_matrix__utility.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="class_r_c_matrix__utility-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">RCMatrix_utility&lt; N, T &gt; クラステンプレート</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="class_r_c_matrix__interface.html" title="行圧縮の疎行列のインターフェース。">RCMatrix_interface</a> のためのユーティリティ関数を提供するクラス。  
+ <a href="class_r_c_matrix__utility.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_r_c_matrix__utility_8h_source.html">RCMatrix_utility.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a70e529820b0e40e5a6055ab5f7e361be"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__utility.html#a70e529820b0e40e5a6055ab5f7e361be">diag</a> (const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *matrix, const std::vector&lt; T &gt; &amp;diag)</td></tr>
+<tr class="memdesc:a70e529820b0e40e5a6055ab5f7e361be"><td class="mdescLeft">&#160;</td><td class="mdescRight">対角行列を生成する。  <a href="class_r_c_matrix__utility.html#a70e529820b0e40e5a6055ab5f7e361be">[詳解]</a><br /></td></tr>
+<tr class="separator:a70e529820b0e40e5a6055ab5f7e361be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f83e67f354062b4f3f1c2438508469d"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__utility.html#a4f83e67f354062b4f3f1c2438508469d">symmetricity_error</a> (const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *matrix)</td></tr>
+<tr class="memdesc:a4f83e67f354062b4f3f1c2438508469d"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列が対称行列からどれくらい離れているかの一様ノルムを計算する。  <a href="class_r_c_matrix__utility.html#a4f83e67f354062b4f3f1c2438508469d">[詳解]</a><br /></td></tr>
+<tr class="separator:a4f83e67f354062b4f3f1c2438508469d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63b328d2890822414a2cc1579577a323"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_c_matrix__utility.html#a63b328d2890822414a2cc1579577a323">report</a> (const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *matrix, std::string name)</td></tr>
+<tr class="memdesc:a63b328d2890822414a2cc1579577a323"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列の性質について調べて報告する。  <a href="class_r_c_matrix__utility.html#a63b328d2890822414a2cc1579577a323">[詳解]</a><br /></td></tr>
+<tr class="separator:a63b328d2890822414a2cc1579577a323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><h3>template&lt;class N, class T&gt;<br />
+class RCMatrix_utility&lt; N, T &gt;</h3>
+
+<p><a class="el" href="class_r_c_matrix__interface.html" title="行圧縮の疎行列のインターフェース。">RCMatrix_interface</a> のためのユーティリティ関数を提供するクラス。 </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a70e529820b0e40e5a6055ab5f7e361be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70e529820b0e40e5a6055ab5f7e361be">&#9670;&nbsp;</a></span>diag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="class_r_c_matrix__utility.html">RCMatrix_utility</a>&lt; N, T &gt;::diag </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>diag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>対角行列を生成する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">matrix</td><td>結果の対角行列。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">diag</td><td>対角行列の成分。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a63b328d2890822414a2cc1579577a323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63b328d2890822414a2cc1579577a323">&#9670;&nbsp;</a></span>report()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="class_r_c_matrix__utility.html">RCMatrix_utility</a>&lt; N, T &gt;::report </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行列の性質について調べて報告する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">matrix</td><td>調べる行列。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>報告文で使われる行列の名前。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>もし行列が対称行列で対角項が全て正なら、<code>true</code> を、そうでなければ <code>false</code> を返す。 </dd></dl>
+
+</div>
+</div>
+<a id="a4f83e67f354062b4f3f1c2438508469d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f83e67f354062b4f3f1c2438508469d">&#9670;&nbsp;</a></span>symmetricity_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class N , class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T <a class="el" href="class_r_c_matrix__utility.html">RCMatrix_utility</a>&lt; N, T &gt;::symmetricity_error </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_r_c_matrix__interface.html">RCMatrix_interface</a>&lt; N, T &gt; *&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行列が対称行列からどれくらい離れているかの一様ノルムを計算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">matrix</td><td>検証する行列。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>一様ノルム。 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>include/shiokaze/math/<a class="el" href="_r_c_matrix__utility_8h_source.html">RCMatrix_utility.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_r_c_matrix__utility.html">RCMatrix_utility</a></li>
+    <li class="footer">2020年09月11日(金) 08時43分29秒作成 - 潮風フレームワーク / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

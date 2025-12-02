@@ -1,0 +1,580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>潮風フレームワーク: graphics_engine クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">潮風フレームワーク
+   </div>
+   <div id="projectbrief">研究開発に特化したコンピューターグラフィックスのための流体ソルバ</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classgraphics__engine.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="classgraphics__engine-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">graphics_engine クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>描画処理を行うインターフェース。  
+ <a href="classgraphics__engine.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="graphics__engine_8h_source.html">graphics_engine.h</a>&gt;</code></p>
+<div class="dynheader">
+graphics_engine の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classgraphics__engine.png" usemap="#graphics_5Fengine_map" alt=""/>
+  <map id="graphics_5Fengine_map" name="graphics_5Fengine_map">
+<area href="classgraphics__interface.html" title="画像処理を行うモジュールインターフェース。" alt="graphics_interface" shape="rect" coords="0,56,118,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:ae5f7cb90051be761c36d434ad1a687e8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#ae5f7cb90051be761c36d434ad1a687e8">FEATURE</a> { <a class="el" href="classgraphics__engine.html#ae5f7cb90051be761c36d434ad1a687e8a4d286e1216d180f5f91b4098ae1be251">FEATURE::OPACITY</a>, 
+<a class="el" href="classgraphics__engine.html#ae5f7cb90051be761c36d434ad1a687e8a38e0791348f0496a0cbf3c07b64afed1">FEATURE::_3D</a>
+ }</td></tr>
+<tr class="memdesc:ae5f7cb90051be761c36d434ad1a687e8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgraphics__engine.html#a4296e54d75cd919d6b43b2f6e7d5b3a8" title="指定された機能がサポートされているか得る。">get_supported()</a> で指定出来る機能一覧  <a href="classgraphics__engine.html#ae5f7cb90051be761c36d434ad1a687e8">[詳解]</a><br /></td></tr>
+<tr class="separator:ae5f7cb90051be761c36d434ad1a687e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c147699a5c2031407c0696cdd2bc1a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a45c147699a5c2031407c0696cdd2bc1a">MODE</a> { <br />
+&#160;&#160;<a class="el" href="classgraphics__engine.html#a45c147699a5c2031407c0696cdd2bc1aa70b71cabeeaf8c2bf473c896d5442ddb">MODE::POINTS</a>, 
+<a class="el" href="classgraphics__engine.html#a45c147699a5c2031407c0696cdd2bc1aae585142391f356c60bcfe68279ec2727">MODE::LINES</a>, 
+<a class="el" href="classgraphics__engine.html#a45c147699a5c2031407c0696cdd2bc1aae64a4d2159ed46d077e21a505575c814">MODE::LINE_STRIP</a>, 
+<a class="el" href="classgraphics__engine.html#a45c147699a5c2031407c0696cdd2bc1aa8e0df0247f66bd2cac06f16abb562134">MODE::LINE_LOOP</a>, 
+<br />
+&#160;&#160;<a class="el" href="classgraphics__engine.html#a45c147699a5c2031407c0696cdd2bc1aadd3bfee8042d1b85c224f08b42a3fc2e">MODE::TRIANGLES</a>, 
+<a class="el" href="classgraphics__engine.html#a45c147699a5c2031407c0696cdd2bc1aa708de017e3b83ccba21dfc9f6367d46f">MODE::TRIANGLE_STRIP</a>, 
+<a class="el" href="classgraphics__engine.html#a45c147699a5c2031407c0696cdd2bc1aaa9f047dff7e4cd4d8d3bdeafc4029d47">MODE::TRIANGLE_FAN</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a45c147699a5c2031407c0696cdd2bc1a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classgraphics__engine.html#ac53a6c11760fed8e4cf9e03fbe26f945" title="glBegin と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glBegin.xml を参照。">begin()</a> 関数で指定出来る描画モード。詳しくは <a href="https://www.khronos.org/opengl/wiki/Primitive">https://www.khronos.org/opengl/wiki/Primitive</a> を参照。  <a href="classgraphics__engine.html#a45c147699a5c2031407c0696cdd2bc1a">[詳解]</a><br /></td></tr>
+<tr class="separator:a45c147699a5c2031407c0696cdd2bc1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a5823a20e6a17e083a8817d9f8305cd77"><td class="memItemLeft" align="right" valign="top"><a id="a5823a20e6a17e083a8817d9f8305cd77"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a5823a20e6a17e083a8817d9f8305cd77">~graphics_engine</a> ()=default</td></tr>
+<tr class="memdesc:a5823a20e6a17e083a8817d9f8305cd77"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトデストラクタ。 <br /></td></tr>
+<tr class="separator:a5823a20e6a17e083a8817d9f8305cd77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a408e5c3a0080746c99c18da00926bd01"><td class="memItemLeft" align="right" valign="top"><a id="a408e5c3a0080746c99c18da00926bd01"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a408e5c3a0080746c99c18da00926bd01">setup_graphics</a> (std::map&lt; std::string, const void * &gt; params=std::map&lt; std::string, const void * &gt;())=0</td></tr>
+<tr class="memdesc:a408e5c3a0080746c99c18da00926bd01"><td class="mdescLeft">&#160;</td><td class="mdescRight">グラフィックスエンジンを初期化する。 <br /></td></tr>
+<tr class="separator:a408e5c3a0080746c99c18da00926bd01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d29d60e7391cc89a8fedc65b6a91073"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a5d29d60e7391cc89a8fedc65b6a91073">get_graphics_engine_name</a> () const =0</td></tr>
+<tr class="memdesc:a5d29d60e7391cc89a8fedc65b6a91073"><td class="mdescLeft">&#160;</td><td class="mdescRight">グラフィックスエンジンの名前を得る。  <a href="classgraphics__engine.html#a5d29d60e7391cc89a8fedc65b6a91073">[詳解]</a><br /></td></tr>
+<tr class="separator:a5d29d60e7391cc89a8fedc65b6a91073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4296e54d75cd919d6b43b2f6e7d5b3a8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a4296e54d75cd919d6b43b2f6e7d5b3a8">get_supported</a> (<a class="el" href="classgraphics__engine.html#ae5f7cb90051be761c36d434ad1a687e8">FEATURE</a> feature) const =0</td></tr>
+<tr class="memdesc:a4296e54d75cd919d6b43b2f6e7d5b3a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された機能がサポートされているか得る。  <a href="classgraphics__engine.html#a4296e54d75cd919d6b43b2f6e7d5b3a8">[詳解]</a><br /></td></tr>
+<tr class="separator:a4296e54d75cd919d6b43b2f6e7d5b3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd29f076b7576c2e816b1c281f42f4ba"><td class="memItemLeft" align="right" valign="top"><a id="afd29f076b7576c2e816b1c281f42f4ba"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#afd29f076b7576c2e816b1c281f42f4ba">set_viewport</a> (unsigned x, unsigned y, unsigned width, unsigned height)=0</td></tr>
+<tr class="memdesc:afd29f076b7576c2e816b1c281f42f4ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビューポートを設定する。 <br /></td></tr>
+<tr class="separator:afd29f076b7576c2e816b1c281f42f4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e694bf11ebe4ef4fcb2a20562e2c1ff"><td class="memItemLeft" align="right" valign="top"><a id="a4e694bf11ebe4ef4fcb2a20562e2c1ff"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a4e694bf11ebe4ef4fcb2a20562e2c1ff">get_viewport</a> (unsigned &amp;x, unsigned &amp;y, unsigned &amp;width, unsigned &amp;height) const =0</td></tr>
+<tr class="memdesc:a4e694bf11ebe4ef4fcb2a20562e2c1ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビューポートを得る。 <br /></td></tr>
+<tr class="separator:a4e694bf11ebe4ef4fcb2a20562e2c1ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae43e2dd42f177e7222cb43d1fe3414f2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#ae43e2dd42f177e7222cb43d1fe3414f2">set_2D_coordinate</a> (double left, double right, double bottom, double top)=0</td></tr>
+<tr class="memdesc:ae43e2dd42f177e7222cb43d1fe3414f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">2次元座標系を設定する。  <a href="classgraphics__engine.html#ae43e2dd42f177e7222cb43d1fe3414f2">[詳解]</a><br /></td></tr>
+<tr class="separator:ae43e2dd42f177e7222cb43d1fe3414f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab670a0589e8568d694349b26f0b7fc61"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#ab670a0589e8568d694349b26f0b7fc61">look_at</a> (const double target[3], const double position[3], const double up[3], double fov, double near, double far)=0</td></tr>
+<tr class="memdesc:ab670a0589e8568d694349b26f0b7fc61"><td class="mdescLeft">&#160;</td><td class="mdescRight">視野角、カメラの位置、ターゲット位置を指定してカメラを向ける。  <a href="classgraphics__engine.html#ab670a0589e8568d694349b26f0b7fc61">[詳解]</a><br /></td></tr>
+<tr class="separator:ab670a0589e8568d694349b26f0b7fc61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8113fc556eb97c7a73ea8ea6434bb4"><td class="memItemLeft" align="right" valign="top"><a id="a3e8113fc556eb97c7a73ea8ea6434bb4"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a3e8113fc556eb97c7a73ea8ea6434bb4">clear</a> ()=0</td></tr>
+<tr class="memdesc:a3e8113fc556eb97c7a73ea8ea6434bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャンバスをクリアする。 <br /></td></tr>
+<tr class="separator:a3e8113fc556eb97c7a73ea8ea6434bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11cf8897172a08573adca7d3a1abf5c"><td class="memItemLeft" align="right" valign="top"><a id="ad11cf8897172a08573adca7d3a1abf5c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#ad11cf8897172a08573adca7d3a1abf5c">get_background_color</a> (double <a class="el" href="classcolor.html">color</a>[3]) const =0</td></tr>
+<tr class="memdesc:ad11cf8897172a08573adca7d3a1abf5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">背景色を得る。 <br /></td></tr>
+<tr class="separator:ad11cf8897172a08573adca7d3a1abf5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a061d1d9b5016e52a543de1ef9502ca6d"><td class="memItemLeft" align="right" valign="top"><a id="a061d1d9b5016e52a543de1ef9502ca6d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a061d1d9b5016e52a543de1ef9502ca6d">get_foreground_color</a> (double <a class="el" href="classcolor.html">color</a>[3]) const =0</td></tr>
+<tr class="memdesc:a061d1d9b5016e52a543de1ef9502ca6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">前景色を得る。 <br /></td></tr>
+<tr class="separator:a061d1d9b5016e52a543de1ef9502ca6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae6860beeff6bf3d4193b1f14592155"><td class="memItemLeft" align="right" valign="top"><a id="adae6860beeff6bf3d4193b1f14592155"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#adae6860beeff6bf3d4193b1f14592155">color3</a> (double r, double g, double b)</td></tr>
+<tr class="memdesc:adae6860beeff6bf3d4193b1f14592155"><td class="mdescLeft">&#160;</td><td class="mdescRight">glColor と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glColor.xml を参照。 <br /></td></tr>
+<tr class="separator:adae6860beeff6bf3d4193b1f14592155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add7d4336428f1ee0dc0643f40f6453e5"><td class="memItemLeft" align="right" valign="top"><a id="add7d4336428f1ee0dc0643f40f6453e5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#add7d4336428f1ee0dc0643f40f6453e5">color4</a> (double r, double g, double b, double a)</td></tr>
+<tr class="memdesc:add7d4336428f1ee0dc0643f40f6453e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">glColor と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glColor.xml を参照。 <br /></td></tr>
+<tr class="separator:add7d4336428f1ee0dc0643f40f6453e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a639873d533f5d20797bf3acf1e922df1"><td class="memTemplParams" colspan="2"><a id="a639873d533f5d20797bf3acf1e922df1"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a639873d533f5d20797bf3acf1e922df1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a639873d533f5d20797bf3acf1e922df1">color3v</a> (const T *v)</td></tr>
+<tr class="memdesc:a639873d533f5d20797bf3acf1e922df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">glColor と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glColor.xml を参照。 <br /></td></tr>
+<tr class="separator:a639873d533f5d20797bf3acf1e922df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11284c96d0908dc33ae421537c8bde88"><td class="memItemLeft" align="right" valign="top"><a id="a11284c96d0908dc33ae421537c8bde88"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a11284c96d0908dc33ae421537c8bde88">color4v</a> (const double *v)=0</td></tr>
+<tr class="memdesc:a11284c96d0908dc33ae421537c8bde88"><td class="mdescLeft">&#160;</td><td class="mdescRight">glColor と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glColor.xml を参照。 <br /></td></tr>
+<tr class="separator:a11284c96d0908dc33ae421537c8bde88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70bfbb795ec01a36a2cdb68d4472a429"><td class="memItemLeft" align="right" valign="top"><a id="a70bfbb795ec01a36a2cdb68d4472a429"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a70bfbb795ec01a36a2cdb68d4472a429">color4v</a> (const float *v)</td></tr>
+<tr class="memdesc:a70bfbb795ec01a36a2cdb68d4472a429"><td class="mdescLeft">&#160;</td><td class="mdescRight">glColor と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glColor.xml を参照。 <br /></td></tr>
+<tr class="separator:a70bfbb795ec01a36a2cdb68d4472a429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ecf39848c99d7db76b782f0ce8b3ff"><td class="memItemLeft" align="right" valign="top"><a id="a13ecf39848c99d7db76b782f0ce8b3ff"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a13ecf39848c99d7db76b782f0ce8b3ff">vertex2</a> (double x, double y)</td></tr>
+<tr class="memdesc:a13ecf39848c99d7db76b782f0ce8b3ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">glVertex と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml を参照。 <br /></td></tr>
+<tr class="separator:a13ecf39848c99d7db76b782f0ce8b3ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea08b24247e78499ff707e2f49eda9ff"><td class="memItemLeft" align="right" valign="top"><a id="aea08b24247e78499ff707e2f49eda9ff"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#aea08b24247e78499ff707e2f49eda9ff">vertex3</a> (double x, double y, double z)</td></tr>
+<tr class="memdesc:aea08b24247e78499ff707e2f49eda9ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">glVertex と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml を参照。 <br /></td></tr>
+<tr class="separator:aea08b24247e78499ff707e2f49eda9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac53a6c11760fed8e4cf9e03fbe26f945"><td class="memItemLeft" align="right" valign="top"><a id="ac53a6c11760fed8e4cf9e03fbe26f945"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#ac53a6c11760fed8e4cf9e03fbe26f945">begin</a> (<a class="el" href="classgraphics__engine.html#a45c147699a5c2031407c0696cdd2bc1a">MODE</a> mode)=0</td></tr>
+<tr class="memdesc:ac53a6c11760fed8e4cf9e03fbe26f945"><td class="mdescLeft">&#160;</td><td class="mdescRight">glBegin と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glBegin.xml を参照。 <br /></td></tr>
+<tr class="separator:ac53a6c11760fed8e4cf9e03fbe26f945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedee6160a1384625fd2987dab786ddd4"><td class="memItemLeft" align="right" valign="top"><a id="aedee6160a1384625fd2987dab786ddd4"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#aedee6160a1384625fd2987dab786ddd4">end</a> ()=0</td></tr>
+<tr class="memdesc:aedee6160a1384625fd2987dab786ddd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">glEnd と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEnd.xml を参照。 <br /></td></tr>
+<tr class="separator:aedee6160a1384625fd2987dab786ddd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af827fbf2fa3d9dcdc6f981d917f677d0"><td class="memItemLeft" align="right" valign="top"><a id="af827fbf2fa3d9dcdc6f981d917f677d0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#af827fbf2fa3d9dcdc6f981d917f677d0">point_size</a> (double size)=0</td></tr>
+<tr class="memdesc:af827fbf2fa3d9dcdc6f981d917f677d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">glPointSize と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPointSize.xml を参照。 <br /></td></tr>
+<tr class="separator:af827fbf2fa3d9dcdc6f981d917f677d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74398feabaab0e252ed5283dc0753816"><td class="memItemLeft" align="right" valign="top"><a id="a74398feabaab0e252ed5283dc0753816"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a74398feabaab0e252ed5283dc0753816">line_width</a> (double width)=0</td></tr>
+<tr class="memdesc:a74398feabaab0e252ed5283dc0753816"><td class="mdescLeft">&#160;</td><td class="mdescRight">glLineWidth と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glLineWidth.xml を参照。 <br /></td></tr>
+<tr class="separator:a74398feabaab0e252ed5283dc0753816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab314bb151ccafbd067edcf44f5e3b35d"><td class="memTemplParams" colspan="2"><a id="ab314bb151ccafbd067edcf44f5e3b35d"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ab314bb151ccafbd067edcf44f5e3b35d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#ab314bb151ccafbd067edcf44f5e3b35d">vertex2v</a> (const T *v)</td></tr>
+<tr class="memdesc:ab314bb151ccafbd067edcf44f5e3b35d"><td class="mdescLeft">&#160;</td><td class="mdescRight">glVertex と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml を参照。 <br /></td></tr>
+<tr class="separator:ab314bb151ccafbd067edcf44f5e3b35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19b73226f7f45daca4d9cff4be0766ed"><td class="memItemLeft" align="right" valign="top"><a id="a19b73226f7f45daca4d9cff4be0766ed"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a19b73226f7f45daca4d9cff4be0766ed">vertex3v</a> (const double *v)=0</td></tr>
+<tr class="memdesc:a19b73226f7f45daca4d9cff4be0766ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">glVertex と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml を参照。 <br /></td></tr>
+<tr class="separator:a19b73226f7f45daca4d9cff4be0766ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af58c3599398b505921aa3dcbac26352f"><td class="memItemLeft" align="right" valign="top"><a id="af58c3599398b505921aa3dcbac26352f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#af58c3599398b505921aa3dcbac26352f">vertex3v</a> (const float *v)</td></tr>
+<tr class="memdesc:af58c3599398b505921aa3dcbac26352f"><td class="mdescLeft">&#160;</td><td class="mdescRight">glVertex と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml を参照。 <br /></td></tr>
+<tr class="separator:af58c3599398b505921aa3dcbac26352f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b2ac8b85831b82eea83f40724f06edb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraphics__engine.html#a8b2ac8b85831b82eea83f40724f06edb">draw_string</a> (const double *v, std::string str, unsigned size=0)=0</td></tr>
+<tr class="memdesc:a8b2ac8b85831b82eea83f40724f06edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在の場所に文字を描く。  <a href="classgraphics__engine.html#a8b2ac8b85831b82eea83f40724f06edb">[詳解]</a><br /></td></tr>
+<tr class="separator:a8b2ac8b85831b82eea83f40724f06edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>描画処理を行うインターフェース。 </p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="ae5f7cb90051be761c36d434ad1a687e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5f7cb90051be761c36d434ad1a687e8">&#9670;&nbsp;</a></span>FEATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classgraphics__engine.html#ae5f7cb90051be761c36d434ad1a687e8">graphics_engine::FEATURE</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classgraphics__engine.html#a4296e54d75cd919d6b43b2f6e7d5b3a8" title="指定された機能がサポートされているか得る。">get_supported()</a> で指定出来る機能一覧 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ae5f7cb90051be761c36d434ad1a687e8a4d286e1216d180f5f91b4098ae1be251"></a>OPACITY&#160;</td><td class="fielddoc"><p>透明描画を行えるか </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae5f7cb90051be761c36d434ad1a687e8a38e0791348f0496a0cbf3c07b64afed1"></a>_3D&#160;</td><td class="fielddoc"><p>3次元投影を行えるか </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a45c147699a5c2031407c0696cdd2bc1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45c147699a5c2031407c0696cdd2bc1a">&#9670;&nbsp;</a></span>MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classgraphics__engine.html#a45c147699a5c2031407c0696cdd2bc1a">graphics_engine::MODE</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classgraphics__engine.html#ac53a6c11760fed8e4cf9e03fbe26f945" title="glBegin と同じ。https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glBegin.xml を参照。">begin()</a> 関数で指定出来る描画モード。詳しくは <a href="https://www.khronos.org/opengl/wiki/Primitive">https://www.khronos.org/opengl/wiki/Primitive</a> を参照。 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a45c147699a5c2031407c0696cdd2bc1aa70b71cabeeaf8c2bf473c896d5442ddb"></a>POINTS&#160;</td><td class="fielddoc"><p>点群 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a45c147699a5c2031407c0696cdd2bc1aae585142391f356c60bcfe68279ec2727"></a>LINES&#160;</td><td class="fielddoc"><p>独立した線セグメント </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a45c147699a5c2031407c0696cdd2bc1aae64a4d2159ed46d077e21a505575c814"></a>LINE_STRIP&#160;</td><td class="fielddoc"><p>連続した線セグメント </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a45c147699a5c2031407c0696cdd2bc1aa8e0df0247f66bd2cac06f16abb562134"></a>LINE_LOOP&#160;</td><td class="fielddoc"><p>閉じた線 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a45c147699a5c2031407c0696cdd2bc1aadd3bfee8042d1b85c224f08b42a3fc2e"></a>TRIANGLES&#160;</td><td class="fielddoc"><p>独立した三角形 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a45c147699a5c2031407c0696cdd2bc1aa708de017e3b83ccba21dfc9f6367d46f"></a>TRIANGLE_STRIP&#160;</td><td class="fielddoc"><p>連続した三角形 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a45c147699a5c2031407c0696cdd2bc1aaa9f047dff7e4cd4d8d3bdeafc4029d47"></a>TRIANGLE_FAN&#160;</td><td class="fielddoc"><p>扇状に連続した三角形 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a8b2ac8b85831b82eea83f40724f06edb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b2ac8b85831b82eea83f40724f06edb">&#9670;&nbsp;</a></span>draw_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void graphics_engine::draw_string </td>
+          <td>(</td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>size</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>現在の場所に文字を描く。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>位置。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>文字列。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>文字の大きさ。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5d29d60e7391cc89a8fedc65b6a91073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d29d60e7391cc89a8fedc65b6a91073">&#9670;&nbsp;</a></span>get_graphics_engine_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string graphics_engine::get_graphics_engine_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グラフィックスエンジンの名前を得る。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>グラフィックスのエンジンの名前。 </dd></dl>
+
+</div>
+</div>
+<a id="a4296e54d75cd919d6b43b2f6e7d5b3a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4296e54d75cd919d6b43b2f6e7d5b3a8">&#9670;&nbsp;</a></span>get_supported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool graphics_engine::get_supported </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgraphics__engine.html#ae5f7cb90051be761c36d434ad1a687e8">FEATURE</a>&#160;</td>
+          <td class="paramname"><em>feature</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定された機能がサポートされているか得る。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">feature</td><td>サポートされているか確認したい機能 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>もしサポートされていれば <code>true</code> が、そうでなければ <code>false</code> が返る。 </dd></dl>
+
+</div>
+</div>
+<a id="ab670a0589e8568d694349b26f0b7fc61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab670a0589e8568d694349b26f0b7fc61">&#9670;&nbsp;</a></span>look_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void graphics_engine::look_at </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>target</em>[3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>position</em>[3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>up</em>[3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>fov</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>near</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>far</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>視野角、カメラの位置、ターゲット位置を指定してカメラを向ける。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>ターゲット位置。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>カメラの位置。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>上方向のユニットベクトル。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fov</td><td>視野角。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">near</td><td>ニアクリッピング。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">far</td><td>ファークリッピング。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae43e2dd42f177e7222cb43d1fe3414f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae43e2dd42f177e7222cb43d1fe3414f2">&#9670;&nbsp;</a></span>set_2D_coordinate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void graphics_engine::set_2D_coordinate </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>bottom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>top</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>2次元座標系を設定する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>左端の X 軸の座標。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td>右端の X 軸の座標。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bottom</td><td>下端の Y 軸の座標。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>上端の Y 軸の座標。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>include/shiokaze/graphics/<a class="el" href="graphics__engine_8h_source.html">graphics_engine.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classgraphics__engine.html">graphics_engine</a></li>
+    <li class="footer">2020年09月11日(金) 08時43分29秒作成 - 潮風フレームワーク / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

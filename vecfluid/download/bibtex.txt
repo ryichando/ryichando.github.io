@@ -1,0 +1,12 @@
+@inproceedings{Ryoichi2010,
+ author = {Ando, Ryoichi and Tsuruno, Reiji},
+ title = {Vector Fluid: A Vector Graphics Depiction of Surface Flow},
+ booktitle = {NPAR '10: Proceedings of the 8th International Symposium on Non-Photorealistic Animation and Rendering},
+ year = {2010},
+ isbn = {978-1-4503-0125-1},
+ pages = {129--135},
+ location = {Annecy, France},
+ doi = {http://doi.acm.org/10.1145/1809939.1809954},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }

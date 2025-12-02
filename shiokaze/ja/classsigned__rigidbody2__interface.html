@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>潮風フレームワーク: signed_rigidbody2_interface クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">潮風フレームワーク
+   </div>
+   <div id="projectbrief">研究開発に特化したコンピューターグラフィックスのための流体ソルバ</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classsigned__rigidbody2__interface.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="classsigned__rigidbody2__interface-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">signed_rigidbody2_interface クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>2D 符号付き距離関数の剛体のインターフェース。  
+ <a href="classsigned__rigidbody2__interface.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="signed__rigidbody2__interface_8h_source.html">signed_rigidbody2_interface.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:af763fb40e60ae304291ebc9f79f1781d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsigned__rigidbody2__interface.html#af763fb40e60ae304291ebc9f79f1781d">get_bounding_box</a> (<a class="el" href="structvec.html">vec2d</a> &amp;p0, <a class="el" href="structvec.html">vec2d</a> &amp;p1) const =0</td></tr>
+<tr class="memdesc:af763fb40e60ae304291ebc9f79f1781d"><td class="mdescLeft">&#160;</td><td class="mdescRight">剛体のワールド座標系のバウンディングボックスを計算する。  <a href="classsigned__rigidbody2__interface.html#af763fb40e60ae304291ebc9f79f1781d">[詳解]</a><br /></td></tr>
+<tr class="separator:af763fb40e60ae304291ebc9f79f1781d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c6cf0d75a82df40a4a83c502cecfee3"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsigned__rigidbody2__interface.html#a0c6cf0d75a82df40a4a83c502cecfee3">get_signed_distance</a> (const <a class="el" href="structvec.html">vec2d</a> &amp;p) const =0</td></tr>
+<tr class="memdesc:a0c6cf0d75a82df40a4a83c502cecfee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド座標系での符号付き距離を得る。  <a href="classsigned__rigidbody2__interface.html#a0c6cf0d75a82df40a4a83c502cecfee3">[詳解]</a><br /></td></tr>
+<tr class="separator:a0c6cf0d75a82df40a4a83c502cecfee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a628e3aac14c33857c7394fc6fae92e73"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsigned__rigidbody2__interface.html#a628e3aac14c33857c7394fc6fae92e73">get_moment_of_inertia</a> () const =0</td></tr>
+<tr class="memdesc:a628e3aac14c33857c7394fc6fae92e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">慣性モーメントを得る。  <a href="classsigned__rigidbody2__interface.html#a628e3aac14c33857c7394fc6fae92e73">[詳解]</a><br /></td></tr>
+<tr class="separator:a628e3aac14c33857c7394fc6fae92e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af58739b3a499a1d5d7c31081991f48e3"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsigned__rigidbody2__interface.html#af58739b3a499a1d5d7c31081991f48e3">get_mass</a> () const =0</td></tr>
+<tr class="memdesc:af58739b3a499a1d5d7c31081991f48e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">質量を得る。  <a href="classsigned__rigidbody2__interface.html#af58739b3a499a1d5d7c31081991f48e3">[詳解]</a><br /></td></tr>
+<tr class="separator:af58739b3a499a1d5d7c31081991f48e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d69a98057ff7ae92863c6e8937384f3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structvec.html">vec2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsigned__rigidbody2__interface.html#a1d69a98057ff7ae92863c6e8937384f3">get_center_of_gravity</a> () const =0</td></tr>
+<tr class="memdesc:a1d69a98057ff7ae92863c6e8937384f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">重心を得る。  <a href="classsigned__rigidbody2__interface.html#a1d69a98057ff7ae92863c6e8937384f3">[詳解]</a><br /></td></tr>
+<tr class="separator:a1d69a98057ff7ae92863c6e8937384f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a8d02efa9c89813a8209083e9a6132"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structvec.html">vec2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsigned__rigidbody2__interface.html#a74a8d02efa9c89813a8209083e9a6132">get_velocity</a> () const =0</td></tr>
+<tr class="memdesc:a74a8d02efa9c89813a8209083e9a6132"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度を得る。  <a href="classsigned__rigidbody2__interface.html#a74a8d02efa9c89813a8209083e9a6132">[詳解]</a><br /></td></tr>
+<tr class="separator:a74a8d02efa9c89813a8209083e9a6132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bcb7713e396ebd4c5e4bad16414478c"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsigned__rigidbody2__interface.html#a0bcb7713e396ebd4c5e4bad16414478c">get_rotation</a> () const =0</td></tr>
+<tr class="memdesc:a0bcb7713e396ebd4c5e4bad16414478c"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転角度を得る。  <a href="classsigned__rigidbody2__interface.html#a0bcb7713e396ebd4c5e4bad16414478c">[詳解]</a><br /></td></tr>
+<tr class="separator:a0bcb7713e396ebd4c5e4bad16414478c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3bbe30e277d86ff8b36bb569a657040"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsigned__rigidbody2__interface.html#aa3bbe30e277d86ff8b36bb569a657040">get_angular_velocity</a> () const =0</td></tr>
+<tr class="memdesc:aa3bbe30e277d86ff8b36bb569a657040"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転速度を得る。  <a href="classsigned__rigidbody2__interface.html#aa3bbe30e277d86ff8b36bb569a657040">[詳解]</a><br /></td></tr>
+<tr class="separator:aa3bbe30e277d86ff8b36bb569a657040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>2D 符号付き距離関数の剛体のインターフェース。 </p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="aa3bbe30e277d86ff8b36bb569a657040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3bbe30e277d86ff8b36bb569a657040">&#9670;&nbsp;</a></span>get_angular_velocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double signed_rigidbody2_interface::get_angular_velocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>回転速度を得る。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>回転速度。 </dd></dl>
+
+</div>
+</div>
+<a id="af763fb40e60ae304291ebc9f79f1781d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af763fb40e60ae304291ebc9f79f1781d">&#9670;&nbsp;</a></span>get_bounding_box()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void signed_rigidbody2_interface::get_bounding_box </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvec.html">vec2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>p0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structvec.html">vec2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>剛体のワールド座標系のバウンディングボックスを計算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">p0</td><td>左下のコーナーの位置。 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">p1</td><td>右上のコーナーの位置。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1d69a98057ff7ae92863c6e8937384f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d69a98057ff7ae92863c6e8937384f3">&#9670;&nbsp;</a></span>get_center_of_gravity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structvec.html">vec2d</a> signed_rigidbody2_interface::get_center_of_gravity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重心を得る。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>重心。 </dd></dl>
+
+</div>
+</div>
+<a id="af58739b3a499a1d5d7c31081991f48e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af58739b3a499a1d5d7c31081991f48e3">&#9670;&nbsp;</a></span>get_mass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double signed_rigidbody2_interface::get_mass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>質量を得る。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>質量。ゼロなら無限大。 </dd></dl>
+
+</div>
+</div>
+<a id="a628e3aac14c33857c7394fc6fae92e73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a628e3aac14c33857c7394fc6fae92e73">&#9670;&nbsp;</a></span>get_moment_of_inertia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double signed_rigidbody2_interface::get_moment_of_inertia </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>慣性モーメントを得る。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>慣性モーメント。 </dd></dl>
+
+</div>
+</div>
+<a id="a0bcb7713e396ebd4c5e4bad16414478c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bcb7713e396ebd4c5e4bad16414478c">&#9670;&nbsp;</a></span>get_rotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double signed_rigidbody2_interface::get_rotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>回転角度を得る。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>回転角度。 </dd></dl>
+
+</div>
+</div>
+<a id="a0c6cf0d75a82df40a4a83c502cecfee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c6cf0d75a82df40a4a83c502cecfee3">&#9670;&nbsp;</a></span>get_signed_distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double signed_rigidbody2_interface::get_signed_distance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structvec.html">vec2d</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ワールド座標系での符号付き距離を得る。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>ワールド座標系での位置。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>符号付き距離。 </dd></dl>
+
+</div>
+</div>
+<a id="a74a8d02efa9c89813a8209083e9a6132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74a8d02efa9c89813a8209083e9a6132">&#9670;&nbsp;</a></span>get_velocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structvec.html">vec2d</a> signed_rigidbody2_interface::get_velocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>速度を得る。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>速度。 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>include/shiokaze/projection/<a class="el" href="signed__rigidbody2__interface_8h_source.html">signed_rigidbody2_interface.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classsigned__rigidbody2__interface.html">signed_rigidbody2_interface</a></li>
+    <li class="footer">2020年09月11日(金) 08時43分29秒作成 - 潮風フレームワーク / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+
+	<head>
+	
+		<meta http-equiv="Content-Language" content="en-US" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		
+		<title>Vector Fluid: A Vector Graphics Depiction of Surface Flow</title>
+		
+		<style type="text/css">
+			body {
+				background-color: #EFEFEF;
+				color: black;
+				font-family: sans-serif;
+				margin-top: 50px;
+				margin-left: 7%; margin-right: 7%;
+			}
+			
+			img {
+				border-style: none;
+				}
+			:link { color: #7d133e }
+			:visited { color: #7d133e }
+			.boardered {
+				border-color: #343434;
+				border-style: solid;
+				border-width: 2px;
+			}
+			
+			.caption {
+				font-style: italic;
+			}
+			
+			.picture {
+				display: block;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				border-color: #343434;
+				border-style: solid;
+				border-width: 2px;
+				display: block;
+				}
+				
+		.publication {
+		font-family: times, serif;
+		}
+		</style>
+
+	</head>
+	
+	<body>
+	
+	<h2>Vector Fluid: A Vector Graphics Depiction of Surface Flow</h2>
+	<big><p><a href="../index.html">Ryoichi Ando</a> and Reiji Tsuruno</big>
+			
+		<div>
+			<img class="picture" src="teaser.png" width="694" height="203" alt="Vector Fluid Teaser" />
+		</div>
+	
+		<p class="caption"><b>Vector graphics depicted fluid:</b> This figure was generated interactively using our prototype and they can be described in terms of spline curves. Zoom in with your vector graphics viewer to see how our vector ﬂuid preserves very high levels of detail. <a href="teaser.svg">Click here to download SVG file.</a></p></p>
+		
+		<h2>Abstract</h2>
+		
+		<p>We present a simple technique for creating fluid silhouettes described with vector graphics, which we call &#34;Vector Fluid.&#34; In our system, a solid region in the fluid is represented as a closed contour and advected by fluid flow to form a curly and clear shape similar to marbling or sumi-nagashi. The fundamental principle behind our method is that contours of solid regions should not collide. This means that if the initial shape of the region is a concave polygon, that shape should maintain its topology so that it can be rendered as a regular concave polygon, no matter how irregularly the contour is distorted by advection. In contrast to other techniques, our approach explicitly neglects topology changes to track surfaces in a trade off of computational cost and complexity. We also introduce an adaptive contour sampling technique to reduce this extra cost. We explore specific examples in 2D for art oriented usage and show applications and robustness of our method to exhibit organic fluid components. We also demonstrate how to port our entire algorithm onto a GPU to boost interactive performance for complex scenes.</p>
+		
+		<h2>Figures</h2>
+		
+	<div>
+		<img class="picture" src="complex.png" width="490" height="482" alt="Complex Fluid Surface" />
+	</div>
+	
+	<p class="caption"><b>Complex marbling-like silhouette:</b> This vector ﬂuid was created with our GPU prototype and during the simulation, rendering and interaction were responsive. <a href="complex.svg">Click here to download SVG file.</a></p>
+
+	<div>
+		<img class="picture" src="target_driven.png" width="691" height="249" alt="Target Driven Vector Fluid" />
+	</div>
+	
+	<p class="caption"><b>Effects of Target-Driven Smoke Animation</b>: When combined with <a href="http://www.cs.huji.ac.il/labs/cglab/research/tdsmoke/">Target-Driven Smoke Animation</a>, our vector ﬂuid can be used to design user speciﬁed stencil art with curly fluid textures. <a href="target_driven.svg">Click here to download SVG file.</a></p>
+	
+	<div>
+		<img class="picture" src="edit.png" width="680" height="300" alt="Vector Fluid imported into vector based programs" />
+	</div>
+	
+	<p class="caption"><b>Shape imported into Adobe illustrator and Adobe FLASH</b>: Our vector ﬂuid can be directly exported into a vector based program without losing detail.
+	
+	<p class="caption"><b>Candy Vector Art Advected Finely on Adobe illustrator</b>: Our vector fluid can be applied not only simple concave polygons but also vector arts designed by artists.
+	
+	<h2>Contents</h2>
+	
+	<p><a href="download/paper.pdf"><b>Paper (PDF)</b></a><br>Ryoichi Ando and Reiji Tsuruno. Vector Fluid: A Vector Graphics Depiction of Surface Flow. Proc. Non-Photorealistic Animation and Rendering, 2010 Research papers.</p>
+	
+	<p><a href="download/bibtex.txt"><b>Bibtex (Text)</b></a><br> A bibtex format file for latex processor.</p>
+		
+	<p><a href="download/npar2010.key"><b>Presentation (Keynote)</b></a><br> A presentation file for Apple Keynote.</p>
+		
+	<p><a href="download/featuring.mp4"><b>Collection Movie (MP4)</b></a><br> Collection movie of animated vector fluids. (31.1 MB)</p>
+		
+	<p><a href="download/gpu.mp4"><b>GPU demonstrated Movie (MP4)</b></a><br> Sample video of vector fluid running on GPU. (11.8 MB)</p>
+
+<p><br><a href="../">[Back]</a></p>
+
+	</body>	
+</html>

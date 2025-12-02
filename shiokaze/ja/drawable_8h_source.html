@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>潮風フレームワーク: include/shiokaze/ui/drawable.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">潮風フレームワーク
+   </div>
+   <div id="projectbrief">研究開発に特化したコンピューターグラフィックスのための流体ソルバ</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('drawable_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">drawable.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="drawable_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">**  drawable.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">**  This is part of Shiokaze, a research-oriented fluid solver for computer graphics.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">**  Created by Ryoichi Ando &lt;rand@nii.ac.jp&gt; on May 1, 2017.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">**  Permission is hereby granted, free of charge, to any person obtaining a copy of</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">**  this software and associated documentation files (the &quot;Software&quot;), to deal in</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">**  the Software without restriction, including without limitation the rights to use,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">**  copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">**  Software, and to permit persons to whom the Software is furnished to do so,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">**  subject to the following conditions:</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">**  The above copyright notice and this permission notice shall be included in all copies</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">**  or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">**  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">**  INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">**  PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">**  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">**  CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">**  OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef SHKZ_DRAWABLE_H</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define SHKZ_DRAWABLE_H</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="runnable_8h.html">shiokaze/core/runnable.h</a>&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_u_i__interface_8h.html">UI_interface.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#if SPATIAL_DIM == 3</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="camera3__interface_8h.html">shiokaze/ui/camera3_interface.h</a>&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#elif SPATIAL_DIM == 2</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="camera2__interface_8h.html">shiokaze/ui/camera2_interface.h</a>&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#error DSPATIAL_DIM must be defined either 2 or 3.</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<a class="code" href="common_8h.html#a391a3576f94983f8ff8e79bed315b29d">SHKZ_BEGIN_NAMESPACE</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="classdrawable.html">drawable</a> : <span class="keyword">public</span> <a class="code" href="classrunnable.html">runnable</a>, <span class="keyword">public</span> <a class="code" href="class_u_i__interface.html">UI_interface</a> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="credit_8h.html#a58ed65af9cd96e3c2c59d6c13240cf09">LONG_NAME</a>(<span class="stringliteral">&quot;Drawable&quot;</span>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classdrawable.html#a7d760e19a1881462c86a8b472685edad">   54</a></span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classdrawable.html#a7d760e19a1881462c86a8b472685edad">recursive_initialize</a>( const <a class="code" href="classconfigurable.html#a543be0036cefaf1cde8d268b8414754d">environment_map</a> &amp;environment )<span class="keyword"> override </span>{ </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        m_environment = environment;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="classrecursive__configurable.html#a38ba57f08df3ed9d312101031399c485">runnable::recursive_initialize</a> (environment);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classdrawable.html#ac6ee660048c26be7200c4ab6764ca751">   64</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classdrawable.html#ac6ee660048c26be7200c4ab6764ca751">handle_event</a>( <span class="keyword">const</span> <a class="code" href="struct_u_i__interface_1_1event__structure.html">event_structure</a> &amp;event )<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#ifdef SPATIAL_DIM</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">bool</span> handled = m_camera-&gt;handle_event(event);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span>( ! handled &amp;&amp; m_camera-&gt;relay_event(event)) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_u_i__interface.html#a71f99ff1f1f04e11178215066c66ae28">UI_interface::handle_event</a>(m_camera-&gt;convert(event));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> handled;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_u_i__interface.html#a71f99ff1f1f04e11178215066c66ae28">UI_interface::handle_event</a>(event);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classdrawable.html#a1f71b29048c00d76413ab8483aac1999">   79</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classdrawable.html#a1f71b29048c00d76413ab8483aac1999">reinitialize</a>() { <a class="code" href="classdrawable.html#a7d760e19a1881462c86a8b472685edad">recursive_initialize</a>(m_environment); }</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classdrawable.html#a279310f42ac2af475b84fb3756ee9c90">   90</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classdrawable.html#a279310f42ac2af475b84fb3756ee9c90">setup_window</a>( std::string &amp;name, <span class="keywordtype">int</span> &amp;width, <span class="keywordtype">int</span> &amp;height )<span class="keyword"> const </span>{}</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classdrawable.html#a6059c37c244a118f0d99bfb185aa44b4">   97</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classdrawable.html#a6059c37c244a118f0d99bfb185aa44b4">should_quit</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classdrawable.html#ab4413bab2a8557344f6a69ddbf515267">  104</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classdrawable.html#ab4413bab2a8557344f6a69ddbf515267">should_screenshot</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classdrawable.html#a255f35cb80fc2c5e02327471a6555f2b">  111</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classdrawable.html#a255f35cb80fc2c5e02327471a6555f2b">hide_logo</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classdrawable.html#ac985d6e851939358608e4b69661516ac">  118</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_u_i__interface.html#a3ebd6c13ac0d953b4a0a2c1f3b35e385">UI_interface::CURSOR_TYPE</a> <a class="code" href="classdrawable.html#ac985d6e851939358608e4b69661516ac">get_current_cursor</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#ifdef SPATIAL_DIM</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">return</span> m_camera-&gt;get_current_cursor();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_u_i__interface.html#a3ebd6c13ac0d953b4a0a2c1f3b35e385a76399b490168e09b47651d9abcb58dbe">UI_interface::ARROW_CURSOR</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="classconfigurable.html#a543be0036cefaf1cde8d268b8414754d">environment_map</a> m_environment;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#if SPATIAL_DIM == 3</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="classrecursive__configurable__driver.html">camera3_driver</a> m_camera{<span class="keyword">this</span>,<span class="stringliteral">&quot;camera3&quot;</span>};</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#elif SPATIAL_DIM == 2</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="classrecursive__configurable__driver.html">camera2_driver</a> m_camera{<span class="keyword">this</span>,<span class="stringliteral">&quot;camera2&quot;</span>};</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;};</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<a class="code" href="common_8h.html#a5b02c8b38b9521be5c763c68cde927bf">SHKZ_END_NAMESPACE</a></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassdrawable_html_a1f71b29048c00d76413ab8483aac1999"><div class="ttname"><a href="classdrawable.html#a1f71b29048c00d76413ab8483aac1999">drawable::reinitialize</a></div><div class="ttdeci">virtual void reinitialize()</div><div class="ttdoc">インスタンスを再初期化する。</div><div class="ttdef"><b>Definition:</b> drawable.h:79</div></div>
+<div class="ttc" id="aclassdrawable_html_a279310f42ac2af475b84fb3756ee9c90"><div class="ttname"><a href="classdrawable.html#a279310f42ac2af475b84fb3756ee9c90">drawable::setup_window</a></div><div class="ttdeci">virtual void setup_window(std::string &amp;name, int &amp;width, int &amp;height) const</div><div class="ttdoc">ウィンドウの最初の初期環境をセットアップする関数。</div><div class="ttdef"><b>Definition:</b> drawable.h:90</div></div>
+<div class="ttc" id="aclassrecursive__configurable_html_a38ba57f08df3ed9d312101031399c485"><div class="ttname"><a href="classrecursive__configurable.html#a38ba57f08df3ed9d312101031399c485">recursive_configurable::recursive_initialize</a></div><div class="ttdeci">virtual void recursive_initialize(const configurable::environment_map &amp;environment=configurable::environment_map())</div><div class="ttdoc">プログラムの初期化を行い、子供インスタンスにも同様の処理を行う。実際にプログラムを実行可能な状態を作るために使われる。</div><div class="ttdef"><b>Definition:</b> configurable.h:166</div></div>
+<div class="ttc" id="aclassdrawable_html_ac6ee660048c26be7200c4ab6764ca751"><div class="ttname"><a href="classdrawable.html#ac6ee660048c26be7200c4ab6764ca751">drawable::handle_event</a></div><div class="ttdeci">virtual bool handle_event(const event_structure &amp;event) override</div><div class="ttdoc">UI の入力イベントを処理する。</div><div class="ttdef"><b>Definition:</b> drawable.h:64</div></div>
+<div class="ttc" id="aclassrunnable_html"><div class="ttname"><a href="classrunnable.html">runnable</a></div><div class="ttdoc">タスクを実行するクラス。</div><div class="ttdef"><b>Definition:</b> runnable.h:35</div></div>
+<div class="ttc" id="aclassrecursive__configurable__driver_html"><div class="ttname"><a href="classrecursive__configurable__driver.html">recursive_configurable_driver</a></div><div class="ttdoc">recursive_configurable のクラスを抱擁するクラス。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:76</div></div>
+<div class="ttc" id="aclassdrawable_html"><div class="ttname"><a href="classdrawable.html">drawable</a></div><div class="ttdoc">描画可能なクラスを実装するためのインターフェース。</div><div class="ttdef"><b>Definition:</b> drawable.h:44</div></div>
+<div class="ttc" id="acamera2__interface_8h_html"><div class="ttname"><a href="camera2__interface_8h.html">camera2_interface.h</a></div></div>
+<div class="ttc" id="acamera3__interface_8h_html"><div class="ttname"><a href="camera3__interface_8h.html">camera3_interface.h</a></div></div>
+<div class="ttc" id="aclass_u_i__interface_html_a71f99ff1f1f04e11178215066c66ae28"><div class="ttname"><a href="class_u_i__interface.html#a71f99ff1f1f04e11178215066c66ae28">UI_interface::handle_event</a></div><div class="ttdeci">virtual bool handle_event(const event_structure &amp;event)</div><div class="ttdoc">UI の入力イベントを処理する。</div><div class="ttdef"><b>Definition:</b> UI_interface.h:172</div></div>
+<div class="ttc" id="aclass_u_i__interface_html_a3ebd6c13ac0d953b4a0a2c1f3b35e385"><div class="ttname"><a href="class_u_i__interface.html#a3ebd6c13ac0d953b4a0a2c1f3b35e385">UI_interface::CURSOR_TYPE</a></div><div class="ttdeci">CURSOR_TYPE</div><div class="ttdoc">カーソルのアイコンの種類。</div><div class="ttdef"><b>Definition:</b> UI_interface.h:211</div></div>
+<div class="ttc" id="acommon_8h_html_a391a3576f94983f8ff8e79bed315b29d"><div class="ttname"><a href="common_8h.html#a391a3576f94983f8ff8e79bed315b29d">SHKZ_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_BEGIN_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の開始の定義。</div><div class="ttdef"><b>Definition:</b> common.h:39</div></div>
+<div class="ttc" id="aclassdrawable_html_ab4413bab2a8557344f6a69ddbf515267"><div class="ttname"><a href="classdrawable.html#ab4413bab2a8557344f6a69ddbf515267">drawable::should_screenshot</a></div><div class="ttdeci">virtual bool should_screenshot() const</div><div class="ttdoc">ホストプログラムにスクリーンショットを取るか伝える関数。</div><div class="ttdef"><b>Definition:</b> drawable.h:104</div></div>
+<div class="ttc" id="aclassdrawable_html_a6059c37c244a118f0d99bfb185aa44b4"><div class="ttname"><a href="classdrawable.html#a6059c37c244a118f0d99bfb185aa44b4">drawable::should_quit</a></div><div class="ttdeci">virtual bool should_quit() const override</div><div class="ttdoc">ホストプログラムにプログラムが終了すべきか伝える関数。</div><div class="ttdef"><b>Definition:</b> drawable.h:97</div></div>
+<div class="ttc" id="acredit_8h_html_a58ed65af9cd96e3c2c59d6c13240cf09"><div class="ttname"><a href="credit_8h.html#a58ed65af9cd96e3c2c59d6c13240cf09">LONG_NAME</a></div><div class="ttdeci">#define LONG_NAME(long_name)</div><div class="ttdoc">完全な名前を定義するマクロ。</div><div class="ttdef"><b>Definition:</b> credit.h:37</div></div>
+<div class="ttc" id="astruct_u_i__interface_1_1event__structure_html"><div class="ttname"><a href="struct_u_i__interface_1_1event__structure.html">UI_interface::event_structure</a></div><div class="ttdoc">イベント情報の構造体。</div><div class="ttdef"><b>Definition:</b> UI_interface.h:96</div></div>
+<div class="ttc" id="aclass_u_i__interface_html"><div class="ttname"><a href="class_u_i__interface.html">UI_interface</a></div><div class="ttdoc">入力の API を提供するインターフェース。</div><div class="ttdef"><b>Definition:</b> UI_interface.h:38</div></div>
+<div class="ttc" id="aclassdrawable_html_a255f35cb80fc2c5e02327471a6555f2b"><div class="ttname"><a href="classdrawable.html#a255f35cb80fc2c5e02327471a6555f2b">drawable::hide_logo</a></div><div class="ttdeci">virtual bool hide_logo() const</div><div class="ttdoc">ホストプログラムに SHKZ のロゴを隠すかどうか伝える関数。</div><div class="ttdef"><b>Definition:</b> drawable.h:111</div></div>
+<div class="ttc" id="aclassconfigurable_html_a543be0036cefaf1cde8d268b8414754d"><div class="ttname"><a href="classconfigurable.html#a543be0036cefaf1cde8d268b8414754d">configurable::environment_map</a></div><div class="ttdeci">std::map&lt; std::string, const void * &gt; environment_map</div><div class="ttdoc">environment_map のタイプ。</div><div class="ttdef"><b>Definition:</b> configurable.h:46</div></div>
+<div class="ttc" id="acommon_8h_html_a5b02c8b38b9521be5c763c68cde927bf"><div class="ttname"><a href="common_8h.html#a5b02c8b38b9521be5c763c68cde927bf">SHKZ_END_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_END_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の終了の定義。</div><div class="ttdef"><b>Definition:</b> common.h:44</div></div>
+<div class="ttc" id="aclassdrawable_html_ac985d6e851939358608e4b69661516ac"><div class="ttname"><a href="classdrawable.html#ac985d6e851939358608e4b69661516ac">drawable::get_current_cursor</a></div><div class="ttdeci">virtual UI_interface::CURSOR_TYPE get_current_cursor() const override</div><div class="ttdoc">現在のカーソルのアイコンを得る。</div><div class="ttdef"><b>Definition:</b> drawable.h:118</div></div>
+<div class="ttc" id="arunnable_8h_html"><div class="ttname"><a href="runnable_8h.html">runnable.h</a></div></div>
+<div class="ttc" id="aclassdrawable_html_a7d760e19a1881462c86a8b472685edad"><div class="ttname"><a href="classdrawable.html#a7d760e19a1881462c86a8b472685edad">drawable::recursive_initialize</a></div><div class="ttdeci">virtual void recursive_initialize(const environment_map &amp;environment) override</div><div class="ttdoc">再帰的に configure を呼ぶ。</div><div class="ttdef"><b>Definition:</b> drawable.h:54</div></div>
+<div class="ttc" id="a_u_i__interface_8h_html"><div class="ttname"><a href="_u_i__interface_8h.html">UI_interface.h</a></div></div>
+<div class="ttc" id="aclass_u_i__interface_html_a3ebd6c13ac0d953b4a0a2c1f3b35e385a76399b490168e09b47651d9abcb58dbe"><div class="ttname"><a href="class_u_i__interface.html#a3ebd6c13ac0d953b4a0a2c1f3b35e385a76399b490168e09b47651d9abcb58dbe">UI_interface::ARROW_CURSOR</a></div><div class="ttdeci">@ ARROW_CURSOR</div><div class="ttdoc">通常の矢印カーソル。</div><div class="ttdef"><b>Definition:</b> UI_interface.h:214</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_eee5611a0202d01240738684f683b52c.html">shiokaze</a></li><li class="navelem"><a class="el" href="dir_1ed751055c59e8bfe66f5ead3161918e.html">ui</a></li><li class="navelem"><a class="el" href="drawable_8h.html">drawable.h</a></li>
+    <li class="footer">2020年09月11日(金) 08時43分28秒作成 - 潮風フレームワーク / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

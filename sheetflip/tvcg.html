@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+
+	<head>
+		<meta http-equiv="Content-Language" content="en-US" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		
+		<title>Preserving Fluid Sheets with Adaptively Sampled Anisotropic Particles</title>
+		
+		<style type="text/css">	
+			body {
+				background-color: #1A1A1A;
+				background-image:url('tvcg/grad.jpg');
+				background-repeat:repeat-x;
+				color: white;
+				font-family: 'Trebuchet MS', sans-serif;
+				margin-top: 50px;
+				margin-left: 7%; margin-right: 7%;
+			}
+			
+			img {
+				border-style: none;
+				}
+			:link { color: #A8D6Fc }
+			:visited { color: #FCC8Cc }
+			.boardered {
+				border-style: none;
+				border-width: 0px;
+			}
+			
+			.caption {
+			//	font-style: italic;
+			}
+			
+			.picture {
+				display: block;
+				border-color: #C4C4C4;
+				border-style: solid;
+				border-width: 1px;
+				display: block;
+			}
+				
+		.publication {
+		font-family: times, serif;
+		}
+		</style>
+	</head>
+	
+	<body>
+	
+	<center>
+	<h2>Preserving Fluid Sheets with Adaptively Sampled Anisotropic Particles</h2>
+	<big><p><a href="../index.html">Ryoichi Ando</a>,&nbsp;&nbsp;<a href="http://www.ntoken.com">Nils Th&uuml;rey</a>,&nbsp;&nbsp;Reiji Tsuruno</big>
+		<p>IEEE Transactions on Visualization and Computer Graphics (TVCG), 2012.<br>
+		This is an extended paper of our <a href="index.html">SCA2011 paper</a>.</p>
+	
+		<div>
+			<img src="tvcg/teaser.jpg" width="828" height="276" alt="Teaser" />
+		</div>
+	</center>
+	<p class="caption"><b>Dam breaking setup.</b> The right side shows our adaptively sampled simulation employing our particle-based thin sheet preservation algorithm. Left side shows its rendered image.
+<a target="_blank" href="tvcg/teaser_big.png">Click here for the large image.</a></p>
+		
+		<h2>Abstract</h2>
+		
+		<p>This paper presents a particle-based model for preserving fluid sheets of animated liquids with an adaptively
+sampled Fluid-Implicit-Particle (FLIP) method. In our method, we preserve fluid sheets by filling the breaking sheets with particle splitting in the thin regions, and by collapsing them in the deep water. To identify the critically thin parts, we compute the anisotropy of the particle neighborhoods, and use this information as a resampling criterion to reconstruct thin liquid surfaces.
+Unlike previous approaches, our method does not suffer from diffusive surfaces or complex re-meshing operations, and robustly handles topology changes with the use of a meshless representation. We extend the underlying FLIP model with an anisotropic position correction to improve the particle spacing, and adaptive sampling to efficiently perform simulations of larger volumes. Due to the Lagrangian nature of our method, it can be easily implemented and efficiently parallelized. The results show that our method can produce visually complex liquid animations with thin structures and vivid motions.</p>
+		
+			<h2>Contents</h2>
+	
+	<p><a href="download/tvcg.pdf"><b>Paper (PDF)</b></a><br>Ryoichi Ando,  Nils Th&uuml;rey, Reiji Tsuruno. <b>Preserving Fluid Sheets with Adaptively Sampled Anisotropic Particles.</b><br>
+	IEEE Transactions on Visualization and Computer Graphics (TVCG), 2012. <a href="http://www.computer.org/portal/web/csdl/doi/10.1109/TVCG.2012.87">Link to the article.</a></p>
+	
+	<p><a href="download/tvcgbib.txt"><b>Bibtex (Text)</b></a><br> A bibtex format file for the latex processor.</p>
+
+	<p><a href="download/tvcg.mp4"><b>Movie (MP4)</b></a><br>Demonstration 60fps video (76.8 MB)</p>
+
+	</p>
+
+<p><br><a href="../">[Back]</a></p>
+
+
+	</body>	
+</html>

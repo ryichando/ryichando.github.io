@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>潮風フレームワーク: include/shiokaze/array/array_core3.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">潮風フレームワーク
+   </div>
+   <div id="projectbrief">研究開発に特化したコンピューターグラフィックスのための流体ソルバ</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="検索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('array__core3_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">array_core3.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="array__core3_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">**  array_core3.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">**  This is part of Shiokaze, a research-oriented fluid solver for computer graphics.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">**  Created by Ryoichi Ando &lt;rand@nii.ac.jp&gt; on Feb 8, 2018.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">**  Permission is hereby granted, free of charge, to any person obtaining a copy of</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">**  this software and associated documentation files (the &quot;Software&quot;), to deal in</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">**  the Software without restriction, including without limitation the rights to use,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">**  copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">**  Software, and to permit persons to whom the Software is furnished to do so,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">**  subject to the following conditions:</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">**  The above copyright notice and this permission notice shall be included in all copies</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">**  or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">**  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">**  INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">**  PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">**  HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">**  CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">**  OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef SHKZ_ARRAY_CORE3_H</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define SHKZ_ARRAY_CORE3_H</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="recursive__configurable__module_8h.html">shiokaze/core/recursive_configurable_module.h</a>&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="parallel__driver_8h.html">shiokaze/parallel/parallel_driver.h</a>&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="common_8h.html#a391a3576f94983f8ff8e79bed315b29d">SHKZ_BEGIN_NAMESPACE</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="classarray__core3.html">array_core3</a> : <span class="keyword">public</span> <a class="code" href="classrecursive__configurable__module.html">recursive_configurable_module</a> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="recursive__configurable__module_8h.html#a086071a8f57eb7ef4ebb57c17a741c30">DEFINE_MODULE</a>(<a class="code" href="classarray__core3.html">array_core3</a>,<span class="stringliteral">&quot;Array Core 3D&quot;</span>,<span class="stringliteral">&quot;Array&quot;</span>,<span class="stringliteral">&quot;Array core module&quot;</span>)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classarray__core3.html">array_core3</a>() = default;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    virtual ~<a class="code" href="classarray__core3.html">array_core3</a>() = default;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#ae4954304b4db9e17450e2c92f4c79145">initialize</a>( <span class="keywordtype">unsigned</span> nx, <span class="keywordtype">unsigned</span> ny, <span class="keywordtype">unsigned</span> nz, <span class="keywordtype">unsigned</span> element_size ) = 0;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#a240e5e50c32820cfcf8441a7c4a06cb7">get</a>( <span class="keywordtype">unsigned</span> &amp;nx, <span class="keywordtype">unsigned</span> &amp;ny, <span class="keywordtype">unsigned</span> &amp;nz, <span class="keywordtype">unsigned</span> &amp;element_size ) const = 0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    virtual <span class="keywordtype">size_t</span> <a class="code" href="classarray__core3.html#a03d370595fbb13fe150bf4d23911ed54">count</a>( const <a class="code" href="classparallel__driver.html">parallel_driver</a> &amp;parallel ) const = 0;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#a28355ecd68e642c9047d432f09432476">copy</a>( const <a class="code" href="classarray__core3.html">array_core3</a> &amp;array, std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">void</span> *target, const <span class="keywordtype">void</span> *src)&gt; copy_func, const <a class="code" href="classparallel__driver.html">parallel_driver</a> &amp;parallel ) = 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#acb8712776725d0749dfe98309706727d">set</a>( <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">void</span> *value_ptr, <span class="keywordtype">bool</span> &amp;active)&gt; func ) = 0;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    virtual const <span class="keywordtype">void</span> * operator()( <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, <span class="keywordtype">bool</span> &amp;filled ) const = 0;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#abf1d7d46b3829ed77e54bf7f66370684">parallel_actives</a> ( std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, <span class="keywordtype">void</span> *value_ptr, <span class="keywordtype">bool</span> &amp;active, const <span class="keywordtype">bool</span> &amp;filled, <span class="keywordtype">int</span> thread_index )&gt; func, const <a class="code" href="classparallel__driver.html">parallel_driver</a> &amp;parallel ) = 0;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#a01d4c3a66c64b5fdac1087f887f6b83a">serial_actives</a> ( std::function&lt;<span class="keywordtype">bool</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, <span class="keywordtype">void</span> *value_ptr, <span class="keywordtype">bool</span> &amp;active, const <span class="keywordtype">bool</span> &amp;filled )&gt; func ) = 0;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#aef3330e13ae2d84da235bada2a0d288d">const_parallel_actives</a> ( std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, const <span class="keywordtype">void</span> *value_ptr, const <span class="keywordtype">bool</span> &amp;filled, <span class="keywordtype">int</span> thread_index )&gt; func, const <a class="code" href="classparallel__driver.html">parallel_driver</a> &amp;parallel ) const = 0;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#afb498c3769940fb5b34ee2d5e688319a">const_serial_actives</a> ( std::function&lt;<span class="keywordtype">bool</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, const <span class="keywordtype">void</span> *value_ptr, const <span class="keywordtype">bool</span> &amp;filled )&gt; func ) const = 0;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#a6fa881e611f724ce957052f262b0dda0">parallel_all</a> ( std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, <span class="keywordtype">void</span> *value_ptr, <span class="keywordtype">bool</span> &amp;active, const <span class="keywordtype">bool</span> &amp;filled, <span class="keywordtype">int</span> thread_index )&gt; func, const <a class="code" href="classparallel__driver.html">parallel_driver</a> &amp;parallel ) = 0;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#a74c71a40cd1dc76a2d88ab7e94385bdd">serial_all</a> ( std::function&lt;<span class="keywordtype">bool</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, <span class="keywordtype">void</span> *value_ptr, <span class="keywordtype">bool</span> &amp;active, const <span class="keywordtype">bool</span> &amp;filled )&gt; func ) = 0;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#ab4670f8883f39c8c279c87b075d261ed">const_parallel_all</a> ( std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, const <span class="keywordtype">void</span> *value_ptr, const <span class="keywordtype">bool</span> &amp;active, const <span class="keywordtype">bool</span> &amp;filled, <span class="keywordtype">int</span> thread_index )&gt; func, const <a class="code" href="classparallel__driver.html">parallel_driver</a> &amp;parallel ) const = 0;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#a770477e10ae8045e8ce9caef12d14e63">const_serial_all</a> ( std::function&lt;<span class="keywordtype">bool</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, const <span class="keywordtype">void</span> *value_ptr, const <span class="keywordtype">bool</span> &amp;active, const <span class="keywordtype">bool</span> &amp;filled )&gt; func ) const = 0;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#a820adc50029fcc148b289724cc1192e3">dilate</a>( std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, <span class="keywordtype">void</span> *value_ptr, <span class="keywordtype">bool</span> &amp;active, const <span class="keywordtype">bool</span> &amp;filled, <span class="keywordtype">int</span> thread_index)&gt; func, const <a class="code" href="classparallel__driver.html">parallel_driver</a> &amp;parallel ) = 0;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#ae5b4b129e84f4a2e7872d6ced4fc136b">flood_fill</a>( std::function&lt;<span class="keywordtype">bool</span>(<span class="keywordtype">void</span> *value_ptr)&gt; inside_func, const <a class="code" href="classparallel__driver.html">parallel_driver</a> &amp;parallel ) = 0;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#a95479a489844595be9777a2ee89a0a5e">const_parallel_inside</a> ( std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, const <span class="keywordtype">void</span> *value_ptr, const <span class="keywordtype">bool</span> &amp;active, <span class="keywordtype">int</span> thread_index )&gt; func, const <a class="code" href="classparallel__driver.html">parallel_driver</a> &amp;parallel ) const = 0;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    virtual <span class="keywordtype">void</span> <a class="code" href="classarray__core3.html#a630cddd6f2187f56837e6354aa7c1c7f">const_serial_inside</a> ( std::function&lt;<span class="keywordtype">bool</span>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> k, const <span class="keywordtype">void</span> *value_ptr, const <span class="keywordtype">bool</span> &amp;active)&gt; func ) const = 0;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;protected:</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="classarray__core3.html">array_core3</a>( const <a class="code" href="classarray__core3.html">array_core3</a> &amp; ) = delete;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">void</span> operator=( const <a class="code" href="classarray__core3.html">array_core3</a> &amp; ) = delete;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;};</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;using array3_ptr = std::unique_ptr&lt;<a class="code" href="classarray__core3.html">array_core3</a>&gt;;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<a class="code" href="common_8h.html#a5b02c8b38b9521be5c763c68cde927bf">SHKZ_END_NAMESPACE</a></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="preprocessor">//</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassarray__core3_html_acb8712776725d0749dfe98309706727d"><div class="ttname"><a href="classarray__core3.html#acb8712776725d0749dfe98309706727d">array_core3::set</a></div><div class="ttdeci">virtual void set(int i, int j, int k, std::function&lt; void(void *value_ptr, bool &amp;active)&gt; func)=0</div><div class="ttdoc">セルに値を設定する。</div></div>
+<div class="ttc" id="aclassarray__core3_html_a770477e10ae8045e8ce9caef12d14e63"><div class="ttname"><a href="classarray__core3.html#a770477e10ae8045e8ce9caef12d14e63">array_core3::const_serial_all</a></div><div class="ttdeci">virtual void const_serial_all(std::function&lt; bool(int i, int j, int k, const void *value_ptr, const bool &amp;active, const bool &amp;filled)&gt; func) const =0</div><div class="ttdoc">全てのセルを読み込み可能に限定してシリアルに処理する。</div></div>
+<div class="ttc" id="aclassarray__core3_html_a6fa881e611f724ce957052f262b0dda0"><div class="ttname"><a href="classarray__core3.html#a6fa881e611f724ce957052f262b0dda0">array_core3::parallel_all</a></div><div class="ttdeci">virtual void parallel_all(std::function&lt; void(int i, int j, int k, void *value_ptr, bool &amp;active, const bool &amp;filled, int thread_index)&gt; func, const parallel_driver &amp;parallel)=0</div><div class="ttdoc">全てのセルを並列に処理する。</div></div>
+<div class="ttc" id="aclassparallel__driver_html"><div class="ttname"><a href="classparallel__driver.html">parallel_driver</a></div><div class="ttdoc">並列ループのための parallel_core を使いやすくするクラス。</div><div class="ttdef"><b>Definition:</b> parallel_driver.h:44</div></div>
+<div class="ttc" id="aclassarray__core3_html_ab4670f8883f39c8c279c87b075d261ed"><div class="ttname"><a href="classarray__core3.html#ab4670f8883f39c8c279c87b075d261ed">array_core3::const_parallel_all</a></div><div class="ttdeci">virtual void const_parallel_all(std::function&lt; void(int i, int j, int k, const void *value_ptr, const bool &amp;active, const bool &amp;filled, int thread_index)&gt; func, const parallel_driver &amp;parallel) const =0</div><div class="ttdoc">全てのセルを読み込み可能に限定して並列に処理する。</div></div>
+<div class="ttc" id="aclassarray__core3_html"><div class="ttname"><a href="classarray__core3.html">array_core3</a></div><div class="ttdoc">array3 クラスで使われる三次元配列クラスのコアモジュールクラス。</div><div class="ttdef"><b>Definition:</b> array_core3.h:38</div></div>
+<div class="ttc" id="aclassarray__core3_html_a01d4c3a66c64b5fdac1087f887f6b83a"><div class="ttname"><a href="classarray__core3.html#a01d4c3a66c64b5fdac1087f887f6b83a">array_core3::serial_actives</a></div><div class="ttdeci">virtual void serial_actives(std::function&lt; bool(int i, int j, int k, void *value_ptr, bool &amp;active, const bool &amp;filled)&gt; func)=0</div><div class="ttdoc">全てのアクティブなセルをシリアルに処理する。</div></div>
+<div class="ttc" id="aclassarray__core3_html_a95479a489844595be9777a2ee89a0a5e"><div class="ttname"><a href="classarray__core3.html#a95479a489844595be9777a2ee89a0a5e">array_core3::const_parallel_inside</a></div><div class="ttdeci">virtual void const_parallel_inside(std::function&lt; void(int i, int j, int k, const void *value_ptr, const bool &amp;active, int thread_index)&gt; func, const parallel_driver &amp;parallel) const =0</div><div class="ttdoc">全ての塗りつぶされたセルを読み込み可能に限定して並列に処理する。</div></div>
+<div class="ttc" id="aclassarray__core3_html_a240e5e50c32820cfcf8441a7c4a06cb7"><div class="ttname"><a href="classarray__core3.html#a240e5e50c32820cfcf8441a7c4a06cb7">array_core3::get</a></div><div class="ttdeci">virtual void get(unsigned &amp;nx, unsigned &amp;ny, unsigned &amp;nz, unsigned &amp;element_size) const =0</div><div class="ttdoc">グリッドの情報を得る。</div></div>
+<div class="ttc" id="aclassarray__core3_html_ae4954304b4db9e17450e2c92f4c79145"><div class="ttname"><a href="classarray__core3.html#ae4954304b4db9e17450e2c92f4c79145">array_core3::initialize</a></div><div class="ttdeci">virtual void initialize(unsigned nx, unsigned ny, unsigned nz, unsigned element_size)=0</div><div class="ttdoc">グリッドを値でメモリに展開する。</div></div>
+<div class="ttc" id="aclassarray__core3_html_ae5b4b129e84f4a2e7872d6ced4fc136b"><div class="ttname"><a href="classarray__core3.html#ae5b4b129e84f4a2e7872d6ced4fc136b">array_core3::flood_fill</a></div><div class="ttdeci">virtual void flood_fill(std::function&lt; bool(void *value_ptr)&gt; inside_func, const parallel_driver &amp;parallel)=0</div><div class="ttdoc">塗りつぶし処理を行う。</div></div>
+<div class="ttc" id="aclassarray__core3_html_a03d370595fbb13fe150bf4d23911ed54"><div class="ttname"><a href="classarray__core3.html#a03d370595fbb13fe150bf4d23911ed54">array_core3::count</a></div><div class="ttdeci">virtual size_t count(const parallel_driver &amp;parallel) const =0</div><div class="ttdoc">アクティブなセルの数を数える。</div></div>
+<div class="ttc" id="arecursive__configurable__module_8h_html_a086071a8f57eb7ef4ebb57c17a741c30"><div class="ttname"><a href="recursive__configurable__module_8h.html#a086071a8f57eb7ef4ebb57c17a741c30">DEFINE_MODULE</a></div><div class="ttdeci">#define DEFINE_MODULE(CLASS_T, LNG_NAME, ARG_NAME, DESCRIPTION)</div><div class="ttdoc">モジュールの読み込みを簡単にする定義。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:39</div></div>
+<div class="ttc" id="acommon_8h_html_a391a3576f94983f8ff8e79bed315b29d"><div class="ttname"><a href="common_8h.html#a391a3576f94983f8ff8e79bed315b29d">SHKZ_BEGIN_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_BEGIN_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の開始の定義。</div><div class="ttdef"><b>Definition:</b> common.h:39</div></div>
+<div class="ttc" id="aclassarray__core3_html_a28355ecd68e642c9047d432f09432476"><div class="ttname"><a href="classarray__core3.html#a28355ecd68e642c9047d432f09432476">array_core3::copy</a></div><div class="ttdeci">virtual void copy(const array_core3 &amp;array, std::function&lt; void(void *target, const void *src)&gt; copy_func, const parallel_driver &amp;parallel)=0</div><div class="ttdoc">グリッドをコピーする。</div></div>
+<div class="ttc" id="aclassarray__core3_html_a630cddd6f2187f56837e6354aa7c1c7f"><div class="ttname"><a href="classarray__core3.html#a630cddd6f2187f56837e6354aa7c1c7f">array_core3::const_serial_inside</a></div><div class="ttdeci">virtual void const_serial_inside(std::function&lt; bool(int i, int j, int k, const void *value_ptr, const bool &amp;active)&gt; func) const =0</div><div class="ttdoc">全ての塗りつぶされたセルを読み込み可能に限定してシリアルに処理する。</div></div>
+<div class="ttc" id="aclassarray__core3_html_afb498c3769940fb5b34ee2d5e688319a"><div class="ttname"><a href="classarray__core3.html#afb498c3769940fb5b34ee2d5e688319a">array_core3::const_serial_actives</a></div><div class="ttdeci">virtual void const_serial_actives(std::function&lt; bool(int i, int j, int k, const void *value_ptr, const bool &amp;filled)&gt; func) const =0</div><div class="ttdoc">全てのアクティブなセルを読み込み可能に限定してシリアルに処理する。</div></div>
+<div class="ttc" id="aclassarray__core3_html_a74c71a40cd1dc76a2d88ab7e94385bdd"><div class="ttname"><a href="classarray__core3.html#a74c71a40cd1dc76a2d88ab7e94385bdd">array_core3::serial_all</a></div><div class="ttdeci">virtual void serial_all(std::function&lt; bool(int i, int j, int k, void *value_ptr, bool &amp;active, const bool &amp;filled)&gt; func)=0</div><div class="ttdoc">全てのセルをシリアルに処理する。</div></div>
+<div class="ttc" id="aclassarray__core3_html_a820adc50029fcc148b289724cc1192e3"><div class="ttname"><a href="classarray__core3.html#a820adc50029fcc148b289724cc1192e3">array_core3::dilate</a></div><div class="ttdeci">virtual void dilate(std::function&lt; void(int i, int j, int k, void *value_ptr, bool &amp;active, const bool &amp;filled, int thread_index)&gt; func, const parallel_driver &amp;parallel)=0</div><div class="ttdoc">拡張する。</div></div>
+<div class="ttc" id="aparallel__driver_8h_html"><div class="ttname"><a href="parallel__driver_8h.html">parallel_driver.h</a></div></div>
+<div class="ttc" id="aclassarray__core3_html_aef3330e13ae2d84da235bada2a0d288d"><div class="ttname"><a href="classarray__core3.html#aef3330e13ae2d84da235bada2a0d288d">array_core3::const_parallel_actives</a></div><div class="ttdeci">virtual void const_parallel_actives(std::function&lt; void(int i, int j, int k, const void *value_ptr, const bool &amp;filled, int thread_index)&gt; func, const parallel_driver &amp;parallel) const =0</div><div class="ttdoc">全てのアクティブなセルを読み込み可能に限定して並列に処理する。</div></div>
+<div class="ttc" id="aclassarray__core3_html_abf1d7d46b3829ed77e54bf7f66370684"><div class="ttname"><a href="classarray__core3.html#abf1d7d46b3829ed77e54bf7f66370684">array_core3::parallel_actives</a></div><div class="ttdeci">virtual void parallel_actives(std::function&lt; void(int i, int j, int k, void *value_ptr, bool &amp;active, const bool &amp;filled, int thread_index)&gt; func, const parallel_driver &amp;parallel)=0</div><div class="ttdoc">全てのアクティブなセルを並列に処理する。</div></div>
+<div class="ttc" id="acommon_8h_html_a5b02c8b38b9521be5c763c68cde927bf"><div class="ttname"><a href="common_8h.html#a5b02c8b38b9521be5c763c68cde927bf">SHKZ_END_NAMESPACE</a></div><div class="ttdeci">#define SHKZ_END_NAMESPACE</div><div class="ttdoc">shiokaze の名前空間の終了の定義。</div><div class="ttdef"><b>Definition:</b> common.h:44</div></div>
+<div class="ttc" id="arecursive__configurable__module_8h_html"><div class="ttname"><a href="recursive__configurable__module_8h.html">recursive_configurable_module.h</a></div></div>
+<div class="ttc" id="aclassrecursive__configurable__module_html"><div class="ttname"><a href="classrecursive__configurable__module.html">recursive_configurable_module</a></div><div class="ttdoc">module を継承する recursive_configurable クラス。</div><div class="ttdef"><b>Definition:</b> recursive_configurable_module.h:49</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_eee5611a0202d01240738684f683b52c.html">shiokaze</a></li><li class="navelem"><a class="el" href="dir_fafa4d74566e6004ce41c819ea2174e0.html">array</a></li><li class="navelem"><a class="el" href="array__core3_8h.html">array_core3.h</a></li>
+    <li class="footer">2020年09月11日(金) 08時43分28秒作成 - 潮風フレームワーク / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>
